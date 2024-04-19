@@ -1,0 +1,389 @@
+@import {
+    url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200;1,300&family=Poppins:ital,wght@0,200;0,400;1,100&display=swap');
+    font-display: swap;
+}
+
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    /* O la fuente que desees utilizar como predeterminada para el texto del cuerpo */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    /* O la fuente que desees utilizar para los títulos */
+}
+
+a {
+    color: #ef6c57;
+}
+
+.site-navbar {
+    background: #0d270e;
+}
+
+.slide-one-item.home-slider .owl-prev,
+.slide-one-item.home-slider .owl-next {
+    background: #0d270ead;
+}
+
+.slide-one-item.home-slider .owl-prev,
+.slide-one-item.home-slider .owl-next:hover {
+    background: #0d270ead !important;
+}
+
+
+.dropdown {
+    background: #0d270ead !important;
+}
+
+.btn-primary {
+    background-color: #c6b791;
+    transition: color 0.3s;
+    /* Transición suave del color */
+    border-radius: 5px;
+}
+
+.btn.btn-primary:hover {
+    color: #fff !important;
+    background-color: #0d270ead !important;
+    border: 2px solid #c6b791;
+}
+
+.btn-wrapper {
+    position: fixed;
+    right: 20px;
+    bottom: 35px;
+    z-index: 10;
+}
+
+.text-primaryservicios {
+    line-height: 0 !important;
+    font-size: 3rem !important;
+    color: #0d270e !important;
+}
+
+.unit-1 {
+    border-radius: 15px;
+}
+
+
+
+
+/*iframe servicios*/
+
+.overlap-section {
+    position: relative;
+    z-index: 100;
+    height: auto;
+    margin-top: -70px;
+    width: 100%;
+    border-radius: 15px;
+   
+}
+
+.iframe {
+    border-radius: 15px;
+}
+
+  
+  .site-section {
+    padding: 10px;
+    position: relative;
+    z-index: 10; /* Asegura que el contenido debajo del iframe esté en una capa superior */
+  }
+  
+
+.p-5 {
+    padding: 1rem !important;
+
+}
+
+.site-footer {
+    padding: 15px;
+    background: #0d270ead;
+}
+
+.site-footer p {
+    margin-bottom: 0px;
+}
+
+.list-unstyled {
+    color: #fff;
+}
+
+/*---ITINERARIO*/
+
+.titulo_itineriario {
+    text-transform: uppercase;
+    font-size: 3.5rem !important; 
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.5;
+    width: max-content;
+}
+
+.itinerario {
+    border-radius: 23px;
+    padding-right: 30px;
+    background-color: #f7f7f7;
+    background-image: none;
+    margin-bottom: 40px;
+}
+
+.image {
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+    overflow: hidden;
+}
+
+.amazing-deals .item span.info {
+    color: #22b3c1;
+    font-size: 15px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.amazing-deals .item h4 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.section-heading h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 36px;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #2a2a2a;
+    padding-top: 50px;
+}
+
+.amazing-deals .itinerario p {
+    padding-top: 25px;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+
+}
+
+.offers_area.padding_top {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.offers_area .single_offers .about_thumb {
+    overflow: hidden;
+}
+
+.offers_area .single_offers .about_thumb img {
+    width: 100%;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.offers_area .single_offers h3 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1F1F1F;
+    margin-top: 32px
+}
+
+.offers_area .single_offers ul {
+    margin-top: 17px;
+    margin-bottom: 30px;
+    list-style-type: none !important;
+    height: 115px;
+}
+
+.offers_area .single_offers ul li {
+    font-size: 16px;
+    color: #4D4D4D;
+    line-height: 28px;
+    position: relative;
+    z-index: 9;
+    padding-left: 23px
+}
+
+.offers_area .single_offers ul li::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #4D4D4D;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    
+}
+
+.offers_area .single_offers a {
+    width: 50%;
+    text-align: center;
+}
+
+.offers_area .single_offers:hover .about_thumb img {
+     width: 100%;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/* Estilos para el contenedor del popup */
+#popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo_itinerario {
+  font-weight: 800; 
+  color: #aa413c;
+  font-size: 2rem;
+  text-transform: uppercase;
+
+}
+
+/* Estilos para el contenido del popup */
+#popup {
+    background-color: #ffffffe0;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* TABLETS */
+@media (max-width: 950px) {
+    .site-mobile-menu {
+        background-color: transparent;
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .offers_area .single_offers h3 {
+        font-size: 18px;
+        display: none;
+    }
+    .offers_area.padding_top {
+        padding-top: 50px;
+    }
+
+    .offers_area .single_offers ul {
+        margin-bottom: 190px;
+    }
+
+    .offers_area .single_offers a {
+        width: 100%;
+    }   
+
+    .itinerario {
+        background-color: #fff;
+    }   
+
+    .site-section {
+        margin-top: 70px;
+    } 
+
+
+}
+
+
+@media (max-width: 767px) {
+    .offers_area.padding_top {
+        padding-top: 40px;
+    }
+
+    .offers_area {
+        padding-bottom: 40px;
+    }
+
+    .offers_area .single_offers {
+        margin-bottom: 30px;
+    }
+        
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .offers_area.padding_top {
+        padding-top: 50px;
+    }
+}
+
+
+/* MOBILES */
+@media (max-width: 750px) {
+
+    .site-mobile-menu {
+        background-color: transparent;
+        width: 200px;
+    }
+
+    .slide-one-item.home-slider .owl-prev, .slide-one-item.home-slider .owl-next {
+        width: 20px;
+        height: 40px;
+    }
+
+    .site-blocks-cover, .site-blocks-cover .row {
+        min-height: 0% !important;
+        height: calc(70vh) !important;
+    } 
+
+    .site-blocks-cover.inner-page-cover .row {
+        min-height: 0% !important;
+        height: calc(80vh) !important;
+    } 
+    
+    .slide-one-item.home-slider .owl-nav {
+        top: 40% !important;
+    } 
+
+    #popup-container {
+        left: 0;
+        width: 100%;
+
+    }
+
+    .itinerario {
+        background-color: #fff;
+    } 
+
+    .site-section {
+        margin-top: 50px;
+    } 
+
+    
+
+
+}
