@@ -281,6 +281,13 @@ a {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+/*politicas de privaciddad*/
+
+.textopoliticas {
+    color: #1F1F1F;
+    
+}
+
 
 /* TABLETS */
 @media (max-width: 950px) {
