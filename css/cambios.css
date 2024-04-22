@@ -46,7 +46,8 @@ a {
     background-color: #c6b791;
     transition: color 0.3s;
     /* Transición suave del color */
-    border-radius: 5px;
+    border-radius: 1px solid #c6b791;
+    color: #c6b791;
 }
 
 .btn.btn-primary:hover {
@@ -324,6 +325,29 @@ a {
     border-bottom: 2px solid #c6b791;
     font-size: 20px;
     line-height: 30px;
+}
+
+/* pagina-error  */
+
+.error-page .error-title {
+    color: #0d270ead;
+}
+
+.btn-default:hover {
+    background-color: #00a1fd;
+}
+
+.page-title h2 {
+    margin: 10px 0px;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.error-page .error-title {
+    font-size: 11em;
+   
 }
 
 
