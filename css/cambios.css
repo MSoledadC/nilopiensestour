@@ -24,7 +24,7 @@ a {
 }
 
 .site-navbar {
-    background: #d8f8e1c0;
+    background: #77bc8a87;
 }
 
 .site-wrap {
@@ -125,8 +125,21 @@ a {
     margin-bottom: 0px;
 }
 
+.logo_footer{
+    width: 250px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.input-group {
+    padding-top: 50px;
+}
+
+
 .list-unstyled {
     color: #fff;
+    padding-top: 45px;
 }
 
 /*---ITINERARIO*/
