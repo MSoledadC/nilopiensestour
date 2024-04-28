@@ -23,6 +23,11 @@ a {
     color: #c6b791;
 }
 
+.fondobody{
+   background: #ebeae2;
+
+}
+
 .site-navbar {
     background: #c5e0dc85;
 }
@@ -31,13 +36,12 @@ a {
     position: relative;
 }
 
-/* .site-navbar {
+.site-navbar {
     position: absolute;
     width: 100%;
     z-index: 1000;
     background-color: transparent;
-}*/
-
+}
 
 
 .slide-one-item.home-slider .owl-prev,
@@ -86,6 +90,10 @@ a {
     border-radius: 15px;
 }
 
+.sectioncolor {
+    background: rgb(88 129 89 / 54%);
+}
+
 
 /*FOOTER*/
 
@@ -98,7 +106,7 @@ a {
 
 .site-footer {
     padding: 15px;
-    background: #44666a45;
+    background: rgb(88 129 89 / 54%);
 }
 
 .site-footer p {
@@ -288,6 +296,22 @@ a {
 
 .nosotros2{
     padding: 15PX;
+}
+
+/* contacto*/
+
+.form-group {
+    
+    color: #ebeae2;
+}
+
+.form {
+    background: rgba(13, 39, 14, 0.678) !important;
+    color: #ebeae2;
+}
+
+.bg-white {
+    background: rgba(13, 39, 14, 0.678) !important;
 }
 
 /* login */
