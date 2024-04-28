@@ -54,6 +54,10 @@ a {
     background: #0d270ead !important;
 }
 
+.text-nav {
+    color: #ebe9e2 !important;
+}
+
 
 .dropdown {
     background: #0d270ead !important;
@@ -127,7 +131,6 @@ a {
 
 .list-unstyled {
     color: #fff;
-    padding-top: 45px;
 }
 
 /*servicios*/
