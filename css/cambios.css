@@ -23,8 +23,8 @@ a {
     color: #c6b791;
 }
 
-.fondobody{
-   background: #ebeae2;
+.fondobody {
+    background: #ebeae2;
 
 }
 
@@ -98,14 +98,18 @@ a {
     background: rgb(88 129 89 / 54%);
 }
 
+.logonav {
+    margin-left: -40px;
+}
+
 
 /*FOOTER*/
 
-/*politicas de privaciddad*/
+/*politicas de privacidad*/
 
 .textopoliticas {
     color: #1F1F1F;
-    
+
 }
 
 .site-footer {
@@ -117,7 +121,7 @@ a {
     margin-bottom: 0px;
 }
 
-.logo_footer{
+.logo_footer {
     width: 250px;
     height: 200px;
     border-radius: 50%;
@@ -131,6 +135,7 @@ a {
 
 .list-unstyled {
     color: #fff;
+    margin-top: 50px;
 }
 
 /*servicios*/
@@ -142,20 +147,21 @@ a {
     margin-top: -70px;
     width: 100%;
     border-radius: 15px;
-   
+
 }
 
 .iframe {
     border-radius: 15px;
 }
 
-  
-  .site-section {
+
+.site-section {
     padding: 10px;
     position: relative;
-    z-index: 10; 
-  }
-  
+    z-index: 10;
+    background: #ebeae2;
+}
+
 
 .p-5 {
     padding: 1rem !important;
@@ -166,7 +172,7 @@ a {
 
 .titulo_itineriario {
     text-transform: uppercase;
-    font-size: 3.5rem !important; 
+    font-size: 3.5rem !important;
     font-weight: 900;
     color: #fff;
     line-height: 1.5;
@@ -281,7 +287,7 @@ a {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     border-radius: 50%;
-    
+
 }
 
 .offers_area .single_offers a {
@@ -290,36 +296,60 @@ a {
 }
 
 .offers_area .single_offers:hover .about_thumb img {
-     width: 100%;
+    width: 100%;
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
 
-.nosotros2{
+/* nosotros*/
+
+.about_area .about_thumb .img_2 {
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.nosotros2 {
     padding: 15PX;
 }
+
+.about_area .about_thumb img {
+    width: 100%;
+}
+
+.img_2 {
+    margin-top: 50px;
+    margin-left: 15px;
+}
+
 
 /* contacto*/
 
 .form-group {
-    
+
     color: #ebeae2;
 }
 
 .form {
     background: rgba(13, 39, 14, 0.678) !important;
     color: #ebeae2;
+    border-radius: 20px;
 }
 
 .bg-white {
     background: rgba(13, 39, 14, 0.678) !important;
+    border-radius: 20px;
+}
+
+.contacto {
+    padding-top: 30px;
 }
 
 /* login */
 
-.login-blocks h2, .register-blocks h2 {
+.login-blocks h2,
+.register-blocks h2 {
     display: inline-block;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -349,12 +379,12 @@ a {
 
 .error-page .error-title {
     font-size: 11em;
-   
+
 }
 
 /*pagina agregar*/
 
-.wizard-container{
+.wizard-container {
     padding-top: 30px;
 }
 
@@ -387,6 +417,7 @@ a {
         font-size: 18px;
         display: none;
     }
+
     .offers_area.padding_top {
         padding-top: 50px;
     }
@@ -397,15 +428,15 @@ a {
 
     .offers_area .single_offers a {
         width: 100%;
-    }   
+    }
 
     .itinerario {
         background-color: #fff;
-    }   
+    }
 
     .site-section {
         margin-top: 70px;
-    } 
+    }
 
 
 }
@@ -423,7 +454,7 @@ a {
     .offers_area .single_offers {
         margin-bottom: 30px;
     }
-        
+
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -441,24 +472,26 @@ a {
         width: 200px;
     }
 
-    .slide-one-item.home-slider .owl-prev, .slide-one-item.home-slider .owl-next {
+    .slide-one-item.home-slider .owl-prev,
+    .slide-one-item.home-slider .owl-next {
         width: 20px;
         height: 40px;
     }
 
-    .site-blocks-cover, .site-blocks-cover .row {
+    .site-blocks-cover,
+    .site-blocks-cover .row {
         min-height: 0% !important;
         height: calc(70vh) !important;
-    } 
+    }
 
     .site-blocks-cover.inner-page-cover .row {
         min-height: 0% !important;
         height: calc(80vh) !important;
-    } 
-    
+    }
+
     .slide-one-item.home-slider .owl-nav {
         top: 40% !important;
-    } 
+    }
 
     #popup-container {
         left: 0;
@@ -468,13 +501,13 @@ a {
 
     .itinerario {
         background-color: #fff;
-    } 
+    }
 
     .site-section {
         margin-top: 50px;
-    } 
+    }
 
-    
+
 
 
 }
