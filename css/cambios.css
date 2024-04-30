@@ -69,6 +69,7 @@ a {
     /* Transición suave del color */
     border-radius: 1px solid #c6b791;
     color: #c6b791;
+    border-radius: 5px
 }
 
 .btn.btn-primary:hover {
@@ -344,6 +345,11 @@ a {
 
 .contacto {
     padding-top: 30px;
+}
+
+.border-top {
+    border-top: 1px solid #ebeae2;
+    padding-top: 20px;
 }
 
 /* login */
