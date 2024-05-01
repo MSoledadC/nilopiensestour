@@ -13,6 +13,13 @@ h6 {
     /* O la fuente que desees utilizar para los títulos */
 }
 
+.mansalva-regular {
+    font-family: "Mansalva", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
 a {
     color: #c6b791 !important;
 }
@@ -44,7 +51,7 @@ a:hover {
 
 .slide-one-item.home-slider .owl-prev,
 .slide-one-item.home-slider .owl-next {
-    background: #0d270ead;
+    background: ##7c9f36;
 }
 
 .slide-one-item.home-slider .owl-prev,
@@ -312,15 +319,14 @@ a:hover {
 }
 
 
-
-.amazing-deals .item span.info {
-    color: #22b3c1;
+.info {
+    color: #c12234;
     font-size: 15px;
     margin-bottom: 20px;
     display: block;
 }
 
-.amazing-deals .item h4 {
+.amazing-deals .itinerario h4 {
     font-size: 20px;
     font-weight: 700;
     padding-bottom: 25px;
@@ -328,7 +334,23 @@ a:hover {
     border-bottom: 1px solid #ddd;
 }
 
+.amazing-deals .itinerario p {
+    padding-top: 25px;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    margin-bottom: 30px;
+}
 
+.amazing-deals .itinerario i {
+    color: #777;
+    margin-right: 5px;
+}
+
+.amazing-deals .itinerario span.list {
+    font-size: 15px;
+    color: #afafaf;
+    font-weight: 500;
+}
 
 .section-heading h2 {
     margin-top: 0px;
