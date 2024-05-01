@@ -20,7 +20,11 @@ h6 {
 }
 
 a {
-    color: #c6b791;
+    color: #c6b791 !important;
+}
+
+a:hover {
+    color: #0d270ead !important;
 }
 
 .fondobody {
@@ -106,6 +110,108 @@ a {
 
 /*FOOTER*/
 
+.footer {
+    position: relative;
+    background-color: #bd1e2d;
+    color: #fff;
+    padding: 40px 0;
+    background: #bd1e2d;
+}
+
+.footer #back-to-top {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    height: 40px;
+    line-height: 48px;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    font-size: 36px;
+    text-align: center;
+    z-index: 99;
+}
+
+.footer .widget_list a {
+    color: #fff;
+    opacity: .7;
+}
+
+.footer .widget_list a:hover {
+    opacity: 1;
+    padding-left: 10px;
+}
+
+.footer .form-item {
+    margin-bottom: 0;
+}
+
+.footer__wrapper {
+    position: relative;
+    padding: 21px 0;
+    z-index: 999;
+}
+
+.footer__social {
+    margin-bottom: 0;
+}
+
+.footer__social a {
+    color: #fff;
+}
+
+.footer__social a:hover {
+    opacity: .8;
+}
+
+.footer__copy {
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+@media (min-width: 993px) {
+    .footer {
+        padding: 80px 0;
+    }
+}
+
+.footer__title {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.footer__form_wrapper {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.footer__btn_custom {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    line-height: 50px;
+    height: 100%;
+    padding: 0 15px;
+    background-color: #e3e3e3;
+    color: #bd1e2d;
+}
+
+.footer__backtotop {
+    float: right;
+    cursor: pointer;
+}
+
+.footer__backtotop i {
+    margin-right: 5px;
+}
+
+
+
 /*politicas de privacidad*/
 
 .textopoliticas {
@@ -115,10 +221,7 @@ a {
 
 .site-footer {
     padding: 15px;
-    background: rgb(88 129 89 / 54%);
-}
-
-.site-footer p {
+    background: #585935;
     margin-bottom: 0px;
 }
 
@@ -266,7 +369,7 @@ a {
     margin: 5px; /* Espacio entre los elementos */
   }
   
-  /* 6. box_image2
+  /* Promociones
 --------------------------------------------------------------------------------*/
 
 .box-image2 {
@@ -487,13 +590,6 @@ a {
   }
   
   
-
-
-  
-  
-
-  
-
 /* nosotros*/
 
 .about_area .about_thumb .img_2 {
@@ -553,6 +649,11 @@ a {
     border-bottom: 2px solid #c6b791;
     font-size: 20px;
     line-height: 30px;
+}
+
+.register-area {
+    padding: 20px;
+    background-color: rgba(13, 39, 14, 0.678);
 }
 
 /* pagina-error  */
