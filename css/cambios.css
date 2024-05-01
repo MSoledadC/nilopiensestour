@@ -654,6 +654,18 @@ a:hover {
     padding-top: 20px;
 }
 
+.titulocontacto {
+    font-size: 50px;
+    color: #c6b791;
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 90px;
+    text-transform: capitalize;
+    font-family: "Mansalva", sans-serif;
+    font-style: italic;
+    
+}
+
 /* login */
 
 .login-blocks h2,
