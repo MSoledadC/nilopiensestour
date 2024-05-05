@@ -87,7 +87,7 @@ a:hover {
     position: fixed;
     right: 20px;
     bottom: 35px;
-    z-index: 10;
+    z-index: 20;
 }
 
 .text-primaryservicios {
@@ -218,15 +218,16 @@ a:hover {
 
 .site-footer {
     padding: 15px;
-    background: #585935;
+    background: rgba(13, 39, 14, 0.678);
     margin-bottom: 0px;
 }
 
 .logo_footer {
-    width: 250px;
+    width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
+    margin-left: -70x;
 }
 
 .input-group {
@@ -622,6 +623,15 @@ a:hover {
     margin-left: 15px;
 }
 
+.nosotrossub {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.lista-nosotros {
+    margin-top: 25px;
+}
+
 
 /* contacto*/
 
@@ -660,6 +670,10 @@ a:hover {
     font-family: "Mansalva", sans-serif;
     font-style: italic;
     
+}
+
+.text-contacto {
+   color: #777272 !important;
 }
 
 /* login */
@@ -734,6 +748,12 @@ a:hover {
 
 .itinerario:hover .carousel-item img {
     transform: scale(1.1);
+}
+
+/*Destino*/
+.destino {
+    margin-bottom: 50px;
+    margin-top: 15px;
 }
 
 /* TABLETS */
