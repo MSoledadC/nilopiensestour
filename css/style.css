@@ -522,7 +522,7 @@ h1, h2, h3, h4, h5,
     height: calc(30vh); }
   .site-blocks-cover h1,h2 {
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 900;
     color: #fff;
     line-height: 1.5; }

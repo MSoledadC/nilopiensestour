@@ -13,12 +13,12 @@ h6 {
     /* O la fuente que desees utilizar para los títulos */
 }
 
-.mansalva-regular {
-    font-family: "Mansalva", sans-serif;
+.mochiy-pop-one-regular {
+    font-family: "Mochiy Pop One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: 3px !important; 
   }
-  
 
 a {
     color: #ffe1bd !important; 
@@ -673,7 +673,11 @@ a:hover {
 }
 
 .text-contacto {
-   color: #777272 !important;
+   color: #ffe1bd !important;
+}
+
+.color-texto {
+    color: #777272 !important;
 }
 
 /* login */
