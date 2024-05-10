@@ -65,7 +65,8 @@ a:hover {
 
 
 .dropdown {
-    background: #0d270ead !important;
+    background: rgb(13 39 14 / 60%) !important;
+    
 }
 
 .btn-primary {
