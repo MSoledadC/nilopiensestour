@@ -632,6 +632,10 @@ a:hover {
     margin-top: 25px;
 }
 
+.imagen-nosotros {
+    height: 500px;
+    width: 540px;
+}
 
 /* contacto*/
 
@@ -677,7 +681,15 @@ a:hover {
 }
 
 .color-texto {
+    color: #24232399 !important;
+}
+
+.text-portada {
     color: #777272 !important;
+}
+
+.viaja {
+    vertical-align: -10px;
 }
 
 /* login */
