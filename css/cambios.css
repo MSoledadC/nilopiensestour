@@ -51,7 +51,7 @@ a:hover {
 
 .slide-one-item.home-slider .owl-prev,
 .slide-one-item.home-slider .owl-next {
-    background: ##7c9f36;
+   /*  background: ##7c9f36;*/
 }
 
 .slide-one-item.home-slider .owl-prev,
@@ -683,6 +683,12 @@ a:hover {
 
 .color-texto {
     color: #24232399 !important;
+}
+
+.texto-contacto {
+    background:rgb(225 225 225 / 50%);
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .text-portada {
