@@ -905,8 +905,22 @@ a:hover {
 
 }
 
+@media (min-width: 992px) and (max-width: 1200px) {
+    .offers_area.padding_top {
+        padding-top: 50px;
+    }
+}
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
+
+    .overlap-section{
+        margin-top: -150px;
+    }
+
+    .section-vista-cel {
+        background: #ddd;
+    }
+
     .offers_area.padding_top {
         padding-top: 40px;
     }
@@ -919,13 +933,25 @@ a:hover {
         margin-bottom: 30px;
     }
 
-}
+    .site-blocks-cover h1, h2 {
+        font-size: 1.9rem;
+    }
+    
+    .logo_footer{
+        width: 150px;
+        height: 150px;
+    }
 
-@media (min-width: 992px) and (max-width: 1200px) {
-    .offers_area.padding_top {
-        padding-top: 50px;
+    .menu-vista-cel{
+        left: 50%;
+    }
+    .footer-vista-cel {
+        flex-wrap: nowrap;
+        flex-direction: row;
     }
 }
+
+
 
 
 /* MOBILES */
@@ -957,6 +983,8 @@ a:hover {
         top: 40% !important;
     }
 
+    
+
     #popup-container {
         left: 0;
         width: 100%;
@@ -970,6 +998,8 @@ a:hover {
     .site-section {
         margin-top: 50px;
     }
+
+    
 
     }
 
