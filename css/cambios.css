@@ -971,7 +971,22 @@ a:hover {
         margin-top: 50px;
     }
 
+    }
+
+
+    /* MOBILES */
+    @media (max-width: 650px) {
+
+        .menu-vista-cel{
+          left: 50%;
+        }
+    }
 
 
 
-}
+
+    /* CEL*/
+    @media (max-width: 340px) {
+    }
+
+
