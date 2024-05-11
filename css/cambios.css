@@ -611,6 +611,21 @@ a:hover {
     margin-left: 10px;
 }
 
+  /* Estilos para el título */
+  .entrada-derecha {
+    animation: entradaDesdeDerecha 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  /* Definición de la animación */
+  @keyframes entradaDesdeDerecha {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
 .nosotros2 {
     padding: 15PX;
 }
@@ -637,6 +652,40 @@ a:hover {
     height: 500px;
     width: 540px;
 }
+
+.titulo-nosotros2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subtitulo2{
+    color: #666;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;   
+}
+
+.texto2{
+    color: #666;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+ /* Estilos para la clase de entrada desde abajo */
+ .entrada-desde-abajo {
+    animation: entradaDesdeAbajo 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  /* Definición de la animación */
+  @keyframes entradaDesdeAbajo {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 /* contacto*/
 
@@ -666,6 +715,21 @@ a:hover {
     padding-top: 20px;
 }
 
+ /* Estilos para la clase de entrada desde la izquierda */
+ .entrada-desde-izquierda {
+    animation: entradaDesdeIzquierda 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  /* Definición de la animación */
+  @keyframes entradaDesdeIzquierda {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
 .titulocontacto {
     font-size: 50px;
     color: #c6b791;
@@ -680,10 +744,33 @@ a:hover {
 
 .text-contacto {
    color: #ffe1bd !important;
+   font-size: 24px;
+   line-height: 1.5;
+   text-align: center;
+   position: relative;
+   display: inline-block;
 }
+
+.texto-contacto span {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+  }
+  .texto-contacto:hover span {
+    transform: translateY(-5px);
+  }
 
 .color-texto {
     color: #24232399 !important;
+}
+
+.subtitulo-contacto{
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .texto-contacto {
