@@ -613,7 +613,7 @@ a:hover {
 
   /* Estilos para el título */
   .entrada-derecha {
-    animation: entradaDesdeDerecha 1s ease-out forwards;
+    animation: entradaDesdeDerecha 3s ease-out forwards;
     opacity: 0;
     transform: translateX(100%);
   }
@@ -674,7 +674,7 @@ a:hover {
 
  /* Estilos para la clase de entrada desde abajo */
  .entrada-desde-abajo {
-    animation: entradaDesdeAbajo 1s ease-out forwards;
+    animation: entradaDesdeAbajo 2s ease-out forwards;
     opacity: 0;
     transform: translateY(100%);
   }
@@ -717,7 +717,7 @@ a:hover {
 
  /* Estilos para la clase de entrada desde la izquierda */
  .entrada-desde-izquierda {
-    animation: entradaDesdeIzquierda 1s ease-out forwards;
+    animation: entradaDesdeIzquierda 3s ease-out forwards;
     opacity: 0;
     transform: translateX(-100%);
   }
