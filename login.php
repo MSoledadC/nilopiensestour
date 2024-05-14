@@ -9,10 +9,10 @@ $confpass= "1234";
 
 
 if ($usuario == $confuser && $contrasenia == $confpass) {
-  header ( "location:listarpropiedades.php");
+  header ( "location:lista.php");
 }
 else {
-    header ( "location:404.html");
+    header ( "location:error404.html");
     }
 
 ?>

@@ -147,89 +147,117 @@
     </div>
 
   <!-- property area -->
+
   <div class="site-blocks-cover inner-page-cover" style="background-image: url(images/portadas/2.png);" data-aos="fade" data-stellar-background-ratio="0.5"></div>
+
 
   <div class="site-section bg-light">
       <div class="container">
-          <div class="row">
-              <!-- Columna izquierda con el formulario -->
-              <div class="col-md-7">
-                  <h3><b>Subir</b> ITINERARIOS<br><small>Seguir las indicaciones y llenar los campos requeridos.</small></h3>
-                  <form action="agregar.php" class="p-5 bg-white" method="post" enctype="multipart/form-data">
-                      <div class="row form-group">
-                          <div class="col-md-6 mb-3 mb-md-0">
-                              <div class="form-group">
-                                  <label>Itinerario Nombre <small>(requerido)</small></label>
-                                  <input name="nombre_itinerario" type="text" class="form-control" placeholder="Itinerario Nombre" required>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label>Ubicación <small>(requerido)</small></label>
-                                  <input name="lugares_itinerario" type="text" class="form-control" placeholder="Ubicación" required>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label>Noches <small>(requerido)</small></label>
-                                  <input name="noches" type="text" class="form-control" placeholder="Noches" required>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label>Fecha Salida <small>(requerido)</small></label>
-                                  <input name="fecha_salida" type="date" class="form-control" placeholder="Fecha Salida" required>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label>promocion3 <small>(requerido)</small></label>
-                                  <input name="promocion3" type="text" class="form-control" placeholder="1 true" required>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row form-group">
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  <label>Descripción :</label>
-                                  <textarea name="descripcion" type="text" placeholder="Descripción" class="form-control" required></textarea>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row form-group">
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  <label>Imagen:</label>
-                                  <input type="file" name="imagen" id="wizard-picture">
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row form-group">
-                          <div class="col-md-12">
-                              <div class="pull-right">
-                                  <input type="submit" class='btn btn-finish btn-primary' name="submit" value="Agregar">
-                              </div>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-              <!-- Columna derecha con el contenido adicional -->
-              <div class="col-md-5">
-                  <div class="p-4 mb-3 bg-white">
-                      <img src="images/portadas/3.jpg" alt="NilopiensesTour" class="img-fluid mb-4 rounded">
-                      <h3 class="h5 text-contacto mb-3">Si algo bueno te pasa</h3>
-                      <p class="texto-contacto">
-                          <span>Si algo bueno te pasa, Viaja para celebrar... </span><br>
-                          <span>Si algo malo te pasa, Viaja para olvidar... </span><br>
-                          <span>Si nada te pasa, Viaja, para que algo te pase... </span>
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-   
+        <div class="row">
+          <div class="col-md-7">
+            <h3>
+              <b>Subir</b> ITINIERARIOS<br>
+              <small>Lorem ipsum dolor sit amet, consectetur adipisicing.</small>
+          </h3>
+            
 
+            
+
+            <form action="" class="p-5 bg-white">
+            <?php
+          // 1) Conexión
+          $conexion = mysqli_connect("127.0.0.1", "root", "");
+          mysqli_select_db($conexion, "nilopiensestour");
+
+          // 2) Preparar la orden SQL
+          $consulta = "SELECT * FROM itinerarios WHERE promocion3 = 1 LIMIT 3";
+
+          // 3) Ejecutar la orden y obtener los registros
+          $datos = mysqli_query($conexion, $consulta);
+        ?>
+             
+
+              <div class="row form-group">
+              <?php while ($reg = mysqli_fetch_array($datos)) { ?>
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <div class="form-group">
+                    <label>Itinerario Nombre <small>(requerido)</small></label>
+                    <input name="nombre_itinerario" type="text" class="form-control" placeholder="Itinerario Nombre" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Ubicación <small>(requerido)</small></label>
+                    <input name="lugares_itinerario" type="text" class="form-control" placeholder="lugares_itinerario" required>
+                </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Noches <small>(requerido)</small></label>
+                    <input name="noches" type="text" class="form-control" placeholder="Noches" required>
+                </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Fecha Salida <small>(requerido)</small></label>
+                    <input name="fecha_salida" type="text" class="form-control" placeholder="Fecha Salida" required>
+                </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Incluye <small>(requerido)</small></label>
+                    <input name="ubicacion" type="text" class="form-control" placeholder="Incluye" required>
+                </div>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Descripción :</label>
+                    <textarea name="descripcion" type="text" placeholder="Descripción" class="form-control" required></textarea>
+                </div>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <div class="pull-right">
+                    <input type="submit" class='btn btn-finish btn-primary' name="submit" value="Agregar">
+                </div>
+                </div>
+              </div>
+
+  
+            </form>
+          </div>
+          <div class="col-md-5">
+            
+            <div class="p-4 mb-3 bg-white">
+              <div class="picture-container">
+                <div class="picture">
+                    <img src="assets/img/default-property.jpg" class="picture-src" id="wizardPicturePreview" title="" />
+                    <input type="file" name="imagen" id="wizard-picture">
+                </div>
+            </div>
+
+            </div>
+            
+            <div class="p-4 mb-3 bg-white">
+              <img src="images/portadas/3.jpg" alt="NilopiensesTour" class="img-fluid mb-4 rounded">
+              <h3 class="h5 text-contacto mb-3">Si algo bueno te pasa</h3>
+              <p class="texto-contacto">
+                <span>Si algo bueno te pasa, Viaja para celebrar... </span><br>
+                <span>Si algo malo te pasa, Viaja para olvidar... </span><br>
+                <span>Si nada te pasa, Viaja, para que algo te pase... </span>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
   <!-- footer -->			
   <footer class="site-footer">
