@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -131,6 +134,8 @@
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
             <div><a href="index.html">Inicio</a> <span class="mx-2 text-white">&bullet;</span> <span
                 class="text-white">Lista </span></div>
+                <h2><strong> <?php echo $_SESSION["usuario"] ?></strong></a></h2>
+                <h6><a href="cerrarsesion.php" >Cerrar Sesión</a></h6>
 
           </div>
         </div>
@@ -186,9 +191,9 @@
                       <span class="box-image2__date">Salida <?php echo $reg['fecha_salida']; ?></span>
                       <span class="box-image2__date"><?php echo $reg['noches']; ?> Noches</span>
                       <div>
-                        <a href="submit-property.html" class="button">Editar</a>
-                        <a href="#" class="button delete_user_car">Eliminar</a>
-                        <a href="agregar.html" class="button">Agregar</a>
+                        <a href="editar.php?id=<?php echo $reg['id'];?>">Editar</a>
+                       <!-- <a href="eliminar.php?id=<?php echo $reg['id'];?>">Eliminar</a>
+                        <a href="agregar.html" class="button">Agregar</a>-->
                       </div>
                     </div>
                   </div>
@@ -220,7 +225,7 @@
       // Reutilizar la conexión existente
       // La conexión ya se realizó anteriormente, por lo que no es necesario volver a conectarse
       // 2) Preparar la orden SQL para itinerarios (puedes cambiar los límites si es necesario)
-      $consulta_itinerarios = "SELECT * FROM itinerarios LIMIT 7";
+      $consulta_itinerarios = "SELECT * FROM itinerarios";
 
       // 3) Ejecutar la orden y obtener los registros
       $datos_itinerarios = mysqli_query($conexion, $consulta_itinerarios);

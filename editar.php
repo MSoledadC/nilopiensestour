@@ -1,3 +1,29 @@
+<?php
+
+$conexion = mysqli_connect("127.0.0.1", "root", "");
+mysqli_select_db($conexion, "servicios_productos");
+
+$id = $_GET['id'];
+$consulta = "SELECT * FROM proyectos WHERE id=$id";
+$respuesta = mysqli_query($conexion, $consulta);
+$datos=mysqli_fetch_array($respuesta);
+
+if(array_key_exists('guardar_cambios',$_POST)){
+    $nombre=$_POST['nombre'];
+    $ubicacion=$_POST['ubicacion'];
+    $descripcion=$_POST['descripcion'];
+    $precio=$_POST['precio'];
+    $m2=$_POST['metros'];
+    $imagen= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+
+    $consulta = "UPDATE proyectos SET nombre='$nombre', ubicacion='$ubicacion', descripcion='$descripcion', precio='$precio', metros='$metros', imagen='$imagen' WHERE id=$id";
+
+    mysqli_query($conexion,$consulta);
+
+header('location: propiedades.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +51,7 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200;1,300&family=Poppins:ital,wght@0,200;0,400;1,100&display=swap"
     rel="stylesheet">
+
 
   <!-- <link rel="manifest" href="site.webmanifest"> -->
   <link rel="shortcut icon" type="image/x-icon" href="/images/logotr.ico">
@@ -119,7 +146,7 @@
                                       class="icon-linkedin"></span></a>
                           </li>
                           <li>
-                              <a href="login.html" target="_blank" class="pl-3 pr-3 text-white"><span
+                              <a href="login.html"  class="pl-3 pr-3 text-white"><span
                                       class="icon-user"></span></a>
                           </li>
                       </ul>
@@ -136,6 +163,7 @@
         </div>
 
     </header>
+    
 
     <div class="btn-wrapper">
       <a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:"
@@ -143,23 +171,101 @@
         <img src="images/logo_ws.png" alt="Nilopiensestour ws" width="70" height="70" />
       </a>
     </div>
-    
 
-    <!-- register-area -->
-          
-        <div class="content-area error-page" style="background-color: #0d270e5e; padding-bottom: 55px; padding-top: 100px;">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
-                      <h2 class="error-title">404</h2>
-                      <p>Lo sentimos, es posible que la página que solicitaste se haya movido o eliminado</p>
-                      <a href="index.html" class="btn btn-primary py-3 px-5 text-white border-0">Inicio</a>                        
+    <?php
+            $nombre_itinerario=$datos["nombre_itinerario"];
+            $lugares_itinerario=$datos["lugares_itinerario"];
+            $descripcion=$datos["descripcion"];
+            $noches=$datos["noches"];
+            $fecha_salida=$datos["fecha_salida"];  
+            $imagen=$datos['imagen'];?>
+
+  <!-- property area -->
+  <div class="site-blocks-cover inner-page-cover" style="background-image: url(images/portadas/2.png);" data-aos="fade" data-stellar-background-ratio="0.5"></div>
+
+  <div class="site-section bg-light">
+      <div class="container">
+          <div class="row">
+              <!-- Columna izquierda con el formulario -->
+              <div class="col-md-7">
+                  <h3><b>Subir</b> ITINERARIOS<br><small>Seguir las indicaciones y llenar los campos requeridos.</small></h3>
+                  <form action="agregar.php" class="p-5 bg-white" method="post" enctype="multipart/form-data">
+                      <div class="row form-group">
+                          <div class="col-md-6 mb-3 mb-md-0">
+                              <div class="form-group">
+                                  <label>Itinerario Nombre <small>(requerido)</small></label>
+                                  <input name="nombre_itinerario" type="text" class="form-control" placeholder="Itinerario Nombre" required>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>Ubicación <small>(requerido)</small></label>
+                                  <input name="lugares_itinerario" type="text" class="form-control" placeholder="Ubicación" required>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>Noches <small>(requerido)</small></label>
+                                  <input name="noches" type="text" class="form-control" placeholder="Noches" required>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>Fecha Salida <small>(requerido)</small></label>
+                                  <input name="fecha_salida" type="date" class="form-control" placeholder="Fecha Salida" required>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>promocion3 <small>(requerido)</small></label>
+                                  <input name="promocion3" type="text" class="form-control" placeholder="1 true" required>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row form-group">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label>Descripción :</label>
+                                  <textarea name="descripcion" type="text" placeholder="Descripción" class="form-control" required></textarea>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row form-group">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label>Imagen:</label>
+                                  <input type="file" name="imagen" id="wizard-picture">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row form-group">
+                          <div class="col-md-12">
+                              <div class="pull-right">
+                                  <input type="submit" class='btn btn-finish btn-primary' name="submit" value="Agregar">
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+              <!-- Columna derecha con el contenido adicional -->
+              <div class="col-md-5">
+                  <div class="p-4 mb-3 bg-white">
+                      <img src="images/portadas/3.jpg" alt="NilopiensesTour" class="img-fluid mb-4 rounded">
+                      <h3 class="h5 text-contacto mb-3">Si algo bueno te pasa</h3>
+                      <p class="texto-contacto">
+                          <span>Si algo bueno te pasa, Viaja para celebrar... </span><br>
+                          <span>Si algo malo te pasa, Viaja para olvidar... </span><br>
+                          <span>Si nada te pasa, Viaja, para que algo te pase... </span>
+                      </p>
                   </div>
-              </div> 
+              </div>
           </div>
-      </div> 
- 
-     <!-- footer -->			
+      </div>
+  </div>
+   
+
+
+  <!-- footer -->			
   <footer class="site-footer">
     <div class="container">
       <div class="row d-flex align-items-center footer-vista-cel">
