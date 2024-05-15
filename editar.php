@@ -266,49 +266,49 @@ header('location: propiedades.php');
 
   <!-- footer -->			
   <footer class="site-footer">
-    <div class="container">
-      <div class="row d-flex align-items-center footer-vista-cel">
-        <div class="col-lg-4">
-          <div class="footer_widget">
-            <img src="images/logo-tr.png" width="150" height="150" alt="NilopiensesTour logo" class="logo_footer">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="list-unstyled">
-                <li><a href="https://maps.app.goo.gl/nmgiiBNKB7BUAE849" target="_blank"><i class="fa fa-map-o"></i> Alicante - España</a></li>
-                <li><a href="https://maps.app.goo.gl/qS9KhPb6yYttkkKAA" target="_blank"><i class="fa fa-map-marker"></i> Ni lo pienses tour - Av. D” Escandinavia 98 - Gran Alacant</a></li>
-                <li><a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:" target="_blank"><i class="fi fi-rr-circle-phone"></i> +34 685804332 </a></li>
-              </ul>
+      <div class="container">
+        <div class="row d-flex align-items-center footer-vista-cel">
+          <div class="col-lg-4">
+            <div class="footer_widget">
+              <img src="images/logo-tr.png" width="150" height="150" alt="NilopiensesTour logo" class="logo_footer">
             </div>
           </div>
-        </div>
-        <div class="col-lg-2">
-          <div class="footer__social">
-              <h3 class="footer-heading mb-2">Redes Sociales</h3>
-              <div class="d-flex justify-content-between">
-                  <a class="social-icon mr-2" href="https://www.facebook.com/NiLoPiensesTour" target="_blank"><i class="fa fa-facebook"></i></a>
-                  <a class="social-icon mr-2" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" ><i class="fa fa-instagram"></i></a>
-                  <a class="social-icon" href="#"><i class="fa fa-linkedin"></i></a>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="list-unstyled">
+                  <li><a href="https://maps.app.goo.gl/nmgiiBNKB7BUAE849" target="_blank"><i class="fa fa-map-o"></i> Alicante - España</a></li>
+                  <li><a href="https://maps.app.goo.gl/qS9KhPb6yYttkkKAA" target="_blank"><i class="fa fa-map-marker"></i> Ni lo pienses tour - Av. D” Escandinavia 98 - Gran Alacant</a></li>
+                  <li><a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:" target="_blank"><i class="fi fi-rr-circle-phone"></i> +34 685804332 </a></li>
+                </ul>
               </div>
+            </div>
           </div>
-      </div>
-      
-  </footer><!-- End / footer -->
-  
-  
-  <div class="footer__wrapper">
-    <div class="container">
-      <p class="footer__copy">Copyright &copy;
-        <script>document.write(new Date().getFullYear());</script> -
-        <a href="politicasprivacidad.html" target="_blank">Políticas de privacidad,</a><a href="avisolegal.html">Términos y condiciones,</a><a href="cookies.html"> Cookies</a>
-        By <a href="https://taplink.cc/msoledadc"
-          target="_blank"> MSoledadC</a></a>.</p><span class="footer__backtotop" id="back-to-top"> <i class="fa fa-arrow-up"></i>Inicio</span>
-    </div>
+          <div class="col-lg-2">
+            <div class="footer__social">
+                <h3 class="footer-heading mb-2">Redes Sociales</h3>
+                <div class="d-flex justify-content-between">
+                    <a class="social-icon mr-2" href="https://www.facebook.com/NiLoPiensesTour" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a class="social-icon mr-2" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" ><i class="fa fa-instagram"></i></a>
+                    <a class="social-icon" target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+    </footer><!-- End / footer -->
+			
+			
+			<div class="footer__wrapper">
+				<div class="container">
+					<p class="footer__copy">Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> -
+						<a href="politicasprivacidad.html" target="_blank">Políticas de privacidad,</a><a href="avisolegal.html">Términos y condiciones,</a><a href="cookies.html"> Cookies</a>
+						By <a href="https://taplink.cc/msoledadc"
+						  target="_blank"> MSoledadC</a></a>.</p><span class="footer__backtotop" id="back-to-top"> <i class="fa fa-arrow-up"></i>Inicio</span>
+				</div>
+			</div>
+		</div>
   </div>
-</div>
-</div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
