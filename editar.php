@@ -134,15 +134,14 @@ header('location: propiedades.php');
                       <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0"
                           data-class="social">
                           <li>
-                              <a href="" class="pl-3 pr-3 text-white"><span
-                                      class="icon-facebook"></span></a>
+                              <a href="https://www.facebook.com/NiLoPiensesTour" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-facebook"></span></a>
                           </li>
                           <li>
                               <a href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="pl-3 pr-3 text-white"><span
-                                      class="icon-instagram"></span></a>
+                                      class="icon-instagram" ></span></a>
                           </li>
                           <li>
-                              <a href="https://www.linkedin.com/in/ni-lo-pienses-tours-4986a52a3/" target="_blank" class="pl-3 pr-3 text-white"><span
+                              <a href="https://www.linkedin.com/in/ni-lo-pienses-tours-4986a52a3/" target="_blank" class="pl-3 pr-3 text-white" ><span
                                       class="icon-linkedin"></span></a>
                           </li>
                           <li>
@@ -289,8 +288,8 @@ header('location: propiedades.php');
           <div class="footer__social">
               <h3 class="footer-heading mb-2">Redes Sociales</h3>
               <div class="d-flex justify-content-between">
-                  <a class="social-icon mr-2" href="#"><i class="fa fa-facebook"></i></a>
-                  <a class="social-icon mr-2" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa fa-instagram"></i></a>
+                  <a class="social-icon mr-2" href="https://www.facebook.com/NiLoPiensesTour" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a class="social-icon mr-2" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" ><i class="fa fa-instagram"></i></a>
                   <a class="social-icon" href="#"><i class="fa fa-linkedin"></i></a>
               </div>
           </div>
