@@ -997,6 +997,10 @@ a:hover {
     /* MOBILES */
     @media (max-width: 650px) {
 
+        .site-mobile-menu .site-nav-wrap > li > a {
+            font-size: 12px;
+        }
+
         .overlap-section {
             margin-top: -100px;
         }
@@ -1023,7 +1027,7 @@ a:hover {
         }
 
         .footer__wrapper {
-            font-size: 10px;
+            font-size: 8px;
         }
     }
 
