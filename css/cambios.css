@@ -84,7 +84,7 @@ a:hover {
     position: fixed;
     right: 20px;
     bottom: 35px;
-    z-index: 20;
+    z-index: 1000;
 }
 
 .text-primaryservicios {
@@ -283,16 +283,6 @@ a:hover {
     position: relative;
     font-size: 48px;
 }
-
-.titulo_itineriario {
-    text-transform: uppercase;
-    font-size: 3.5rem !important;
-    font-weight: 900;
-    color: #fff;
-    line-height: 1.5;
-    width: max-content;
-}
-
 
 .itinerario {
     border-radius: 23px;
@@ -898,6 +888,10 @@ a:hover {
         margin-top: 70px;
     }
 
+    .footer__wrapper {
+        font-size: smaller;
+    }
+
 
 }
 
@@ -1003,8 +997,33 @@ a:hover {
     /* MOBILES */
     @media (max-width: 650px) {
 
+        .overlap-section {
+            margin-top: -100px;
+        }
+
+        .btn-wrapper {
+            position: fixed;
+            right: 20px;
+            bottom: 85px;
+            z-index: 1000;
+        }
+
+        
         .menu-vista-cel{
           left: 50%;
+        }
+
+        .logo_footer {
+            width: 100px;
+            height: 100px;
+        }
+
+        .list-unstyled{
+            font-size: 10px;
+        }
+
+        .footer__wrapper {
+            font-size: 10px;
         }
     }
 
