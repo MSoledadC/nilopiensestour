@@ -989,16 +989,18 @@ a:hover {
         margin-top: 50px;
     }
 
-    
-
     }
 
 
     /* MOBILES */
     @media (max-width: 650px) {
 
+        .site-mobile-menu .site-nav-wrap[data-class="social"] {
+            margin-top: 0px;
+        }
+
         .site-mobile-menu .site-nav-wrap > li > a {
-            font-size: 12px;
+            font-size: 14px;
         }
 
         .overlap-section {
