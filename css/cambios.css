@@ -114,9 +114,17 @@ a:hover {
 
 }
 
+/* metodos de pago */
+
+.titulo_pagos{
+    color: rgb(13 39 14 / 60%);
+    font-weight: 900 !important;
+    
+}
+
 .payment-icons img {
-    max-width: 100px; /* Ajusta el tamaño de las imágenes */
-    margin: 0 15px; /* Margen entre las imágenes */
+    max-width: 100px; 
+    margin: 0 15px; 
 }
 
 
