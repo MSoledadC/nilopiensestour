@@ -86,11 +86,11 @@ session_start()
                 <li class="has-children">
                   <a class="text-white" href="">Destinos</a>
                   <ul class="dropdown">
-                    <li><a class="text-white" href="">Cruceros</a></li>
-                    <li><a class="text-white" href="">Alojamientos</a></li>
-                    <li><a class="text-white" href="">Paquetes Grupales</a></li>               
-                    <li><a class="text-white" href="">Paquetes en Glampings</a></li>            
-                    <li><a class="text-white" href="">Aéreos </a></li>
+                      <li><a class="text-white" href="">América</a></li>
+                      <li><a class="text-white" href="">Europa</a></li>
+                      <li><a class="text-white" href="">Cruceros</a></li>               
+                      <li><a class="text-white" href="">Oriente Medio</a></li>            
+                      <li><a class="text-white" href="">África</a></li>
                   </ul>
                 </li>
                 <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
