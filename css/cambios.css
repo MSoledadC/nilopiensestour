@@ -101,6 +101,21 @@ a:hover {
     margin-left: -40px;
 }
 
+.inicio_2texto{
+    color: #000 !important;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.inicio_3texto {
+    color: #000 !important;
+    font-size: 2rem;
+    margin-bottom: 20px;
+
+}
+
+
+
 
 /*FOOTER*/
 
