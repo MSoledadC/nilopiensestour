@@ -922,6 +922,13 @@ a:hover {
         background-color: #fff;
     }
 
+    .site-sectiontablet {
+        padding: 10px;
+        position: relative;
+        z-index: 10;
+        background: #ebeae2;
+    }
+
     .site-section {
         margin-top: 70px;
     }
@@ -1028,6 +1035,10 @@ a:hover {
     .itinerario {
         background-color: #fff;
     }
+
+    .site-sectiontablet {
+            margin-top: 60px;
+        }
 
     .site-section {
         margin-top: 50px;
