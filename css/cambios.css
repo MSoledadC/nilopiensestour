@@ -66,9 +66,9 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #c6b791;
+    background-color: #c6b79185;
     transition: color 0.3s;
-    /* Transición suave del color */
+    /* Transición suave del color background-color: #c6b791;*/
     border-radius: 1px solid #c6b791;
     color: #0d270e;
     border-radius: 5px
@@ -90,7 +90,7 @@ a:hover {
 .text-primaryservicios {
     line-height: 0 !important;
     font-size: 3rem !important;
-    color: #0d270e !important;
+    color: rgb(13 39 14 / 60%) !important;
 }
 
 .unit-1 {
@@ -103,16 +103,22 @@ a:hover {
 
 .inicio_2texto{
     color: #000 !important;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 20px;
 }
 
 .inicio_3texto {
     color: #000 !important;
-    font-size: 2rem;
+    
     margin-bottom: 20px;
 
 }
+
+.payment-icons img {
+    max-width: 100px; /* Ajusta el tamaño de las imágenes */
+    margin: 0 15px; /* Margen entre las imágenes */
+}
+
 
 
 
