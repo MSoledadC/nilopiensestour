@@ -95,12 +95,12 @@
                               <li class="has-children">
                                   <a class="text-white" href="">Destinos</a>
                                   <ul class="dropdown">
-                                    <li><a class="text-white" href="">América</a></li>
-                                    <li><a class="text-white" href="">Europa</a></li>
-                                    <li><a class="text-white" href="">Cruceros</a></li>               
-                                    <li><a class="text-white" href="">Oriente Medio</a></li>            
-                                    <li><a class="text-white" href="">África</a></li>
-                                  </ul>
+                      <li><a class="text-white" href="puntacana.html">América</a></li>
+                      <li><a class="text-white" href="">Europa</a></li>
+                      <li><a class="text-white" href="">Cruceros</a></li>               
+                      <li><a class="text-white" href="">Oriente Medio</a></li>            
+                      <li><a class="text-white" href="marruecos.html">África</a></li>
+                    </ul>
                               </li>
                               <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
                               <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>
