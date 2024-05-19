@@ -101,7 +101,7 @@ session_start()
                 <li><a href="booking.html">Book Online</a></li> -->
               </ul>
             </nav>
-          </div
+          </div>
 
           <div class="col-6 col-xl-2 text-right">
             <div class="d-none d-xl-inline-block">

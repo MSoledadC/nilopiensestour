@@ -995,9 +995,23 @@ a:hover {
     .subtitulo-contacto {
         font-size: 20px;
     }
+
+    .footer-vista-cel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footer-vista-cel > div {
+        flex: 0 0 48%; /* Each div takes approximately half the width */
+        margin-bottom: 20px;
+    }
+    .footer_widget img,
+    .footer__social img {
+        max-width: 100%; /* Ensure images fit within their containers */
+        height: auto;
+    }
     
 }
-
 
 
 
