@@ -233,6 +233,10 @@ a:hover {
     margin-right: 5px;
 }
 
+.icono_pagoseguro {
+    background: #ffe1bd !important;
+    border-radius: 35%; 
+}
 
 
 /*politicas de privacidad*/
