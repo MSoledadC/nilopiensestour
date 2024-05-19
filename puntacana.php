@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="google-site-verification" content="fHQZZUJkBFcxu885s-_RxvO19M0c53Qhjosu2NYXlFE" />
+  <title>NilopiensesTour &mdash; Agencia de viajes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="keywords" content="Crista Travel" />
+	<meta name="author" content="MSoledadC" />
+  <meta name="description" content="Servicio personalizado en cada viaje, estamos presentes en cada detalle, para que su viaje se transforme en una experiencia inolvidable de principio a fin.">
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Crista Travel"/>
+	<meta property="og:image" content="https://www.cristatravel.tur.ar/images/Logo_crista.jpg"/>
+	<meta property="og:url" content="https://www.cristatravel.tur.ar/"/>
+	<meta property="og:site_name" content="Crista Travel"/>
+    <meta property="og:type" content="Sitio Web">
+	<meta property="og:description" content="Nuestra Agencia de viaje ofrece un servicio personalizado, estamos presentes en cada detalle, para que su viaje se transforme en una experiencia inolvidable de principio a fin."/>
+	<meta name="twitter:title" content="Crista Travel" />
+	<meta name="twitter:image" content="https://www.cristatravel.tur.ar/images/Logo_crista.jpg" />
+	<meta name="twitter:url" content="https://www.cristatravel.tur.ar/" />
+	<meta name="twitter:card" content="summary" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200;1,300&family=Poppins:ital,wght@0,200;0,400;1,100&display=swap" rel="stylesheet"/>
+
+
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="/images/logotr.ico">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cambios.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+  <script src="https://kit.fontawesome.com/df0028962f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar py-1" role="banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6 col-xl-2">
+                    <img class="mb-0 logonav" src="images/logo-tr.png" alt="Nilopiensestour logo" width="150" height="150">
+                    <!-- <h1 class="text-white mb-0 nava"><strong>NI LO PIENSES TOUR</strong></h1>-->
+                </div>
+                <div class="col-8 col-md-8 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
+
+                        <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                            <li class="active">
+                                <a class="text-white" href="index.html">Inicio</a>
+                            </li>
+                            <li class="has-children">
+                                <a class="text-white" href="">Destinos</a>
+                                <ul class="dropdown">
+                                  <li><a class="text-white" href="">América</a></li>
+                                  <li><a class="text-white" href="">Europa</a></li>
+                                  <li><a class="text-white" href="">Cruceros</a></li>               
+                                  <li><a class="text-white" href="">Oriente Medio</a></li>            
+                                  <li><a class="text-white" href="">África</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
+                            <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>
+                            <li><a class="text-white" href="contacto.html">Contacto</a></li>
+                            <!--<li><a href="blog.html">Blog</a></li>
+                                <li><a href="discount.html">Discount</a></li>
+                                
+                                <li><a href="booking.html">Book Online</a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-6 col-xl-2 text-right">
+                    <div class="d-none d-xl-inline-block">
+                        <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0"
+                            data-class="social">
+                            <li>
+                                <a href="https://www.facebook.com/NiLoPiensesTour" target="_blank" class="pl-3 pr-3 text-white"><span
+                                        class="icon-facebook"></span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="pl-3 pr-3 text-white"><span
+                                        class="icon-instagram"></span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/ni-lo-pienses-tours-4986a52a3/" target="_blank" class="pl-3 pr-3 text-white"><span
+                                        class="icon-linkedin"></span></a>
+                            </li>
+                            <li>
+                                <a href="login.html" target="_blank" class="pl-3 pr-3 text-white"><span
+                                        class="icon-user"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+                        <a href="#" class="site-menu-toggle js-menu-toggle text-black"><span
+                                class="icon-menu h3"></span></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <div class="site-blocks-cover inner-page-cover" style="background-image: url(images/portadas/3.jpg);"
+      data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+
+          <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+            <h1 class="text-white font-weight-light"></h1>
+            <div><a href="index.html">inicio</a> <span class="mx-2 text-white">&bullet;</span> <span
+                class="text-white">Itinerario</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-wrapper">
+      <a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:"
+        target="_blank" class="btn-ws">
+        <img src="images/logo_ws.png" alt="Nilopiensestour ws" width="70" height="70" />
+      </a>
+    </div>
+
+    <?php
+    // 1) Conexion
+    $conexion = mysqli_connect("127.0.0.1", "root", "");
+    mysqli_select_db($conexion, "nilopiensestour");
+
+    // 2) Preparar la orden SQL
+    // Sintaxis SQL SELECT
+    // SELECT * FROM nombre_tabla
+    // => Selecciona todos los campos de la siguiente tabla
+    // SELECT campos_tabla FROM nombre_tabla
+    // => Selecciona los siguientes campos de la siguiente tabla
+    $consulta= "SELECT*FROM itnerarios WHERE nombre_itinerario = 'Punta Cana' ";
+
+    // 3) Ejecutar la orden y obtenemos los registros
+
+    $datos= mysqli_query ($conexion, $consulta);
+ 
+  
+  <div class="site-section destino block-13 bg-light">
+  // 4) Mostrar los datos del registro
+  while ($reg = mysqli_fetch_array($datos)) {?>
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7">
+            <h2 class="font-weight-light text-black text-center"><?php echo ucwords($reg['nombre_itinerario']) ?></h2>
+          </div>
+        </div>
+
+        <div class="nonloop-block-13 owl-carousel">
+
+          <div class="item">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 mb-5">
+                  <img src="images/itinerarios/puntacana_1.jpg" alt="Image" class="img-md-fluid">
+                </div>
+                <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
+                  <p class="text-black lead">&ldquo;<?php echo $reg['lugares_itinerario']; ?>Un tour que no olvidaras!!!
+                    Te pasarán a recoger en tu hotel de Punta Cana por la mañana y te llevarán a Bayahibe para abordar una lancha. De camino a la isla Saona, nos detendremos en una piscina natural para admirar las vistas y buscar estrellas de mar.
+                    En la isla Saona, tendrás alrededor de 3 horas para relajarte en la playa de arena blanca, jugar en las aguas cristalinas y explorar la isla. Reponer energías con el almuerzo buff et incluido y bebidas, cerveza, ron y refrescos ilimitados en la barra libre.&rdquo;</p>
+                  <p class="">&mdash; <em>James Martin</em>, <a href="#">Traveler</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 mb-5">
+                  <img src="images/itinerarios/puntacana_2.jpg" alt="Image" class="img-md-fluid">
+                </div>
+                <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
+                  <p class="text-black lead">&ldquo;<?php echo $reg['descripcion']; ?>Salida y regreso
+                    Inicio:
+                    Detalles de la recogida
+                    La recogida será en el vestíbulo del hotel o en el punto de encuentro especificado, que varía según la ubicación. Si se aloja en un apartamento, le indicaremos el punto de encuentro más cercano.
+                    Fin: Esta actividad fi naliza en el punto de encuentro inicial&rdquo;</p>
+                  <p class="">&mdash; <em>Clair Augustin</em>, <a href="#">Traveler</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 mb-5">
+                  <img src="images/itinerarios/puntacana_3.jpg" alt="Image" class="img-md-fluid">
+                </div>
+                <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
+                  <p class="text-black lead">&ldquo;<?php echo $reg['noches']; ?>Política de cancelación
+                    Si quieres que se te reembolse el importe íntegro, cancela con al menos 24 horas de antelación a la fecha de inicio de la actividad.&rdquo;</p>
+                  <p class="">&mdash; <em>James Martin</em>, <a href="#">Traveler</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <?php } ?>
+    </div>
+
+    <!--<div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center">
+            <h2 class="font-weight-light text-black">Servicios</h2>
+            <p class="color-black-opacity-5">Información Adicional </p>
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary fi fi-rr-taxi"></span></div>
+              <div>
+                <h3>Traslado</h3>
+                <p>La recogida será en el vestíbulo del hotel o en el punto de encuentro especificado, que varía según la ubicación. Si se aloja en un apartamento, le indicaremos el punto de encuentro más cercano.
+                  Se ofrece recogida en hotel</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-ship"></span></div>
+              <div>
+                <h3>Crucero</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-route"></span></div>
+              <div>
+                <h3>Tour Paquetes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-hotel"></span></div>
+              <div>
+                <h3>Hotel </h3>
+                <p>Durante la tramitación de la compra, podrá seleccionar una opción de la lista de hoteles incluidos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-sailboat"></span></div>
+              <div>
+                <h3>Mar </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary fi fi-rr-delete-document"></span></div>
+              <div>
+                <h3>Política de cancelación</h3>
+                <p>Si quieres que se te reembolse el importe íntegro, cancela con al menos 24 horas de antelación a la fecha de inicio de la actividad.</p>
+              </div>
+            </div>
+          </div>
+        </div>         
+      </div>
+    </div>-->
+
+
+    
+    <div class="site-section border-top">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-12">
+            <h4 class="mb-2 text-black">¿Estás listo para explorar el mundo sin límites?</h4>
+            <h5>¡Únete a la familia Ni lo Pienses y deja que tus sueños de viaje se hagan realidad!</h5>
+            <p class="mb-5"><a href="mailto:info@nilopiensestour.com" 
+                class="btn btn-primary py-3 px-5 text-white">info@nilopiensestour.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- footer -->			
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row d-flex align-items-center footer-vista-cel">
+        <div class="col-lg-4 mb-2">
+          <div class="footer_widget">
+            <img src="images/logo-tr.png" width="150" height="150" alt="NilopiensesTour logo" class="logo_footer">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 mb-6 mb-lg-0">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-unstyled">
+                <li><a href="https://maps.app.goo.gl/nmgiiBNKB7BUAE849" target="_blank"><i class="fa fa-map-o"></i> Alicante - España</a></li>
+                <li><a href="https://maps.app.goo.gl/qS9KhPb6yYttkkKAA" target="_blank"><i class="fa fa-map-marker"></i> Ni lo pienses tour - Av. D” Escandinavia 98 - Gran Alacant</a></li>
+                <li><a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:" target="_blank"><i class="fi fi-rr-circle-phone"></i> +34 685804332 </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 ">
+          <div class="footer__social">
+              <h3 class="footer-heading mb-2">Redes Sociales</h3>
+              <div class="d-flex justify-content-between">
+                  <a class="social-icon mr-2" href="https://www.facebook.com/NiLoPiensesTour" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a class="social-icon mr-2" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" ><i class="fa fa-instagram"></i></a>
+                  <a class="social-icon" target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
+              </div>
+          </div>
+      </div>
+      
+  </footer><!-- End / footer -->
+    <div class="footer__wrapper">
+    <div class="container">
+      <p class="footer__copy">Copyright &copy;
+        <script>document.write(new Date().getFullYear());</script> -
+        <a href="politicasprivacidad.html" target="_blank">Políticas de privacidad,</a><a href="avisolegal.html">Términos y condiciones,</a><a href="cookies.html"> Cookies</a>
+        By <a href="https://taplink.cc/msoledadc"
+          target="_blank"> MSoledadC</a></a>.</p><span class="footer__backtotop" id="back-to-top"> <i class="fa fa-arrow-up"></i>Inicio</i> </i></span> <i class="fa-brands fa-glide-g" style="color: red;"></i>
+    </div>
+  </div>
+ 
+</div>
+</div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/backtotop.js"></script>
+
+</body>
+
+</html>
