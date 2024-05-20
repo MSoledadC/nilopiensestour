@@ -116,12 +116,6 @@ a:hover {
 
 /* metodos de pago */
 
-.titulo_pagos{
-    color: rgb(13 39 14 / 60%);
-    font-weight: 900 !important;
-    
-}
-
 .payment-icons img {
     max-width: 100px; 
     margin: 0 15px; 
@@ -815,7 +809,7 @@ a:hover {
     vertical-align: -10px;
 }
 
-/* login */
+/* LOGIN */
 
 .login-blocks h2,
 .register-blocks h2 {
@@ -833,7 +827,7 @@ a:hover {
     background-color: rgba(13, 39, 14, 0.678);
 }
 
-/* pagina-error  */
+/* PAGINA-ERROR */
 
 .error-page .error-title {
     color: #0d270ead;
@@ -856,7 +850,7 @@ a:hover {
 
 }
 
-/*pagina agregar*/
+/*PAGINA AGREGAR*/
 
 .wizard-container {
     padding-top: 30px;
@@ -894,6 +888,11 @@ a:hover {
     margin-bottom: 50px;
     margin-top: 15px;
 }
+
+.paginas_destinos{
+    background-position-y: -150px !important;
+}
+
 
 /* TABLETS */
 @media (max-width: 950px) {
