@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -69,29 +69,28 @@
                 <div class="col-8 col-md-8 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
-                        <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                            <li class="active">
-                                <a class="text-white" href="index.html">Inicio</a>
-                            </li>
-                            <li class="has-children">
-                                <a class="text-white" href="">Destinos</a>
-                                <ul class="dropdown">
-                                  <li><a class="text-white" href="puntacana.html">América</a></li>
-                                  <li><a class="text-white" href="">Europa</a></li>
-                                  <li><a class="text-white" href="">Cruceros</a></li>               
-                                  <li><a class="text-white" href="">Oriente Medio</a></li>            
-                                  <li><a class="text-white" href="marruecos.html">África</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
-                            <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>
-                            <li><a class="text-white" href="contacto.html">Contacto</a></li>
-                            <!--<li><a href="blog.html">Blog</a></li>
-                                <li><a href="discount.html">Discount</a></li>
-                                
-                                <li><a href="booking.html">Book Online</a></li> -->
+                    <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                      <li class="active">
+                        <a class="text-white" href="index.html">Inicio</a>
+                      </li>
+                      <li class="has-children">
+                        <a class="text-white" href="itinerarios.php">Destinos</a>
+                        <ul class="dropdown">
+                          <li><a class="text-white" href="puntacana.php">América</a></li>
+                          <li><a class="text-white" href="">Europa</a></li>
+                          <li><a class="text-white" href="">Cruceros</a></li>               
+                          <li><a class="text-white" href="">Oriente Medio</a></li>            
+                          <li><a class="text-white" href="marruecos.php">África</a></li>
                         </ul>
-                    </nav>
+                      </li>
+                      <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
+                      <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>             
+                      <li><a class="text-white" href="contacto.html">Contacto</a> </li>     
+                      <!--<li><a href="blog.html">Blog</a></li>
+                      <li><a href="discount.html">Discount</a></li>
+                      <li><a href="booking.html">Book Online</a></li> -->
+                    </ul>
+                  </nav>
                 </div>
 
                 <div class="col-6 col-xl-2 text-right">
@@ -152,149 +151,159 @@
     </div>
 
     <?php
-    // 1) Conexion
-    $conexion = mysqli_connect("127.0.0.1", "root", "");
-    mysqli_select_db($conexion, "nilopiensestour");
-  
-  <div class="site-section destino block-13 bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7">
-            <h2 class="font-weight-light text-black text-center">Marrakech</h2>
-          </div>
-        </div>
+// 1) Conexion
+$conexion = mysqli_connect("127.0.0.1", "root", "");
+mysqli_select_db($conexion, "nilopiensestour");
 
+// 2) Preparar la orden SQL
+$consulta = "SELECT * FROM itinerarios WHERE nombre_itinerario = 'Marrakech'";
+
+// 3) Ejecutar la orden y obtener los registros
+$datos = mysqli_query($conexion, $consulta);
+
+// 4) Mostrar los datos del registro
+?>
+<div class="amazing-deals">
+<div class="container">
+    <div class="row ">
+    <?php while ($reg = mysqli_fetch_array($datos)) { ?>
+        <div class="col-lg-8 offset-lg-3">
+            <div class="section-heading text-center">
+                <h2 class="font-weight-light text-black text-center"><?php echo ucwords($reg['nombre_itinerario']); ?>
+                </h2>
+                <p>Con paquetes turísticos imperdibles, acompañamos cada momento de tu viaje.</p>
+            </div>
+        </div>
         <div class="nonloop-block-13 owl-carousel">
-
-          <div class="item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6 mb-5">
-                  <img src="images/itinerarios/puntacana_1.jpg" alt="Image" class="img-md-fluid">
+            <div class="col-md-12 col-sm-12">
+                <div class="itinerario">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="image">
+                                <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="images/itinerarios/marruecos_1.jpg" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="images/itinerarios/marruecos_2.jpg" alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="images/itinerarios/marruecos_1.jpg" alt="Third slide">
+                                        </div>
+                                        <!-- Agrega más imágenes según sea necesario -->
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 align-self-center">
+                            <div class="content">
+                                <span class="info">*Oferta limitada!</span>
+                                <h4><?php echo ucwords($reg['nombre_itinerario']); ?></h4>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <i class="fa fa-clock"></i>
+                                        <span class="list"><?php echo $reg['noches']; ?> Noches</span>
+                                    </div>
+                                    <div class="col-8">
+                                        <i class="fa fa-map"></i>
+                                        <span class="list"><?php echo $reg['lugares_itinerario']; ?></span>
+                                    </div>
+                                </div>
+                                <p><?php echo $reg['descripcion']; ?></p>
+                                <div>
+                                    <a href="https://wa.me/34657589477/?text=%20Hola%20Nilopiensestour,%20quisiera%20saber%20sobre:%20" target="_blank" class="btn btn-primary py-3 px-5 text-white border-0">Consulta</a>
+                                </div>
+                                <!-- Resto del contenido del itinerario -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
-                  <p class="text-black lead">&ldquo;Escápate 4 días a Marrakech!!!
-                    Marrakech es conocida como la ciudad roja, lo sabias? Este viaje a Marrakech y alrededores, aprenderás no solo la respuesta si no que quedaras fascinado de una de las ciudades mas bellas de Marrakech.
-                    Día 1: La llegada a Marrakech
-                    Una vez en Marrakech, es el momento de llegar al riad o hotel para relajarse y estar listo para el día siguiente.
-                    Día 2: Recorriendo Marrakech
-                    ¿ Preparado? Tras empezar la mañana con un buen desayuno tradicional en tu hotel o riad, empezaremos el recorrido con la compañía de un guía local, descubriremos su historia, su cultura, tradiciones, lugares mas famosos en una de las cuatro ciudades imperiales.
-                    &rdquo;</p>
-                  <p class="">&mdash; <em>James Martin</em>, <a href="#">Traveler</a></p>
-                </div>
-              </div>
             </div>
-          </div>
-
-          <div class="item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6 mb-5">
-                  <img src="images/itinerarios/puntacana_2.jpg" alt="Image" class="img-md-fluid">
-                </div>
-                <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
-                  <p class="text-black lead">&ldquo; Conocerás la popular medina, los Jardines Majorelle, la Torre de Koutoubia, el Souk con su gran variedad de colecciones de artesanía, las tumbas Saadíes, la plaza de Jamaa el Fna donde los visitantes pueden sorprenderse con las actuaciones de músicos, narradores y encantadores de serpientes.
-                    Día 3: Excursión de día completo a las Montañas del Atlas
-                    Después de disfrutar un exquisito desayuno marroquí en tu riad u hotel, el chofer nos acompañara a los alrededores de Marrakech, nos trasladaremos a las imponentes Montañas del Atlas para observar sus hermosos paisajes, cimas nevadas y encantadores arroyos. Cruzaremos por la aldea berebere de Asni, alojada a la orilla del Parque Nacional de Tubqal, seguido de Asni encontraremos la aldea de Imlil y el Kasbah de Tamadot, sitio para comer.
-                    En la llegada a Imlil, tendras la posibilidad de que un guía local te acompañe en un paseo de 30 minutos para observar los maravillosos valles. Un recorrido en el que podrás contemplar la imponente naturaleza marroquí y sus aldeas.
-                    Por la tarde, regreso a Marrakech.&rdquo;</p>
-                  <p class="">&mdash; <em>Clair Augustin</em>, <a href="#">Traveler</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-
-          <div class="item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6 mb-5">
-                  <img src="images/itinerarios/puntacana_3.jpg" alt="Image" class="img-md-fluid">
-                </div>
-                <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
-                  <p class="text-black lead">&ldquo;Política de cancelación
-                    Si quieres que se te reembolse el importe íntegro, cancela con al menos 24 horas de antelación a la fecha de inicio de la actividad.&rdquo;</p>
-                  <p class="">&mdash; <em>James Martin</em>, <a href="#">Traveler</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
+            <?php } ?>
         </div>
-      </div>
     </div>
+</div>
+</div>
 
-  <!--<div class="site-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-7 text-center">
-          <h2 class="font-weight-light text-black">Servicios</h2>
-          <p class="color-black-opacity-5">Información Adicional </p>
+    <!--<div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center">
+            <h2 class="font-weight-light text-black">Servicios</h2>
+            <p class="color-black-opacity-5">Información Adicional </p>
+          </div>
         </div>
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary fi fi-rr-taxi"></span></div>
+              <div>
+                <h3>Traslado</h3>
+                <p>La recogida será en el vestíbulo del hotel o en el punto de encuentro especificado, que varía según la ubicación. Si se aloja en un apartamento, le indicaremos el punto de encuentro más cercano.
+                  Se ofrece recogida en hotel</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-ship"></span></div>
+              <div>
+                <h3>Crucero</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-route"></span></div>
+              <div>
+                <h3>Tour Paquetes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-hotel"></span></div>
+              <div>
+                <h3>Hotel </h3>
+                <p>Durante la tramitación de la compra, podrá seleccionar una opción de la lista de hoteles incluidos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-sailboat"></span></div>
+              <div>
+                <h3>Mar </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary fi fi-rr-delete-document"></span></div>
+              <div>
+                <h3>Política de cancelación</h3>
+                <p>Si quieres que se te reembolse el importe íntegro, cancela con al menos 24 horas de antelación a la fecha de inicio de la actividad.</p>
+              </div>
+            </div>
+          </div>
+        </div>         
       </div>
-      <div class="row align-items-stretch">
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-airplane"></span></div>
-            <div>
-              <h3>Traslado</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-ship"></span></div>
-            <div>
-              <h3>Crucero</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-route"></span></div>
-            <div>
-              <h3>Tour Paquetes</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-hotel"></span></div>
-            <div>
-              <h3>Hotel </h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-sailboat"></span></div>
-            <div>
-              <h3>Sea Explorations</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-          <div class="unit-4 d-flex">
-            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-ski"></span></div>
-            <div>
-              <h3>Ski Experiences</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>-->
-
-
-    
+    </div>-->
+   
     <div class="site-section border-top">
       <div class="container">
         <div class="row text-center">
@@ -308,38 +317,52 @@
       </div>
     </div>
 
-  <!-- footer -->			
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row d-flex align-items-center footer-vista-cel">
-        <div class="col-lg-4 mb-2">
-          <div class="footer_widget">
-            <img src="images/logo-tr.png" width="150" height="150" alt="NilopiensesTour logo" class="logo_footer">
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 mb-6 mb-lg-0">
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="list-unstyled">
-                <li><a href="https://maps.app.goo.gl/nmgiiBNKB7BUAE849" target="_blank"><i class="fa fa-map-o"></i> Alicante - España</a></li>
-                <li><a href="https://maps.app.goo.gl/qS9KhPb6yYttkkKAA" target="_blank"><i class="fa fa-map-marker"></i> Ni lo pienses tour - Av. D” Escandinavia 98 - Gran Alacant</a></li>
-                <li><a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:" target="_blank"><i class="fi fi-rr-circle-phone"></i> +34 685804332 </a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-2 ">
-          <div class="footer__social">
-              <h3 class="footer-heading mb-2">Redes Sociales</h3>
-              <div class="d-flex justify-content-between">
-                  <a class="social-icon mr-2" href="https://www.facebook.com/NiLoPiensesTour" target="_blank"><i class="fa fa-facebook"></i></a>
-                  <a class="social-icon mr-2" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" ><i class="fa fa-instagram"></i></a>
-                  <a class="social-icon" target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
-              </div>
-          </div>
-      </div>
-      
-  </footer><!-- End / footer -->
+    <!-- footer -->			
+    <footer class="site-footer">
+     <div class="container">
+         <div class="row d-flex align-items-center footer-vista-cel">
+             <div class="col-lg-2 col-md-4 mb-2">
+                 <div class="footer_widget">
+                     <img src="images/logo-tr.png" width="150" height="150" alt="NilopiensesTour logo" class="logo_footer">
+                 </div>
+             </div>
+             <div class="col-lg-6 col-md-8 mb-8 mb-lg-0">
+                 <div class="row">
+                     <div class="col-md-12">
+                         <ul class="list-unstyled">
+                             <li><a href="https://maps.app.goo.gl/nmgiiBNKB7BUAE849" target="_blank"><i class="fa fa-map-o"></i> Alicante - España</a></li>
+                             <li><a href="https://maps.app.goo.gl/qS9KhPb6yYttkkKAA" target="_blank"><i class="fa fa-map-marker"></i> Ni lo pienses tour - Av. D” Escandinavia 98 - Gran Alacant</a></li>
+                             <li><a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:" target="_blank"><i class="fi fi-rr-circle-phone"></i> +34 685804332 </a></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-2 col-md-6 mb-2 mb-lg-0">
+                 <div class="footer__social">
+                     <h3 class="footer-heading mb-2">Redes Sociales</h3>
+                     <div class="d-flex justify-content-between">
+                         <a class="social-icon mr-2" href="https://www.facebook.com/NiLoPiensesTour" target="_blank"><i class="fa fa-facebook"></i></a>
+                         <a class="social-icon mr-2" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa fa-instagram"></i></a>
+                         <a class="social-icon" target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
+                         <a class="social-icon" target="_blank" href="#"><i class='bx bxl-visa'></i></a>
+                      </div>
+                 </div>
+             </div>
+             <div class="col-lg-2 col-md-6 mb-2 mb-lg-0">
+                 <div class="footer__social">
+                     <h3 class="footer-heading mb-2">Pago Seguro</h3>
+                     <div class="d-flex justify-content-between">
+                         <a class="icono_pagoseguro"><img class="iconos_pagoseguro" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfhJREFUWEft1knIjlEYxvHfJykbpAzpw8LGnGFn9S1IlJRCiQU2xMKQQvmKBZGyMGRciSI2LGTYoUgUISwMRYZEKclQnFv3W+/C612+m3M2z3Cec+7r/K/rOc/TpcOtq8P1VQGVQCVQCVQCzQT6YAq2YAheYRW+5Xa9H5NwEr9K/3JcxzaMxmbMwjDcwCY8zLHrMQ+/MTvH/+36lwXD8QQDsRhnMSoFxZix6MUS7Maucv4MQ/ES78uY8ejBPcwowm42fXOm5/2WAqIjii4sIvZhQxbcjkuYi/uYjGV4i2tZYCReI2j2xQ+cwaJcVIhfWwgfbAhqFcKVOI5buYKwIyafU66vpC39MBWf8TyLBoFAfy4LdONFClmHoziFpe0EjMAb/MQCXEzMsYJxhc6j9LN/ycz3pHKkiI6C0cKWrdiZmTqBPXiaYse0ExD9EaAJeZyINcXnQ2lNWBSThaBGCzEHsCJXPCjtGJw2RE4isNEi5B9bhbAx4V5szIsvBV9Q+VqCG1mIEJ7PkF7G1ZLyu4i0R0Zup4XHWvzwzMeFdgJm5sTxXCOMcR6Fw5YQcjpJNOrEaxZ2Ba0IbJBbjcP5QBDY0WTRf/+IImTxCkV7gE95Pg0DsvC73BsCc9B5nMfmsXfyXgyPPSIy9CGfrb9klUAlUAlUAp0n8Ae0NWohlKNEwwAAAABJRU5ErkJggg=="/></a>
+                         <a class="icono_pagoseguro"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAiRJREFUWEft1kuoT1EUx/HPNSAyIQMjoQykKGXgNVEUJVEeIwwYMSLKRJlJZIwueURSGCBFSd4ZeE2QRzEwEMlAktd/1bn1b3f+5+xz6N7JXZN//332b63vXnvttXefIba+IY5vGCA3A+exMmO77uACjuFzxvysLRiNbznOuuZ8xVacrNPlZGAWHtc56vF9I45XaXMA1uFMS4CnnS2JBfS0HIA92N0S4CdG4k8vfQ7AWaxpCRCBAyBASi0H4AlmtgR4hxmYiFdlPuoARhQnYFRLgCjAo+jH9LJM1AFMwZuWwUO2AkuwBUtxNfVVB7AMl1sCvMQivEZkcAf2NwXYhgMtAKL45hVBVxX68HWwKcARbGoI8KLQxOrjCA9YtPKLTQFuY34GwG/EPXCqU/XncAirE90EfGoKEILxiShWdiMZG4e5WItI+djk+/UO4OKmxzCIPyaiZ4jCfJ+RlYEpUQ+RxXtNARbgViKK2y0646VMgNiaqKG4nkut6hhuxuFEtbP4vy8D4DniNnxQNbcKIM7s9kS8vCiu9cn4Q1wpxuItcL/TgO5mQFY+SKIBxX532zSc7jSnOSXjpb2+DqIqA28xucvBr6KjfUmq/EcxXherUQ1E6/yeKGKFC/EhGX+E2a2idzpVrwwEQDwux3Q5jkYT2xK/3XYCG/43QC9/ZSdjF/YOFkDZyYjr9tpgAUztPDAmJcFuVr356sDq3gN1+n/+PgzwF6IPWiEkbD7/AAAAAElFTkSuQmCC"/></a>
+                         <a class="icono_pagoseguro"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAkFJREFUWEft1kuoTWEUB/DfJfIaSF6ZEVKESJ4DSqLM5RFCGIm6kQyQmVdJJCPPxMSAATOKYuAREmJAhJnySvLYS/ve9t32Pd/OHdzU+ep0Oqf/Wt9//dfra9HNp6Wb79ck0FTgv1FgAEaiD17jHX5VdNBAjEB8v8D7VJc1UqAXVmAtZpccvcV2nMZPTMZhzCnhPuBORnhj5ut5FZnOCEzHCYxLRLAcN3EXgxpgP2XKrcP5MqaKQERxHT0Slx9FpGZehtuFYwjVGp1WHCgCygSG4CGGJRzdxmXsyXGR7yCwL2H3HVPwqA1XJhCR7EwVDubjEvoWsJuwAeMT9o9zEt8CVyQQkr/JIhmecHAfFzPb3SXcSxzB3hoBLMKVMoGxeFrDOGRekJGYVIGNrjlTw8e2NqJFBaLVbtQw3owdWbRRL+UTXXG2ho/ABNkOKZiVt1TKPvJ8MCu4/l1Q4CoWlgn0w+fU7XmRrsKoLhCING4tE4jfzzIJxyRIXMjyF2QXV+CC2MkaQSzDuSoCW3J5G/n4isBF3xfPNbzCygSB2CNR8B+rCPREDJmpCScxgJZmFT+6gFudLaLj6J2wbY++ikD8NxH3EqP4B9bjUD6OI6dzMS1xeeyNDgurs2U0IyuyU4l6iI24BhPybRgt2OjcwpI8Te24Rus4pIyxHJEOrvAcqYqB8iBTYX/e11Xyf8lXd6zrv94QdV9EsZZn5kRiXMfEjD1fPEMRs6T4IHmC+PyZ+1WnLoEanfVvkCaBpgJNBX4DTkJfIVPFwNkAAAAASUVORK5CYII="/></a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </footer>
+ <!-- End / footer -->
+
     <div class="footer__wrapper">
     <div class="container">
       <p class="footer__copy">Copyright &copy;

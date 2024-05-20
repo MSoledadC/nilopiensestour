@@ -251,7 +251,7 @@ a:hover {
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    margin-left: -70x;
+    margin-left: -50px;
 }
 
 .input-group {
@@ -978,6 +978,7 @@ a:hover {
     .logo_footer{
         width: 150px;
         height: 150px;
+        margin-left: 0px;
     }
 
     .menu-vista-cel{

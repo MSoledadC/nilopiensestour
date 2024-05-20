@@ -69,29 +69,28 @@
                 <div class="col-8 col-md-8 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
-                        <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                            <li class="active">
-                                <a class="text-white" href="index.html">Inicio</a>
-                            </li>
-                            <li class="has-children">
-                                <a class="text-white" href="">Destinos</a>
-                                <ul class="dropdown">
-                                  <li><a class="text-white" href="">América</a></li>
-                                  <li><a class="text-white" href="">Europa</a></li>
-                                  <li><a class="text-white" href="">Cruceros</a></li>               
-                                  <li><a class="text-white" href="">Oriente Medio</a></li>            
-                                  <li><a class="text-white" href="">África</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
-                            <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>
-                            <li><a class="text-white" href="contacto.html">Contacto</a></li>
-                            <!--<li><a href="blog.html">Blog</a></li>
-                                <li><a href="discount.html">Discount</a></li>
-                                
-                                <li><a href="booking.html">Book Online</a></li> -->
+                    <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                      <li class="active">
+                        <a class="text-white" href="index.html">Inicio</a>
+                      </li>
+                      <li class="has-children">
+                        <a class="text-white" href="itinerarios.php">Destinos</a>
+                        <ul class="dropdown">
+                          <li><a class="text-white" href="puntacana.php">América</a></li>
+                          <li><a class="text-white" href="">Europa</a></li>
+                          <li><a class="text-white" href="">Cruceros</a></li>               
+                          <li><a class="text-white" href="">Oriente Medio</a></li>            
+                          <li><a class="text-white" href="marruecos.php">África</a></li>
                         </ul>
-                    </nav>
+                      </li>
+                      <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
+                      <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>             
+                      <li><a class="text-white" href="contacto.html">Contacto</a> </li>     
+                      <!--<li><a href="blog.html">Blog</a></li>
+                      <li><a href="discount.html">Discount</a></li>
+                      <li><a href="booking.html">Book Online</a></li> -->
+                    </ul>
+                  </nav>
                 </div>
 
                 <div class="col-6 col-xl-2 text-right">
@@ -152,159 +151,87 @@
     </div>
 
     <?php
-    // 1) Conexion
-    $conexion = mysqli_connect("127.0.0.1", "root", "");
-    mysqli_select_db($conexion, "nilopiensestour");
+// 1) Conexion
+$conexion = mysqli_connect("127.0.0.1", "root", "");
+mysqli_select_db($conexion, "nilopiensestour");
 
-    // 2) Preparar la orden SQL
-    // Sintaxis SQL SELECT
-    // SELECT * FROM nombre_tabla
-    // => Selecciona todos los campos de la siguiente tabla
-    // SELECT campos_tabla FROM nombre_tabla
-    // => Selecciona los siguientes campos de la siguiente tabla
-    $consulta= "SELECT*FROM itnerarios WHERE nombre_itinerario = 'Punta Cana' ";
+// 2) Preparar la orden SQL
+$consulta = "SELECT * FROM itinerarios WHERE nombre_itinerario = 'Punta Cana'";
 
-    // 3) Ejecutar la orden y obtenemos los registros
+// 3) Ejecutar la orden y obtener los registros
+$datos = mysqli_query($conexion, $consulta);
 
-    $datos= mysqli_query ($conexion, $consulta);
- 
-  
-  <div class="site-section destino block-13 bg-light">
-  // 4) Mostrar los datos del registro
-  while ($reg = mysqli_fetch_array($datos)) {?>
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7">
-            <h2 class="font-weight-light text-black text-center"><?php echo ucwords($reg['nombre_itinerario']) ?></h2>
-          </div>
+// 4) Mostrar los datos del registro
+?>
+<div class="amazing-deals">
+<div class="container">
+    <div class="row ">
+    <?php while ($reg = mysqli_fetch_array($datos)) { ?>
+        <div class="col-lg-8 offset-lg-3">
+            <div class="section-heading text-center">
+                <h2 class="font-weight-light text-black text-center"><?php echo ucwords($reg['nombre_itinerario']); ?>
+                </h2>
+                <p>Con paquetes turísticos imperdibles, acompañamos cada momento de tu viaje.</p>
+            </div>
         </div>
-
         <div class="nonloop-block-13 owl-carousel">
-
-          <div class="item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6 mb-5">
-                  <img src="images/itinerarios/puntacana_1.jpg" alt="Image" class="img-md-fluid">
+            <div class="col-md-12 col-sm-12">
+                <div class="itinerario">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="image">
+                                <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="images/itinerarios/marruecos_1.jpg" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="images/itinerarios/marruecos_2.jpg" alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="images/itinerarios/marruecos_1.jpg" alt="Third slide">
+                                        </div>
+                                        <!-- Agrega más imágenes según sea necesario -->
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 align-self-center">
+                            <div class="content">
+                                <span class="info">*Oferta limitada!</span>
+                                <h4><?php echo ucwords($reg['nombre_itinerario']); ?></h4>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <i class="fa fa-clock"></i>
+                                        <span class="list"><?php echo $reg['noches']; ?> Noches</span>
+                                    </div>
+                                    <div class="col-8">
+                                        <i class="fa fa-map"></i>
+                                        <span class="list"><?php echo $reg['lugares_itinerario']; ?></span>
+                                    </div>
+                                </div>
+                                <p><?php echo $reg['descripcion']; ?></p>
+                                <div>
+                                    <a href="https://wa.me/34657589477/?text=%20Hola%20Nilopiensestour,%20quisiera%20saber%20sobre:%20" target="_blank" class="btn btn-primary py-3 px-5 text-white border-0">Consulta</a>
+                                </div>
+                                <!-- Resto del contenido del itinerario -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
-                  <p class="text-black lead">&ldquo;<?php echo $reg['lugares_itinerario']; ?>Un tour que no olvidaras!!!
-                    Te pasarán a recoger en tu hotel de Punta Cana por la mañana y te llevarán a Bayahibe para abordar una lancha. De camino a la isla Saona, nos detendremos en una piscina natural para admirar las vistas y buscar estrellas de mar.
-                    En la isla Saona, tendrás alrededor de 3 horas para relajarte en la playa de arena blanca, jugar en las aguas cristalinas y explorar la isla. Reponer energías con el almuerzo buff et incluido y bebidas, cerveza, ron y refrescos ilimitados en la barra libre.&rdquo;</p>
-                  <p class="">&mdash; <em>James Martin</em>, <a href="#">Traveler</a></p>
-                </div>
-              </div>
             </div>
-          </div>
-
-          <div class="item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6 mb-5">
-                  <img src="images/itinerarios/puntacana_2.jpg" alt="Image" class="img-md-fluid">
-                </div>
-                <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
-                  <p class="text-black lead">&ldquo;<?php echo $reg['descripcion']; ?>Salida y regreso
-                    Inicio:
-                    Detalles de la recogida
-                    La recogida será en el vestíbulo del hotel o en el punto de encuentro especificado, que varía según la ubicación. Si se aloja en un apartamento, le indicaremos el punto de encuentro más cercano.
-                    Fin: Esta actividad fi naliza en el punto de encuentro inicial&rdquo;</p>
-                  <p class="">&mdash; <em>Clair Augustin</em>, <a href="#">Traveler</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6 mb-5">
-                  <img src="images/itinerarios/puntacana_3.jpg" alt="Image" class="img-md-fluid">
-                </div>
-                <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
-                  <p class="text-black lead">&ldquo;<?php echo $reg['noches']; ?>Política de cancelación
-                    Si quieres que se te reembolse el importe íntegro, cancela con al menos 24 horas de antelación a la fecha de inicio de la actividad.&rdquo;</p>
-                  <p class="">&mdash; <em>James Martin</em>, <a href="#">Traveler</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+            <?php } ?>
         </div>
-      </div>
-      <?php } ?>
     </div>
-
-    <!--<div class="site-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <h2 class="font-weight-light text-black">Servicios</h2>
-            <p class="color-black-opacity-5">Información Adicional </p>
-          </div>
-        </div>
-        <div class="row align-items-stretch">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary fi fi-rr-taxi"></span></div>
-              <div>
-                <h3>Traslado</h3>
-                <p>La recogida será en el vestíbulo del hotel o en el punto de encuentro especificado, que varía según la ubicación. Si se aloja en un apartamento, le indicaremos el punto de encuentro más cercano.
-                  Se ofrece recogida en hotel</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-ship"></span></div>
-              <div>
-                <h3>Crucero</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-route"></span></div>
-              <div>
-                <h3>Tour Paquetes</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-hotel"></span></div>
-              <div>
-                <h3>Hotel </h3>
-                <p>Durante la tramitación de la compra, podrá seleccionar una opción de la lista de hoteles incluidos.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-sailboat"></span></div>
-              <div>
-                <h3>Mar </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary fi fi-rr-delete-document"></span></div>
-              <div>
-                <h3>Política de cancelación</h3>
-                <p>Si quieres que se te reembolse el importe íntegro, cancela con al menos 24 horas de antelación a la fecha de inicio de la actividad.</p>
-              </div>
-            </div>
-          </div>
-        </div>         
-      </div>
-    </div>-->
-
+</div>
 
     
     <div class="site-section border-top">
@@ -319,6 +246,7 @@
         </div>
       </div>
     </div>
+
 
   <!-- footer -->			
   <footer class="site-footer">
