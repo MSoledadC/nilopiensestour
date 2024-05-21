@@ -164,9 +164,9 @@ $datos = mysqli_query($conexion, $consulta);
 // 4) Mostrar los datos del registro
 ?>
 <div class="amazing-deals">
-<div class="container">
+  <div class="container">
     <div class="row ">
-    <?php while ($reg = mysqli_fetch_array($datos)) { ?>
+      <?php while ($reg = mysqli_fetch_array($datos)) { ?>
         <div class="col-lg-8 offset-lg-3">
             <div class="section-heading text-center">
                 <h2 class="font-weight-light text-black text-center"><?php echo ucwords($reg['nombre_itinerario']); ?>
@@ -174,63 +174,62 @@ $datos = mysqli_query($conexion, $consulta);
                 <p>Con paquetes turísticos imperdibles, acompañamos cada momento de tu viaje.</p>
             </div>
         </div>
-
-            <div class="col-md-12 col-sm-12">
-                <div class="itinerario">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="image">
-                                <div id="carouselExample" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="images/itinerarios/marruecos_1.jpg" alt="First slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/itinerarios/marruecos_2.jpg" alt="Second slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/itinerarios/marruecos_1.jpg" alt="Third slide">
-                                        </div>
-                                        <!-- Agrega más imágenes según sea necesario -->
+        <div class="col-md-12 col-sm-12">
+            <div class="itinerario">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="image">
+                            <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="images/itinerarios/marruecos_1.jpg" alt="First slide">
                                     </div>
-                                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="images/itinerarios/marruecos_2.jpg" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="images/itinerarios/marruecos_1.jpg" alt="Third slide">
+                                    </div>
+                                    <!-- Agrega más imágenes según sea necesario -->
                                 </div>
+                                <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
                         </div>
-                        <div class="col-lg-8 align-self-center">
-                            <div class="content">
-                                <span class="info">*Oferta limitada!</span>
-                                <h4><?php echo ucwords($reg['nombre_itinerario']); ?></h4>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <i class="fa fa-clock"></i>
-                                        <span class="list"><?php echo $reg['noches']; ?> Noches</span>
-                                    </div>
-                                    <div class="col-8">
-                                        <i class="fa fa-map"></i>
-                                        <span class="list"><?php echo $reg['lugares_itinerario']; ?></span>
-                                    </div>
+                    </div>
+                    <div class="col-lg-8 align-self-center">
+                        <div class="content">
+                            <span class="info">*Oferta limitada!</span>
+                            <h4><?php echo ucwords($reg['nombre_itinerario']); ?></h4>
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-clock"></i>
+                                    <span class="list"><?php echo $reg['noches']; ?> Noches</span>
                                 </div>
-                                <p><?php echo $reg['descripcion']; ?></p>
-                                <div>
-                                    <a href="https://wa.me/34657589477/?text=%20Hola%20Nilopiensestour,%20quisiera%20saber%20sobre:%20" target="_blank" class="btn btn-primary py-3 px-5 text-white border-0">Consulta</a>
+                                <div class="col-8">
+                                    <i class="fa fa-map"></i>
+                                    <span class="list"><?php echo $reg['lugares_itinerario']; ?></span>
                                 </div>
-                                <!-- Resto del contenido del itinerario -->
                             </div>
+                            <p><?php echo $reg['descripcion']; ?></p>
+                            <div>
+                                <a href="https://wa.me/34657589477/?text=%20Hola%20Nilopiensestour,%20quisiera%20saber%20sobre:%20" target="_blank" class="btn btn-primary py-3 px-5 text-white border-0">Consulta</a>
+                            </div>
+                            <!-- Resto del contenido del itinerario -->
                         </div>
                     </div>
                 </div>
             </div>
-          <?php } ?>
-      </div>
+        </div>
+      <?php } ?>
     </div>
+  </div>
 
     
     <div class="site-section border-top">

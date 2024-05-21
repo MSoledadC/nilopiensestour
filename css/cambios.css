@@ -981,9 +981,7 @@ a:hover {
         margin-left: 0px;
     }
 
-    .menu-vista-cel{
-        left: 50%;
-    }
+    
     .footer-vista-cel {
         flex-wrap: nowrap;
         flex-direction: row;
@@ -1010,6 +1008,10 @@ a:hover {
         max-width: 100%; /* Ensure images fit within their containers */
         height: auto;
     }
+
+    .menu-vista-cel {
+        left: 40%;
+      }
     
 }
 
@@ -1072,6 +1074,10 @@ a:hover {
     flex: 0 0 100%;
   }
 
+  .menu-vista-cel {
+    left: 50%;
+  }
+
  }
 
 
@@ -1099,7 +1105,7 @@ a:hover {
 
         
         .menu-vista-cel{
-          left: 50%;
+          left: 30%;
         }
 
         .logo_footer {
