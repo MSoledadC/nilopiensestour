@@ -174,7 +174,7 @@ $datos = mysqli_query($conexion, $consulta);
                 <p>Con paquetes turísticos imperdibles, acompañamos cada momento de tu viaje.</p>
             </div>
         </div>
-        <div class="nonloop-block-13 owl-carousel">
+
             <div class="col-md-12 col-sm-12">
                 <div class="itinerario">
                     <div class="row">
@@ -228,10 +228,9 @@ $datos = mysqli_query($conexion, $consulta);
                     </div>
                 </div>
             </div>
-            <?php } ?>
-        </div>
+          <?php } ?>
+      </div>
     </div>
-</div>
 
     
     <div class="site-section border-top">
