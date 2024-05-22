@@ -69,29 +69,28 @@
                 <div class="col-8 col-md-8 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
-                        <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                            <li class="active">
-                                <a class="text-white" href="index.html">Inicio</a>
-                            </li>
-                            <li class="has-children">
-                              <a class="text-white" >Destinos</a>
-                              <ul class="dropdown">
-                                <li><a class="text-white" href="puntacana.html">América</a></li>
-                                <li><a class="text-white" href="">Europa</a></li>
-                                <li><a class="text-white" href="">Cruceros</a></li>               
-                                <li><a class="text-white" href="">Oriente Medio</a></li>            
-                                <li><a class="text-white" href="marruecos.html">África</a></li>
-                              </ul>
-                            </li>
-                            <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
-                            <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>             
-                            <li><a class="text-white" href="contacto.html">Contacto</a> </li>    
-                            <!--<li><a href="blog.html">Blog</a></li>
-                                <li><a href="discount.html">Discount</a></li>
-                                
-                                <li><a href="booking.html">Book Online</a></li> -->
-                        </ul>
-                    </nav>
+                    <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                      <li class="active">
+                        <a class="text-white" href="index.html">Inicio</a>
+                      </li>
+                      <li class="has-children">
+                        <a class="text-white" href="itinerarios.php">Destinos</a>
+                        <ul class="dropdown">
+                        <li><a class="text-white" href="america.php">América</a></li>
+                        <li><a class="text-white" href="europa.php">Europa</a></li>
+                        <li><a class="text-white" href="cruceros.php">Cruceros</a></li>               
+                        <li><a class="text-white" href="orientemedio.php">Oriente Medio</a></li>            
+                        <li><a class="text-white" href="africa.php">África</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
+                    <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>             
+                    <li><a class="text-white" href="contacto.html">Contacto</a> </li>      
+                      <!--<li><a href="blog.html">Blog</a></li>
+                      <li><a href="discount.html">Discount</a></li>
+                      <li><a href="booking.html">Book Online</a></li> -->
+                    </ul>
+                  </nav>
                 </div>
 
                 <div class="col-6 col-xl-2 text-right">
@@ -111,7 +110,7 @@
                                         class="icon-linkedin"></span></a>
                             </li>
                             <li>
-                                <a href="login.html" class="pl-3 pr-3 text-white"><span
+                                <a href="login.html" target="_blank" class="pl-3 pr-3 text-white"><span
                                         class="icon-user"></span></a>
                             </li>
                         </ul>
@@ -128,14 +127,15 @@
 
     </header>
 
-    <div class="site-blocks-cover inner-page-cover" style="background-image: url(images/portadas/20.jpg); background-position: center bottom;"  data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page-cover paginas_destinos" style="background-image: url(images/portadas/3.jpg);"
+      data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             <h1 class="text-white font-weight-light"></h1>
-            <div><a href="index.html">inicio</a> <span class="mx-2 text-white">&bullet;</span> <span
-                class="text-white">Sobré NI LO PIENSES TOUR</span></div>
+            <div><a href="index.html">Inicio</a> <span class="mx-2 text-white">&bullet;</span> <span
+                class="text-white">Cruceros</span></div>
 
           </div>
         </div>
@@ -149,36 +149,89 @@
       </a>
     </div>
 
-    <div class="site-section" data-aos="fade-up">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-5 mb-md-0">
-            <img src="images/banner/44.jpg" alt="Crista Travel" class="img-fluid rounded imagen-nosotros">
-            
-          </div>
-          <div class="col-md-6 pl-md-5">
-            <h2 class="font-weight-light text-black mb-4 entrada-derecha">Nosotros</h2>
-            <p>En <strong>Ni lo Pienses</strong>, no solo ofrecemos destinos exquisitos, sino  experiencias inolvidables, queremos ser tus compañeros de aventura, tus guías y tus creadores de recuerdos inolvidables. ¡Es un placer
-            tenerte con nosotros en este viaje lleno de emociones y descubrimientos! Estamos aquí para llevarte de la mano en cada paso del camino, con recuerdos que atesorarás para siempre. Nuestro compromiso es brindarte
-            un servicio excepcional y hacer que cada momento sea especial.<br>
-            Nos enorgullece ofrecerte no solo destinos impresionantes, sino también la calidez de nuestro equipo, que está aquí para asegurarse de que cada momento de tu viaje sea memorable y lleno de alegría.             
-                       
-            </p>
-            <div class="lista-nosotros">
-              <ul class="list-unstyled">
-                <li class="d-flex align-items-center"><span class="icon-check2 text-primary h3 mr-2"></span><span style="
-                  color: #c6b791">Servicio boutique</span></li>
-                <li class="d-flex align-items-center"><span class="icon-check2 text-primary h3 mr-2"></span><span style="
-                  color: #c6b791"> Atención personalizada (24/7)</span></li>
-                <li class="d-flex align-items-center"><span class="icon-check2 text-primary h3 mr-2"></span><span style="
-                  color: #c6b791"> Respaldo y seguridad</span></li>
-              </ul>
+    <?php
+// 1) Conexion
+$conexion = mysqli_connect("127.0.0.1", "root", "");
+mysqli_select_db($conexion, "nilopiensestour");
+
+// 2) Preparar la orden SQL
+$consulta = "SELECT * FROM itinerarios WHERE continente = 'cruceros'";
+
+// 3) Ejecutar la orden y obtener los registros
+$datos = mysqli_query($conexion, $consulta);
+
+// 4) Mostrar los datos del registro
+?>
+<div class="amazing-deals">
+<div class="container">
+    <div class="row ">
+    <?php while ($reg = mysqli_fetch_array($datos)) { ?>
+        <div class="col-lg-8 offset-lg-3">
+            <div class="section-heading text-center">
+                <h2 class="font-weight-light text-black text-center"><?php echo ucwords($reg['nombre_itinerario']); ?>
+                </h2>
+                <p>Con paquetes turísticos imperdibles, acompañamos cada momento de tu viaje.</p>
             </div>
-          </div>
         </div>
+          <div class="col-md-12 col-sm-12">
+              <div class="itinerario">
+                  <div class="row">
+                      <div class="col-lg-4">
+                          <div class="image">
+                              <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                                  <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                          <img class="d-block w-100" src="images/itinerarios/marruecos_1.jpg" alt="First slide">
+                                      </div>
+                                      <div class="carousel-item">
+                                          <img class="d-block w-100" src="images/itinerarios/marruecos_2.jpg" alt="Second slide">
+                                      </div>
+                                      <div class="carousel-item">
+                                          <img class="d-block w-100" src="images/itinerarios/marruecos_1.jpg" alt="Third slide">
+                                      </div>
+                                      <!-- Agrega más imágenes según sea necesario -->
+                                  </div>
+                                  <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="sr-only">Next</span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-8 align-self-center">
+                          <div class="content">
+                              <span class="info">*Oferta limitada!</span>
+                              <h4><?php echo ucwords($reg['nombre_itinerario']); ?></h4>
+                              <div class="row">
+                                  <div class="col-4">
+                                      <i class="fa fa-clock"></i>
+                                      <span class="list"><?php echo $reg['noches']; ?> Noches</span>
+                                  </div>
+                                  <div class="col-8">
+                                      <i class="fa fa-map"></i>
+                                      <span class="list"><?php echo $reg['lugares_itinerario']; ?></span>
+                                  </div>
+                              </div>
+                              <p><?php echo $reg['descripcion']; ?></p>
+                              <div>
+                                  <a href="https://wa.me/34657589477/?text=%20Hola%20Nilopiensestour,%20quisiera%20saber%20sobre:%20" target="_blank" class="btn btn-primary py-3 px-5 text-white border-0">Consulta</a>
+                              </div>
+                              <!-- Resto del contenido del itinerario -->
+                      </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        <?php } ?>
       </div>
     </div>
+  </div>
 
+    
     <div class="site-section border-top">
       <div class="container">
         <div class="row text-center">
@@ -186,44 +239,14 @@
             <h4 class="mb-2 text-black">¿Estás listo para explorar el mundo sin límites?</h4>
             <h5>¡Únete a la familia Ni lo Pienses y deja que tus sueños de viaje se hagan realidad!</h5>
             <p class="mb-5"><a href="mailto:info@nilopiensestour.com" 
-                class="btn btn-primary py-3 px-5 text-white border-0">info@nilopiensestour.com</a></p>
+                class="btn btn-primary py-3 px-5 text-white">info@nilopiensestour.com</a></p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- quienes somos 2-->
-    <div class="nosotros2">
-        <div class="container">
-            <div class="row">
-              <div class="img_1 col-12 col-md-6 mb-3 mb-md-0">
-                    <div class="about_thumb2 d-flex">
-                        <div class="img_1">
-                            <img src="images/itinerarios/03-japan.jpg" alt="foto">
-                        </div>
-                        <div class="img_2 col-12 col-md-6">
-                            <img src="images/banner/nosotros2.jpg" alt="foto">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-5">
-                    <div class="about_info">
-                        <div class="nosotrossub mb-20px entrada-desde-abajo">
-                            <span class="titulo-nosotros2" >Calidad en NiLoPiensesTour </span>
-                            <p class="subtitulo2" >Gracias por confiar en nosotros para ser parte de tus aventuras.</p>
-                            <p class="texto2">
-                              ¡Bienvenido/a a Ni Lo Pienses Tour, donde cada viaje es una experiencia única e inolvidable!</P>
-                        </div>
-                        <a href="#" class="line-button">......</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- about_area_end -->
-
   <!-- footer -->			
-    <footer class="site-footer">
+  <footer class="site-footer">
       <div class="container">
           <div class="row d-flex align-items-center footer-vista-cel">
               <div class="col-lg-2 col-md-4 mb-2">
@@ -250,7 +273,7 @@
                           <a class="social-icon mr-2" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa fa-instagram"></i></a>
                           <a class="social-icon" target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
                           <a class="social-icon" target="_blank" href="#"><i class='bx bxl-visa'></i></a>
-                      </div>
+                       </div>
                   </div>
               </div>
               <div class="col-lg-2 col-md-6 mb-2 mb-lg-0">
@@ -267,7 +290,7 @@
       </div>
   </footer>
   <!-- End / footer -->
-
+  
     <div class="footer__wrapper">
     <div class="container">
       <p class="footer__copy">Copyright &copy;
@@ -280,9 +303,6 @@
  
 </div>
 </div>
-
-
-
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

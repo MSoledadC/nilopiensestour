@@ -326,6 +326,7 @@ a:hover {
     background-color: #fff;
 }
 
+
 .image {
     border-top-left-radius: 23px;
     border-bottom-left-radius: 23px;
@@ -894,7 +895,7 @@ a:hover {
 }
 
 .paginas_destinos{
-    background-position-y: -150px !important;
+    background-position-y: 0px !important;
 }
 
 
@@ -1046,6 +1047,12 @@ a:hover {
         height: calc(80vh) !important;
     }
 
+    .portada_destinos {
+        height: calc(67vh) !important;    
+    }
+   
+
+
     .slide-one-item.home-slider .owl-nav {
         top: 40% !important;
     }
@@ -1082,6 +1089,10 @@ a:hover {
     left: 50%;
   }
 
+  .box-for {
+    margin-top: 20px;
+  }
+
  }
 
 
@@ -1106,7 +1117,6 @@ a:hover {
             bottom: 85px;
             z-index: 1000;
         }
-
         
         .menu-vista-cel{
           left: 30%;
