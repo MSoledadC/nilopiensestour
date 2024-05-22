@@ -93,22 +93,18 @@
                                   <a class="text-white" href="index.html">Inicio</a>
                               </li>
                               <li class="has-children">
-                                  <a class="text-white" href="">Destinos</a>
-                                  <ul class="dropdown">
-                                    <li><a class="text-white" href="puntacana.html">América</a></li>
-                                    <li><a class="text-white" href="">Europa</a></li>
-                                    <li><a class="text-white" href="">Cruceros</a></li>               
-                                    <li><a class="text-white" href="">Oriente Medio</a></li>            
-                                    <li><a class="text-white" href="marruecos.html">África</a></li>
-                                  </ul>
-                              </li>
-                              <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
-                              <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>
-                              <li><a class="text-white" href="contacto.html">Contacto</a></li>
-                              <!--<li><a href="blog.html">Blog</a></li>
-                                  <li><a href="discount.html">Discount</a></li>
-                                  
-                                  <li><a href="booking.html">Book Online</a></li> -->
+                              <a class="text-white" >Destinos</a>
+                                <ul class="dropdown">
+                                  <li><a class="text-white" href="puntacana.html">América</a></li>
+                                  <li><a class="text-white" href="">Europa</a></li>
+                                  <li><a class="text-white" href="">Cruceros</a></li>               
+                                  <li><a class="text-white" href="">Oriente Medio</a></li>            
+                                  <li><a class="text-white" href="marruecos.html">África</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="text-white" href="itinerarios.html"> Servicios</a></li>
+                            <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>             
+                            <li><a class="text-white" href="contacto.html">Contacto</a> </li>    
                           </ul>
                       </nav>
                   </div>
@@ -137,8 +133,7 @@
                     </div>
 
                       <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
-                          <a href="#" class="site-menu-toggle js-menu-toggle text-black"><span
-                                  class="icon-menu h3"></span></a>
+                        <a href="#" class="site-menu-toggle js-menu-toggle text-white "><span class="icon-menu h3 menuvistacel"></span></a>
                       </div>
 
                   </div>

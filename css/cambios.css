@@ -59,6 +59,10 @@ a:hover {
     color: #ebe9e2 !important;
 }
 
+.site-mobile-menu .site-nav-wrap .arrow-collapse{
+    color: #f0f0f0;
+}
+
 
 .dropdown {
     background: rgb(13 39 14 / 60%) !important;
