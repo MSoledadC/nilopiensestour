@@ -194,6 +194,10 @@ a:hover {
     display: inline-block;
 }
 
+.redes_footer{
+    font-size: 24px;
+}
+
 @media (min-width: 993px) {
     .footer {
         padding: 80px 0;
@@ -326,7 +330,6 @@ a:hover {
     background-color: #fff;
 }
 
-
 .image {
     border-top-left-radius: 23px;
     border-bottom-left-radius: 23px;
@@ -363,9 +366,9 @@ a:hover {
 }
 
 .amazing-deals .itinerario span.list {
-    font-size: 15px;
-    color: #afafaf;
-    font-weight: 500;
+    font-size: 17px;
+    color: #1f1f1f;
+    font-weight: 600;
 }
 
 .section-heading h2 {
@@ -835,7 +838,17 @@ a:hover {
 /* PAGINA-ERROR */
 
 .error-page .error-title {
-    color: #0d270ead;
+    margin-top: 50px;
+    margin-left: 130px;
+    color: #0d270ead !important;
+}
+
+.nav_error {
+    background-color: #0d270e5e !important;
+}
+
+.error_btnp {
+    margin-left: 130px;
 }
 
 .btn-default:hover {
@@ -875,6 +888,8 @@ a:hover {
 
 /*Lista*/
 
+
+
 .itinerario:hover .image img {
     transform: scale(1.1); /* Ajusta el factor de escala según tu preferencia */
     transition: transform 0.3s ease; /* Agrega una transición suave */
@@ -894,9 +909,7 @@ a:hover {
     margin-top: 15px;
 }
 
-.paginas_destinos{
-    background-position-y: 0px !important;
-}
+
 
 
 /* TABLETS */
@@ -1017,6 +1030,11 @@ a:hover {
     .menu-vista-cel {
         left: 40%;
       }
+
+      .site-blocks-cover.inner-page-cover .row {
+        min-height: 0% !important;
+        height: calc(70vh) !important;
+    }
     
 }
 
@@ -1039,19 +1057,13 @@ a:hover {
     .site-blocks-cover,
     .site-blocks-cover .row {
         min-height: 0% !important;
-        height: calc(70vh) !important;
+        height: calc(60vh) !important;
     }
 
     .site-blocks-cover.inner-page-cover .row {
         min-height: 0% !important;
         height: calc(80vh) !important;
     }
-
-    .portada_destinos {
-        height: calc(67vh) !important;    
-    }
-   
-
 
     .slide-one-item.home-slider .owl-nav {
         top: 40% !important;
@@ -1097,7 +1109,7 @@ a:hover {
 
 
  /* MOBILES */
-    @media (max-width: 650px) {
+    @media (max-width: 655px) {
 
         .site-mobile-menu .site-nav-wrap[data-class="social"] {
             margin-top: 0px;
@@ -1117,6 +1129,7 @@ a:hover {
             bottom: 85px;
             z-index: 1000;
         }
+
         
         .menu-vista-cel{
           left: 30%;
@@ -1138,13 +1151,67 @@ a:hover {
         .form {
             margin-bottom: 20px;
          }
+
+         .site-blocks-cover.inner-page-cover .row {
+            min-height: 0% !important;
+            height: calc(30vh) !important;
+        }
     }
 
+    @media (max-width: 426px) {
+        .paginas_destinos.inner-page-cover {
+          background-position: 50% 0px !important;
+        }
 
+        .paginas_destinos{
+            height: calc(40vh) !important;
+        }
 
+        .logonav {
+            width: 100px;
+            height: 100px;
+            margin-left: 0px;
+        }
+
+        .titulocontacto {
+            font-size: 30px !important;
+        }
+
+        .site-section {
+            margin-top: -40px; 
+        }
+
+        .site-blocks-cover.inner-page-cover .row {
+            min-height: 0% !important;
+            height: calc(40vh) !important;
+        }
+
+        .site-mobile-menu .site-nav-wrap > li > ul > li > a {
+            font-size: 10px !important;
+        }
+
+        .site-mobile-menu {
+            padding-top: 0px;
+        }
+
+        .site-mobile-menu .site-nav-wrap > li > a{
+            font-size: 10px;
+        }
+    }
+    
+    
 
     /* CEL*/
-    @media (max-width: 340px) {
+    @media (max-width: 380px) {
+        .site-blocks-cover{
+            height: calc(50vh) !important;
+        }
+
+        .logonav {
+            width: 100px;
+            height: 100px;
+            margin-left: 0px;
+        }
     }
 
 
