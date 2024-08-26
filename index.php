@@ -281,201 +281,216 @@
               $datos = mysqli_query($conexion, $consulta);
           ?>
 
-      <div class="row">
-          <?php while ($reg = mysqli_fetch_array($datos)) { ?>
-              <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                  <a href="america.php" class="unit-1 text-center">
-                      <img src="data:image/jpeg;base64,<?php echo base64_encode($reg['imagen']); ?>" alt="nilopiensestour_imagen" class="img-fluid" />
-                      <div class="unit-1-text">
-                          <!--<strong class="text-primary mb-2 d-block">$590</strong>-->
-                          <div class="unit-1-text">
-                              <?php
-                                  // Obtener el continente de la base de datos
-                                  $continente = $reg['continente'];
+        <div class="row">
+                    <?php 
+                    // Variable para llevar el conteo de imágenes
+                    $contador = 0;
+                    while ($reg = mysqli_fetch_array($datos)) { 
+                        $contador++;
+                        // Determinar el enlace basado en el contador
+                        if ($contador == mysqli_num_rows($datos)) {
+                            // Última imagen
+                            $enlace = 'itinerarios.php';
+                        } else {
+                            // Enlace basado en el continente
+                            $continente = $reg['continente'];
+                            // Convertir la primera letra en minúscula y el resto en minúscula
+                            $enlace = strtolower($continente) . '.php';
+                        }
+                    ?>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                        <a href="<?php echo $enlace; ?>" class="unit-1 text-center">
+                            <img src="data:image/jpeg;base64,<?php echo base64_encode($reg['imagen']); ?>" alt="nilopiensestour_imagen" class="img-fluid" />
+                            <div class="unit-1-text">
+                                <div class="unit-1-text">
+                                    <?php
+                                        // Obtener el continente de la base de datos
+                                        $continente = $reg['continente'];
 
-                                  // Convertir la primera letra en mayúscula y el resto en minúscula
-                                  $continente = ucfirst(mb_strtolower($continente));
+                                        // Convertir la primera letra en mayúscula y el resto en minúscula
+                                        $continente = ucfirst(mb_strtolower($continente));
 
-                                  // Array para reemplazar con los nombres correctos con acentos
-                                  $conAcentos = [
-                                      'America' => 'América',
-                                      'Europa' => 'Europa',
-                                      'Asia' => 'Asia',
-                                      'Africa' => 'África',
-                                      'Oceania' => 'Oceanía'
-                                  ];
+                                        // Array para reemplazar con los nombres correctos con acentos
+                                        $conAcentos = [
+                                            'America' => 'América',
+                                            'Europa' => 'Europa',
+                                            'Asia' => 'Asia',
+                                            'Africa' => 'África',
+                                            'Oceania' => 'Oceanía'
+                                        ];
 
-                                  // Reemplazar el continente si existe en el array
-                                  if (array_key_exists($continente, $conAcentos)) {
-                                      $continente = $conAcentos[$continente];
-                                  }
-                              ?>
-                              <h3 class="unit-1-heading"><?php echo $continente; ?></h3>
-                          </div>
-                      </div>
-                  </a>
-              </div>
-          <?php } ?>
-      </div>
-      <div class="site-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-7 text-center">
-                    <h3 class="font-weight-light text-black">Tips para Viajeros</h3>
+                                        // Reemplazar el continente si existe en el array
+                                        if (array_key_exists($continente, $conAcentos)) {
+                                            $continente = $conAcentos[$continente];
+                                        }
+                                    ?>
+                                    <h3 class="unit-1-heading"><?php echo $continente; ?></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                <?php } ?>
+            </div>
+            <div class="site-section">
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-md-7 text-center">
+                            <h3 class="font-weight-light text-black">Tips para Viajeros</h3>
+                        </div>
+                    </div>
+                    <div class="row align-items-stretch">
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4">
+                                    <i class="text-primaryservicios fi fi-rr-headset"></i>
+                                </div>
+                                <div>
+                                    <h3>Asesoramiento</h3>
+                                    <h5><strong>24/7</strong></h5>
+                                    <p>Te asesoramos paso a paso para que te lleves la mejor experiencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4">
+                                    <i class="text-primaryservicios fi fi-rr-shield-check "></i>
+                                </div>
+                                <div>
+                                    <h3>Seguridad al Viajar</h3>
+                                    <p>En nuestra agencia te proporcionamos seguridad en todos los aspectos para tu tranquilidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4">
+                                    <span class="text-primaryservicios fi fi-rr-map-marker"></span>
+                                </div>
+                                <div>
+                                    <h3>Paquetes Turísticos</h3>
+                                    <p>Encuentra los mejores paquetes turísticos en un solo lugar para vivir experiencias únicas en parajes indómitos inaccesibles o exóticos, como parques nacionales, montañas, bosques, selvas o desiertos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nuevo título y contenido adicional en la misma fila -->
+                        <div class="col-md-12 text-center mb-4">
+                            <h3 class="font-weight-light inicio_3texto">SOMOS TU MEJOR OPCIÓN</h3>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4">
+                                    <span class="text-primaryservicios fi fi-rr-picture"></span>
+                                </div>
+                                <div>
+                                    <h3>Destinos</h3>
+                                    <p>Investiga tu destino antes de viajar de esta forma no te vas a perder nada.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4">
+                                <i class="text-primaryservicios fi fi-rr-nfc-lock "></i>
+                                </div>
+                                <div>
+                                    <h3>Seguro de Viajero</h3>
+                                    <p>Viaja seguro, viaja tranquilo.<br>Viajar forma parte de nuestra vida, y los seguros de viaje nos protegen.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                            <div class="unit-4 d-flex">
+                                <div class="unit-4-icon mr-4">
+                                    <i class="text-primaryservicios fi fi-rr-luggage-rolling"></i>
+                                </div>
+                                <div>
+                                    <h3>Documentos y Equipajes</h3>
+                                    <p>Antes de viajar revisa el vencimiento de tu pasaporte.<br> 
+                                    ¡No te olvides tus documentos!<br>
+                                    No te cargues de más, lleva lo imprescindible.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row align-items-stretch">
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                            <i class="text-primaryservicios fi fi-rr-headset"></i>
+
+                <div class="site-section border-top">
+                    <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                        <h3 class="mb-2 text-black">¿Queres viajar con nosotros?</h3>
+                        <p class="mb-5">
+                            <a href="itinerarios.php" target="_blank" class="btn btn-primary py-3 px-5 text-white 
+                            border-0" >Nosotros te llevamos <i class="fi fi-rr-plane-alt"></i></a>
+                        </p>
                         </div>
-                        <div>
-                            <h3>Asesoramiento</h3>
-                            <h5><strong>24/7</strong></h5>
-                            <p>Te asesoramos paso a paso para que te lleves la mejor experiencia.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->	
+
+                                
+        <!-- footer -->			
+        <footer class="site-footer">
+        <div class="container">
+            <div class="row d-flex align-items-center footer-vista-cel">
+                <div class="col-lg-2 col-md-4 mb-2">
+                    <div class="footer_widget">
+                        <img src="images/logo-tr.png" width="150" height="150" alt="NilopiensesTour logo" class="logo_footer">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8 mb-8 mb-lg-0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="list-unstyled">
+                                <li><a href="https://maps.app.goo.gl/nmgiiBNKB7BUAE849" target="_blank"><i class="fa fa-map-o"></i> Alicante - España</a></li>
+                                <li><a href="https://maps.app.goo.gl/qS9KhPb6yYttkkKAA" target="_blank"><i class="fa fa-map-marker"></i> Ni lo pienses tour - Av. D” Escandinavia 98 - Gran Alacant</a></li>
+                                <li><a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:" target="_blank"><i class="fi fi-rr-circle-phone"></i> +34 685804332 </a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                            <i class="text-primaryservicios fi fi-rr-shield-check "></i>
-                        </div>
-                        <div>
-                            <h3>Seguridad al Viajar</h3>
-                            <p>En nuestra agencia te proporcionamos seguridad en todos los aspectos para tu tranquilidad.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                            <span class="text-primaryservicios fi fi-rr-map-marker"></span>
-                        </div>
-                        <div>
-                            <h3>Paquetes Turísticos</h3>
-                            <p>Encuentra los mejores paquetes turísticos en un solo lugar para vivir experiencias únicas en parajes indómitos inaccesibles o exóticos, como parques nacionales, montañas, bosques, selvas o desiertos.</p>
+                <div class="col-lg-2 col-md-6 mb-2 mb-lg-0">
+                    <div class="footer__social">
+                        <h3 class="footer-heading mb-2">Redes Sociales</h3>
+                        <div class="d-flex justify-content-between">
+                            <a class="social-icon mr-2 redes_footer" href="https://www.facebook.com/NiLoPiensesTour" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a class="social-icon mr-2 redes_footer" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a class="social-icon mr-2 redes_footer" href="https://www.tripadvisor.es/Attraction_Review-g150812-d27967357-Reviews-Ni_Lo_Pienses_Tour-Playa_del_Carmen_Yucatan_Peninsula.html" target="_blank"><span class="icon-tripadvisor"></span></a>
                         </div>
                     </div>
                 </div>
-                <!-- Nuevo título y contenido adicional en la misma fila -->
-                <div class="col-md-12 text-center mb-4">
-                    <h3 class="font-weight-light inicio_3texto">SOMOS TU MEJOR OPCIÓN</h3>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                            <span class="text-primaryservicios fi fi-rr-picture"></span>
-                        </div>
-                        <div>
-                            <h3>Destinos</h3>
-                            <p>Investiga tu destino antes de viajar de esta forma no te vas a perder nada.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                          <i class="text-primaryservicios fi fi-rr-nfc-lock "></i>
-                        </div>
-                        <div>
-                            <h3>Seguro de Viajero</h3>
-                            <p>Viaja seguro, viaja tranquilo.<br>Viajar forma parte de nuestra vida, y los seguros de viaje nos protegen.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                            <i class="text-primaryservicios fi fi-rr-luggage-rolling"></i>
-                        </div>
-                        <div>
-                            <h3>Documentos y Equipajes</h3>
-                            <p>Antes de viajar revisa el vencimiento de tu pasaporte.<br> 
-                            ¡No te olvides tus documentos!<br>
-                            No te cargues de más, lleva lo imprescindible.</p>
+                <div class="col-lg-2 col-md-6 mb-2 mb-lg-0">
+                    <div class="footer__social">
+                        <h3 class="footer-heading mb-2">Pago Seguro</h3>
+                        <div class="d-flex justify-content-between">
+                            <a class="icono_pagoseguro"><img class="iconos_pagoseguro" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfhJREFUWEft1knIjlEYxvHfJykbpAzpw8LGnGFn9S1IlJRCiQU2xMKQQvmKBZGyMGRciSI2LGTYoUgUISwMRYZEKclQnFv3W+/C612+m3M2z3Cec+7r/K/rOc/TpcOtq8P1VQGVQCVQCVQCzQT6YAq2YAheYRW+5Xa9H5NwEr9K/3JcxzaMxmbMwjDcwCY8zLHrMQ+/MTvH/+36lwXD8QQDsRhnMSoFxZix6MUS7Maucv4MQ/ES78uY8ejBPcwowm42fXOm5/2WAqIjii4sIvZhQxbcjkuYi/uYjGV4i2tZYCReI2j2xQ+cwaJcVIhfWwgfbAhqFcKVOI5buYKwIyafU66vpC39MBWf8TyLBoFAfy4LdONFClmHoziFpe0EjMAb/MQCXEzMsYJxhc6j9LN/ycz3pHKkiI6C0cKWrdiZmTqBPXiaYse0ExD9EaAJeZyINcXnQ2lNWBSThaBGCzEHsCJXPCjtGJw2RE4isNEi5B9bhbAx4V5szIsvBV9Q+VqCG1mIEJ7PkF7G1ZLyu4i0R0Zup4XHWvzwzMeFdgJm5sTxXCOMcR6Fw5YQcjpJNOrEaxZ2Ba0IbJBbjcP5QBDY0WTRf/+IImTxCkV7gE95Pg0DsvC73BsCc9B5nMfmsXfyXgyPPSIy9CGfrb9klUAlUAlUAp0n8Ae0NWohlKNEwwAAAABJRU5ErkJggg=="/></a>
+                            <a class="icono_pagoseguro"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAiRJREFUWEft1kuoT1EUx/HPNSAyIQMjoQykKGXgNVEUJVEeIwwYMSLKRJlJZIwueURSGCBFSd4ZeE2QRzEwEMlAktd/1bn1b3f+5+xz6N7JXZN//332b63vXnvttXefIba+IY5vGCA3A+exMmO77uACjuFzxvysLRiNbznOuuZ8xVacrNPlZGAWHtc56vF9I45XaXMA1uFMS4CnnS2JBfS0HIA92N0S4CdG4k8vfQ7AWaxpCRCBAyBASi0H4AlmtgR4hxmYiFdlPuoARhQnYFRLgCjAo+jH9LJM1AFMwZuWwUO2AkuwBUtxNfVVB7AMl1sCvMQivEZkcAf2NwXYhgMtAKL45hVBVxX68HWwKcARbGoI8KLQxOrjCA9YtPKLTQFuY34GwG/EPXCqU/XncAirE90EfGoKEILxiShWdiMZG4e5WItI+djk+/UO4OKmxzCIPyaiZ4jCfJ+RlYEpUQ+RxXtNARbgViKK2y0646VMgNiaqKG4nkut6hhuxuFEtbP4vy8D4DniNnxQNbcKIM7s9kS8vCiu9cn4Q1wpxuItcL/TgO5mQFY+SKIBxX532zSc7jSnOSXjpb2+DqIqA28xucvBr6KjfUmq/EcxXherUQ1E6/yeKGKFC/EhGX+E2a2idzpVrwwEQDwux3Q5jkYT2xK/3XYCG/43QC9/ZSdjF/YOFkDZyYjr9tpgAUztPDAmJcFuVr356sDq3gN1+n/+PgzwF6IPWiEkbD7/AAAAAElFTkSuQmCC"/></a>
+                            <a class="icono_pagoseguro"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAkFJREFUWEft1kuoTWEUB/DfJfIaSF6ZEVKESJ4DSqLM5RFCGIm6kQyQmVdJJCPPxMSAATOKYuAREmJAhJnySvLYS/ve9t32Pd/OHdzU+ep0Oqf/Wt9//dfra9HNp6Wb79ck0FTgv1FgAEaiD17jHX5VdNBAjEB8v8D7VJc1UqAXVmAtZpccvcV2nMZPTMZhzCnhPuBORnhj5ut5FZnOCEzHCYxLRLAcN3EXgxpgP2XKrcP5MqaKQERxHT0Slx9FpGZehtuFYwjVGp1WHCgCygSG4CGGJRzdxmXsyXGR7yCwL2H3HVPwqA1XJhCR7EwVDubjEvoWsJuwAeMT9o9zEt8CVyQQkr/JIhmecHAfFzPb3SXcSxzB3hoBLMKVMoGxeFrDOGRekJGYVIGNrjlTw8e2NqJFBaLVbtQw3owdWbRRL+UTXXG2ho/ABNkOKZiVt1TKPvJ8MCu4/l1Q4CoWlgn0w+fU7XmRrsKoLhCING4tE4jfzzIJxyRIXMjyF2QXV+CC2MkaQSzDuSoCW3J5G/n4isBF3xfPNbzCygSB2CNR8B+rCPREDJmpCScxgJZmFT+6gFudLaLj6J2wbY++ikD8NxH3EqP4B9bjUD6OI6dzMS1xeeyNDgurs2U0IyuyU4l6iI24BhPybRgt2OjcwpI8Te24Rus4pIyxHJEOrvAcqYqB8iBTYX/e11Xyf8lXd6zrv94QdV9EsZZn5kRiXMfEjD1fPEMRs6T4IHmC+PyZ+1WnLoEanfVvkCaBpgJNBX4DTkJfIVPFwNkAAAAASUVORK5CYII="/></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </footer>
+    <!-- End / footer -->
+
+
+    <div class="footer__wrapper">
+                <div class="container">
+                    <p class="footer__copy">Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> -
+                        <a href="politicasprivacidad.html" target="_blank">Políticas de privacidad,</a><a href="avisolegal.html">Términos y condiciones,</a><a href="cookies.html"> Cookies</a>
+                        By <a href="https://taplink.cc/msoledadc"
+                        target="_blank"> MSoledadC</a></a>.</p><span class="footer__backtotop" id="back-to-top"> <i class="fa fa-arrow-up"></i>Inicio</i> </i></span> <i class="fa-brands fa-glide-g" style="color: red;"></i>
+                </div>
+            </div>
     </div>
-
-      <div class="site-section border-top">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-md-12">
-              <h3 class="mb-2 text-black">¿Queres viajar con nosotros?</h3>
-              <p class="mb-5">
-                <a href="itinerarios.php" target="_blank" class="btn btn-primary py-3 px-5 text-white 
-                  border-0" >Nosotros te llevamos <i class="fi fi-rr-plane-alt"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end -->	
-
-            			
-     <!-- footer -->			
-     <footer class="site-footer">
-      <div class="container">
-          <div class="row d-flex align-items-center footer-vista-cel">
-              <div class="col-lg-2 col-md-4 mb-2">
-                  <div class="footer_widget">
-                      <img src="images/logo-tr.png" width="150" height="150" alt="NilopiensesTour logo" class="logo_footer">
-                  </div>
-              </div>
-              <div class="col-lg-6 col-md-8 mb-8 mb-lg-0">
-                  <div class="row">
-                      <div class="col-md-12">
-                          <ul class="list-unstyled">
-                              <li><a href="https://maps.app.goo.gl/nmgiiBNKB7BUAE849" target="_blank"><i class="fa fa-map-o"></i> Alicante - España</a></li>
-                              <li><a href="https://maps.app.goo.gl/qS9KhPb6yYttkkKAA" target="_blank"><i class="fa fa-map-marker"></i> Ni lo pienses tour - Av. D” Escandinavia 98 - Gran Alacant</a></li>
-                              <li><a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:" target="_blank"><i class="fi fi-rr-circle-phone"></i> +34 685804332 </a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-6 mb-2 mb-lg-0">
-                <div class="footer__social">
-                    <h3 class="footer-heading mb-2">Redes Sociales</h3>
-                    <div class="d-flex justify-content-between">
-                        <a class="social-icon mr-2 redes_footer" href="https://www.facebook.com/NiLoPiensesTour" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a class="social-icon mr-2 redes_footer" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a class="social-icon mr-2 redes_footer" href="https://www.tripadvisor.es/Attraction_Review-g150812-d27967357-Reviews-Ni_Lo_Pienses_Tour-Playa_del_Carmen_Yucatan_Peninsula.html" target="_blank"><span class="icon-tripadvisor"></span></a>
-                     </div>
-                </div>
-            </div>
-              <div class="col-lg-2 col-md-6 mb-2 mb-lg-0">
-                  <div class="footer__social">
-                      <h3 class="footer-heading mb-2">Pago Seguro</h3>
-                      <div class="d-flex justify-content-between">
-                          <a class="icono_pagoseguro"><img class="iconos_pagoseguro" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfhJREFUWEft1knIjlEYxvHfJykbpAzpw8LGnGFn9S1IlJRCiQU2xMKQQvmKBZGyMGRciSI2LGTYoUgUISwMRYZEKclQnFv3W+/C612+m3M2z3Cec+7r/K/rOc/TpcOtq8P1VQGVQCVQCVQCzQT6YAq2YAheYRW+5Xa9H5NwEr9K/3JcxzaMxmbMwjDcwCY8zLHrMQ+/MTvH/+36lwXD8QQDsRhnMSoFxZix6MUS7Maucv4MQ/ES78uY8ejBPcwowm42fXOm5/2WAqIjii4sIvZhQxbcjkuYi/uYjGV4i2tZYCReI2j2xQ+cwaJcVIhfWwgfbAhqFcKVOI5buYKwIyafU66vpC39MBWf8TyLBoFAfy4LdONFClmHoziFpe0EjMAb/MQCXEzMsYJxhc6j9LN/ycz3pHKkiI6C0cKWrdiZmTqBPXiaYse0ExD9EaAJeZyINcXnQ2lNWBSThaBGCzEHsCJXPCjtGJw2RE4isNEi5B9bhbAx4V5szIsvBV9Q+VqCG1mIEJ7PkF7G1ZLyu4i0R0Zup4XHWvzwzMeFdgJm5sTxXCOMcR6Fw5YQcjpJNOrEaxZ2Ba0IbJBbjcP5QBDY0WTRf/+IImTxCkV7gE95Pg0DsvC73BsCc9B5nMfmsXfyXgyPPSIy9CGfrb9klUAlUAlUAp0n8Ae0NWohlKNEwwAAAABJRU5ErkJggg=="/></a>
-                          <a class="icono_pagoseguro"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAiRJREFUWEft1kuoT1EUx/HPNSAyIQMjoQykKGXgNVEUJVEeIwwYMSLKRJlJZIwueURSGCBFSd4ZeE2QRzEwEMlAktd/1bn1b3f+5+xz6N7JXZN//332b63vXnvttXefIba+IY5vGCA3A+exMmO77uACjuFzxvysLRiNbznOuuZ8xVacrNPlZGAWHtc56vF9I45XaXMA1uFMS4CnnS2JBfS0HIA92N0S4CdG4k8vfQ7AWaxpCRCBAyBASi0H4AlmtgR4hxmYiFdlPuoARhQnYFRLgCjAo+jH9LJM1AFMwZuWwUO2AkuwBUtxNfVVB7AMl1sCvMQivEZkcAf2NwXYhgMtAKL45hVBVxX68HWwKcARbGoI8KLQxOrjCA9YtPKLTQFuY34GwG/EPXCqU/XncAirE90EfGoKEILxiShWdiMZG4e5WItI+djk+/UO4OKmxzCIPyaiZ4jCfJ+RlYEpUQ+RxXtNARbgViKK2y0646VMgNiaqKG4nkut6hhuxuFEtbP4vy8D4DniNnxQNbcKIM7s9kS8vCiu9cn4Q1wpxuItcL/TgO5mQFY+SKIBxX532zSc7jSnOSXjpb2+DqIqA28xucvBr6KjfUmq/EcxXherUQ1E6/yeKGKFC/EhGX+E2a2idzpVrwwEQDwux3Q5jkYT2xK/3XYCG/43QC9/ZSdjF/YOFkDZyYjr9tpgAUztPDAmJcFuVr356sDq3gN1+n/+PgzwF6IPWiEkbD7/AAAAAElFTkSuQmCC"/></a>
-                          <a class="icono_pagoseguro"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAkFJREFUWEft1kuoTWEUB/DfJfIaSF6ZEVKESJ4DSqLM5RFCGIm6kQyQmVdJJCPPxMSAATOKYuAREmJAhJnySvLYS/ve9t32Pd/OHdzU+ep0Oqf/Wt9//dfra9HNp6Wb79ck0FTgv1FgAEaiD17jHX5VdNBAjEB8v8D7VJc1UqAXVmAtZpccvcV2nMZPTMZhzCnhPuBORnhj5ut5FZnOCEzHCYxLRLAcN3EXgxpgP2XKrcP5MqaKQERxHT0Slx9FpGZehtuFYwjVGp1WHCgCygSG4CGGJRzdxmXsyXGR7yCwL2H3HVPwqA1XJhCR7EwVDubjEvoWsJuwAeMT9o9zEt8CVyQQkr/JIhmecHAfFzPb3SXcSxzB3hoBLMKVMoGxeFrDOGRekJGYVIGNrjlTw8e2NqJFBaLVbtQw3owdWbRRL+UTXXG2ho/ABNkOKZiVt1TKPvJ8MCu4/l1Q4CoWlgn0w+fU7XmRrsKoLhCING4tE4jfzzIJxyRIXMjyF2QXV+CC2MkaQSzDuSoCW3J5G/n4isBF3xfPNbzCygSB2CNR8B+rCPREDJmpCScxgJZmFT+6gFudLaLj6J2wbY++ikD8NxH3EqP4B9bjUD6OI6dzMS1xeeyNDgurs2U0IyuyU4l6iI24BhPybRgt2OjcwpI8Te24Rus4pIyxHJEOrvAcqYqB8iBTYX/e11Xyf8lXd6zrv94QdV9EsZZn5kRiXMfEjD1fPEMRs6T4IHmC+PyZ+1WnLoEanfVvkCaBpgJNBX4DTkJfIVPFwNkAAAAASUVORK5CYII="/></a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </footer>
-  <!-- End / footer -->
-
-
-      <div class="footer__wrapper">
-				<div class="container">
-					<p class="footer__copy">Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> -
-						<a href="politicasprivacidad.html" target="_blank">Políticas de privacidad,</a><a href="avisolegal.html">Términos y condiciones,</a><a href="cookies.html"> Cookies</a>
-						By <a href="https://taplink.cc/msoledadc"
-						  target="_blank"> MSoledadC</a></a>.</p><span class="footer__backtotop" id="back-to-top"> <i class="fa fa-arrow-up"></i>Inicio</i> </i></span> <i class="fa-brands fa-glide-g" style="color: red;"></i>
-				</div>
-			</div>
-     
-		</div>
-  </div>
+        
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
