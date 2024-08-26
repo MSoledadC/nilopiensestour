@@ -227,7 +227,7 @@
     mysqli_select_db($conexion, "nilopiensestour");
 
     // 2) Preparar la orden SQL
-    $consulta = "SELECT * FROM itinerarios WHERE pais = 'costa rica'";
+    $consulta = "SELECT * FROM itinerarios WHERE pais = 'indonesia'";
 
     // 3) Ejecutar la orden y obtener los registros
     $datos = mysqli_query($conexion, $consulta);

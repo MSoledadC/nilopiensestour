@@ -144,7 +144,7 @@ $datos = mysqli_fetch_array($respuesta);
               <div class="d-none d-xl-inline-block">
                   <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0"
                       data-class="social">
-                      <li><a href="https://www.facebook.com/NiLoPiensesTour" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-facebook large-icon"></span></a>
+                      <li><a href="https://www.facebook.com/people/NI-Lo-Pienses-Tour/61562454133917/?mibextid=qi2Omg&rdid=HgxgTyFEMMvE3Rao&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FKn3GWjBhuihHipro%2F%3Fmibextid%3Dqi2Omg" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-facebook large-icon"></span></a>
                       </li>
                       <li><a href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-instagram large-icon"></span></a>
                       </li>
@@ -216,6 +216,7 @@ $datos = mysqli_fetch_array($respuesta);
                                         <option value="asia" <?php echo ($datos['continente'] == 'asia') ? 'selected' : ''; ?>>Asia</option>
                                         <option value="paquete" <?php echo ($datos['continente'] == 'paquete') ? 'selected' : ''; ?>>Paquetes</option>
                                         <option value="europa" <?php echo ($datos['continente'] == 'europa') ? 'selected' : ''; ?>>Europa</option>
+                                        <option value="info" <?php echo ($datos['continente'] == 'info') ? 'selected' : ''; ?>>Info</option>
                                     </select>
                                 </div>
                             </div>

@@ -115,7 +115,7 @@ $datos = mysqli_fetch_array($respuesta);
                     <div class="d-none d-xl-inline-block">
                         <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0"
                             data-class="social">
-                            <li><a href="https://www.facebook.com/profile.php?id=61562454133917&mibextid=qi2Omg&rdid=hDyo2Z1fBRfymVUx&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FKn3GWjBhuihHipro%2F%3Fmibextid%3Dqi2Omg" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-facebook"></span></a>
+                            <li><a href="https://www.facebook.com/people/NI-Lo-Pienses-Tour/61562454133917/?mibextid=qi2Omg&rdid=HgxgTyFEMMvE3Rao&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FKn3GWjBhuihHipro%2F%3Fmibextid%3Dqi2Omg" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-facebook"></span></a>
                             </li>
                             <li><a href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-instagram"></span></a>
                             </li>
@@ -212,27 +212,31 @@ $datos = mysqli_fetch_array($respuesta);
                                     <div class="form-group">
                                         <label>País<small> (requerido)</small></label>
                                         <select name="pais" class="form-control" required>
-                                            <option value="" disabled>Seleccionar</option>
-                                            <option value="argentina" <?php echo ($datos['pais'] == 'argentina') ? 'selected' : ''; ?>>Argentina</option>
-                                            <option value="brasil" <?php echo ($datos['pais'] == 'brasil') ? 'selected' : ''; ?>>Brasil</option>
-                                            <option value="chile" <?php echo ($datos['pais'] == 'chile') ? 'selected' : ''; ?>>Chile</option>
-                                            <option value="colombia" <?php echo ($datos['pais'] == 'colombia') ? 'selected' : ''; ?>>Colombia</option>
-                                            <option value="costa_rica" <?php echo ($datos['pais'] == 'costa_rica') ? 'selected' : ''; ?>>Costa Rica</option>
-                                            <option value="mexico" <?php echo ($datos['pais'] == 'mexico') ? 'selected' : ''; ?>>México</option>
-                                            <option value="panama" <?php echo ($datos['pais'] == 'panama') ? 'selected' : ''; ?>>Panamá</option>
-                                            <option value="peru" <?php echo ($datos['pais'] == 'peru') ? 'selected' : ''; ?>>Perú</option>
-                                            <option value="republica_dominicana" <?php echo ($datos['pais'] == 'republica_dominicana') ? 'selected' : ''; ?>>República Dominicana</option>
-                                            <option value="marruecos" <?php echo ($datos['pais'] == 'marruecos') ? 'selected' : ''; ?>>Marruecos</option>
-                                            <option value="egipto" <?php echo ($datos['pais'] == 'egipto') ? 'selected' : ''; ?>>Egipto</option>
-                                            <option value="sudafrica" <?php echo ($datos['pais'] == 'sudafrica') ? 'selected' : ''; ?>>Sudáfrica</option>
-                                            <option value="italia" <?php echo ($datos['pais'] == 'italia') ? 'selected' : ''; ?>>Italia</option>
-                                            <option value="espana" <?php echo ($datos['pais'] == 'espana') ? 'selected' : ''; ?>>España</option>
-                                            <option value="francia" <?php echo ($datos['pais'] == 'francia') ? 'selected' : ''; ?>>Francia</option>
-                                            <option value="croacia" <?php echo ($datos['pais'] == 'croacia') ? 'selected' : ''; ?>>Croacia</option>
-                                            <option value="portugal" <?php echo ($datos['pais'] == 'portugal') ? 'selected' : ''; ?>>Portugal</option>
-                                            <option value="paises_bajos" <?php echo ($datos['pais'] == 'paises_bajos') ? 'selected' : ''; ?>>Países Bajos</option>
-                                            <option value="polonia" <?php echo ($datos['pais'] == 'polonia') ? 'selected' : ''; ?>>Polonia</option>
-                                        </select>
+                                        <option value="argentina" <?php echo ($datos['pais'] == 'argentina') ? 'selected' : ''; ?>>Argentina</option>
+                                        <option value="brasil" <?php echo ($datos['pais'] == 'brasil') ? 'selected' : ''; ?>>Brasil</option>
+                                        <option value="chile" <?php echo ($datos['pais'] == 'chile') ? 'selected' : ''; ?>>Chile</option>
+                                        <option value="colombia" <?php echo ($datos['pais'] == 'colombia') ? 'selected' : ''; ?>>Colombia</option>
+                                        <option value="costarica" <?php echo ($datos['pais'] == 'costarica') ? 'selected' : ''; ?>>Costa Rica</option>
+                                        <option value="croacia" <?php echo ($datos['pais'] == 'croacia') ? 'selected' : ''; ?>>Croacia</option>
+                                        <option value="egipto" <?php echo ($datos['pais'] == 'egipto') ? 'selected' : ''; ?>>Egipto</option>
+                                        <option value="emiratosarabes" <?php echo ($datos['pais'] == 'emiratosarabes') ? 'selected' : ''; ?>>Emiratos Árabes</option>
+                                        <option value="espana" <?php echo ($datos['pais'] == 'espana') ? 'selected' : ''; ?>>España</option>
+                                        <option value="francia" <?php echo ($datos['pais'] == 'francia') ? 'selected' : ''; ?>>Francia</option>
+                                        <option value="indonesia" <?php echo ($datos['pais'] == 'indonesia') ? 'selected' : ''; ?>>Indonesia</option>
+                                        <option value="italia" <?php echo ($datos['pais'] == 'italia') ? 'selected' : ''; ?>>Italia</option>
+                                        <option value="maldivas" <?php echo ($datos['pais'] == 'maldivas') ? 'selected' : ''; ?>>Maldivas</option>
+                                        <option value="marruecos" <?php echo ($datos['pais'] == 'marruecos') ? 'selected' : ''; ?>>Marruecos</option>
+                                        <option value="mexico" <?php echo ($datos['pais'] == 'mexico') ? 'selected' : ''; ?>>México</option>
+                                        <option value="panama" <?php echo ($datos['pais'] == 'panama') ? 'selected' : ''; ?>>Panamá</option>
+                                        <option value="paisesbajos" <?php echo ($datos['pais'] == 'paisesbajos') ? 'selected' : ''; ?>>Países Bajos</option>
+                                        <option value="peru" <?php echo ($datos['pais'] == 'peru') ? 'selected' : ''; ?>>Perú</option>
+                                        <option value="polonia" <?php echo ($datos['pais'] == 'polonia') ? 'selected' : ''; ?>>Polonia</option>
+                                        <option value="portugal" <?php echo ($datos['pais'] == 'portugal') ? 'selected' : ''; ?>>Portugal</option>
+                                        <option value="republicadominicana" <?php echo ($datos['pais'] == 'republicadominicana') ? 'selected' : ''; ?>>República Dominicana</option>
+                                        <option value="sudafrica" <?php echo ($datos['pais'] == 'sudafrica') ? 'selected' : ''; ?>>Sudáfrica</option>
+                                        <option value="tailandia" <?php echo ($datos['pais'] == 'tailandia') ? 'selected' : ''; ?>>Tailandia</option>
+                                        <option value="turquia" <?php echo ($datos['pais'] == 'turquia') ? 'selected' : ''; ?>>Turquía</option>
+                                    </select>
                                     </div>
                                 </div>
                                     <div class="col-md-6">

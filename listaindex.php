@@ -65,59 +65,116 @@ session_start()
               <img class="mb-0 logonav"src="images/logo-tr.png" alt="Nilopiensestour logo" width="150" height="150"/>
                <!-- <h1 class="text-white mb-0 nava"><strong>NI LO PIENSES TOUR</strong></h1>-->
             </div>
-            <div class="col-8 col-md-8 d-none d-xl-block">
-              <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-                <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                  <li class="active">
-                    <a class="text-white" href="index.html">Inicio</a>
-                  </li>
-                  <li class="has-children">
-                    <a class="text-white" href="#">Destinos</a>
-                    <ul class="dropdown">
-                      <li class="has-children">
-                        <a class="text-white" href="america.php">América</a>
-                        <ul class="dropdown">
-                          <li><a class="text-white" href="argentina.php">Argentina</a></li>
-                          <li><a class="text-white" href="brasil.php">Brasil</a></li>
-                          <li><a class="text-white" href="chile.php">Chile</a></li>
-                          <li><a class="text-white" href="colombia.php">Colombia</a></li>
-                          <li><a class="text-white" href="costarica.php">Costa Rica</a></li>
-                          <li><a class="text-white" href="mexico.php">México</a></li>
-                          <li><a class="text-white" href="panama.php">Panamá</a></li>
-                          <li><a class="text-white" href="peru.php">Perú</a></li>
-                          <li><a class="text-white" href="republicadominicana.php">Rep. Dominicana</a></li>
-                        </ul>
-                      </li>
-                      <li class="has-children">
-                        <a class="text-white" href="europa.php">Europa</a>
-                        <ul class="dropdown">
-                          <li><a class="text-white" href="croacia.php">Croacia</a></li>
-                          <li><a class="text-white" href="españa.php">España</a></li>
-                          <li><a class="text-white" href="francia.php">Francia</a></li>
-                          <li><a class="text-white" href="italia.php">Italia</a></li>
-                          <li><a class="text-white" href="paisesbajos.php">Países Bajos</a></li>
-                          <li><a class="text-white" href="polonia.php">Polonia</a></li>
-                          <li><a class="text-white" href="portugal.php">Portugal</a></li>
-                        </ul>
-                      </li>
-                      <li><a class="text-white" href="orientemedio.php">Asia</a></li>
-                      <li class="has-children">
-                        <a class="text-white" href="africa.php">África</a>
-                        <ul class="dropdown">
-                          <li><a class="text-white" href="egipto.php">Egipto</a></li>
-                          <li><a class="text-white" href="marruecos.php">Marruecos</a></li>
-                          <li><a class="text-white" href="sudafrica.php">Sudáfrica</a></li>
-                        </ul>
-                      </li>
-                      <li><a class="text-white" href="cruceros.php">Transfer</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="text-white" href="itinerarios.php">Servicios</a></li>
-                  <li><a class="text-white" href="nosotros.html">Quienes Somos</a></li>
-                  <li><a class="text-white" href="contacto.html">Contacto</a></li>
-                </ul>
-              </nav>              
-            </div>
+            <?php
+              // Conexión a la base de datos
+              $conexion = mysqli_connect("127.0.0.1", "root", "", "nilopiensestour");
+
+              // Función para obtener destinos por continente
+              function obtener_destinos($conexion, $continente) {
+                  $query = "SELECT pais FROM itinerarios WHERE continente = '$continente' AND contenido_disponible = 1";
+                  $result = mysqli_query($conexion, $query);
+
+                  $destinos = [];
+                  if ($result) {
+                      while ($row = mysqli_fetch_assoc($result)) {
+                          $destinos[] = $row['pais'];
+                      }
+                  }
+                  return $destinos;
+              }
+
+              // Función para convertir nombres de países a formato visual
+              function nombre_pais_visual($pais) {
+                  $mapa_paises = [
+                      'mexico' => 'México',
+                      'peru' => 'Perú',
+                      // Agrega más países según sea necesario
+                  ];
+
+                  return $mapa_paises[$pais] ?? ucfirst($pais);
+              }
+
+              // Obtener destinos para cada continente
+              $destinos_america = obtener_destinos($conexion, 'América');
+              $destinos_europa = obtener_destinos($conexion, 'Europa');
+              $destinos_africa = obtener_destinos($conexion, 'África');
+              $destinos_asia = obtener_destinos($conexion, 'Asia');
+              $destinos_paquete = obtener_destinos($conexion, 'Paquetes');
+              ?>
+
+              <div class="col-8 col-md-8 d-none d-xl-block">
+                  <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
+                      <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                          <li class="active">
+                              <a class="text-white" href="index.html">Inicio</a>
+                          </li>
+                          <li class="has-children">
+                              <a class="text-white" href="#">Destinos</a>
+                              <ul class="dropdown">
+                                  <?php if (!empty($destinos_america)): ?>
+                                      <li class="has-children">
+                                          <a class="text-white" href="america.php">América</a>
+                                          <ul class="dropdown">
+                                              <?php foreach ($destinos_america as $pais): ?>
+                                                  <li><a class="text-white" href="<?= strtolower($pais) ?>.php"><?= nombre_pais_visual($pais) ?></a></li>
+                                              <?php endforeach; ?>
+                                          </ul>
+                                      </li>
+                                  <?php endif; ?>
+
+                                  <?php if (!empty($destinos_europa)): ?>
+                                      <li class="has-children">
+                                          <a class="text-white" href="europa.php">Europa</a>
+                                          <ul class="dropdown">
+                                              <?php foreach ($destinos_europa as $pais): ?>
+                                                  <li><a class="text-white" href="<?= strtolower($pais) ?>.php"><?= nombre_pais_visual($pais) ?></a></li>
+                                              <?php endforeach; ?>
+                                          </ul>
+                                      </li>
+                                  <?php endif; ?>
+
+                                  <?php if (!empty($destinos_asia)): ?>
+                                      <li class="has-children">
+                                          <a class="text-white" href="asia.php">Asia</a>
+                                          <ul class="dropdown">
+                                              <?php foreach ($destinos_asia as $pais): ?>
+                                                  <li><a class="text-white" href="<?= strtolower($pais) ?>.php"><?= nombre_pais_visual($pais) ?></a></li>
+                                              <?php endforeach; ?>
+                                          </ul>
+                                      </li>
+                                  <?php endif; ?>
+
+                                  <?php if (!empty($destinos_africa)): ?>
+                                      <li class="has-children">
+                                          <a class="text-white" href="africa.php">África</a>
+                                          <ul class="dropdown">
+                                              <?php foreach ($destinos_africa as $pais): ?>
+                                                  <li><a class="text-white" href="<?= strtolower($pais) ?>.php"><?= nombre_pais_visual($pais) ?></a></li>
+                                              <?php endforeach; ?>
+                                          </ul>
+                                      </li>
+                                  <?php endif; ?>
+
+                                  <?php if (!empty($destinos_paquete)): ?>
+                                      <li class="has-children">
+                                          <a class="text-white" href="paquetes.php">Paquetes</a>
+                                          <ul class="dropdown">
+                                              <?php foreach ($destinos_paquete as $pais): ?>
+                                                  <li><a class="text-white" href="<?= strtolower($pais) ?>.php"><?= nombre_pais_visual($pais) ?></a></li>
+                                              <?php endforeach; ?>
+                                          </ul>
+                                      </li>
+                                  <?php else: ?>
+                                      <li><a class="text-white" href="paquetes.php">Paquetes</a></li>
+                                  <?php endif; ?>
+                              </ul>
+                          </li>
+                          <li><a class="text-white" href="itinerarios.php">Servicios</a></li>
+                          <li><a class="text-white" href="nosotros.html">Quienes Somos</a></li>
+                          <li><a class="text-white" href="contacto.html">Contacto</a></li>
+                      </ul>
+                  </nav>
+              </div>
 
             <div class="col-6 col-xl-2 text-right">
               <div class="d-none d-xl-inline-block">

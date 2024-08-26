@@ -96,7 +96,8 @@
               $destinos_europa = obtener_destinos($conexion, 'Europa');
               $destinos_africa = obtener_destinos($conexion, 'África');
               $destinos_asia = obtener_destinos($conexion, 'Asia');
-              $destinos_paquete = obtener_destinos($conexion, 'Paquetes');
+              $destinos_paquetes = obtener_destinos($conexion, 'Paquetes');
+              $destinos_info = obtener_destinos($conexion, 'Info');
               ?>
 
               <div class="col-8 col-md-8 d-none d-xl-block">
@@ -176,7 +177,7 @@
               <div class="d-none d-xl-inline-block">
                   <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0"
                       data-class="social">
-                      <li><a href="https://www.facebook.com/NiLoPiensesTour" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-facebook large-icon"></span></a>
+                      <li><a href="https://www.facebook.com/people/NI-Lo-Pienses-Tour/61562454133917/?mibextid=qi2Omg&rdid=HgxgTyFEMMvE3Rao&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FKn3GWjBhuihHipro%2F%3Fmibextid%3Dqi2Omg" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-facebook large-icon"></span></a>
                       </li>
                       <li><a href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-instagram large-icon"></span></a>
                       </li>
