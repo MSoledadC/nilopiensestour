@@ -237,7 +237,7 @@ session_start()
                 </div>
               </a>
               <div class="text-center mt-2">
-          <a href="editarindex.php?id=<?php echo $reg['id']; ?>" class="btn btn-warning">Editar</a>
+          <a href="editarindex.php?id=<?php echo $reg['id']; ?>" class="btn btn-primary">Editar</a>
         </div>
             </div>
           <?php } ?>
@@ -245,105 +245,7 @@ session_start()
     </div>
 </div>
 
-      <div class="site-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-7 text-center">
-                    <h3 class="font-weight-light text-black">Tips para Viajeros</h3>
-                </div>
-            </div>
-            <div class="row align-items-stretch">
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                            <i class="text-primaryservicios fi fi-rr-headset"></i>
-                        </div>
-                        <div>
-                            <h3>Asesoramiento</h3>
-                            <h5><strong>24/7</strong></h5>
-                            <p>Te asesoramos paso a paso para que te lleves la mejor experiencia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                            <i class="text-primaryservicios fi fi-rr-shield-check "></i>
-                        </div>
-                        <div>
-                            <h3>Seguridad al Viajar</h3>
-                            <p>En nuestra agencia te proporcionamos seguridad en todos los aspectos para tu tranquilidad.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                            <span class="text-primaryservicios fi fi-rr-map-marker"></span>
-                        </div>
-                        <div>
-                            <h3>Paquetes Turísticos</h3>
-                            <p>Encuentra los mejores paquetes turísticos en un solo lugar para vivir experiencias únicas en parajes indómitos inaccesibles o exóticos, como parques nacionales, montañas, bosques, selvas o desiertos.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Nuevo título y contenido adicional en la misma fila -->
-                <div class="col-md-12 text-center mb-4">
-                    <h3 class="font-weight-light inicio_3texto">SOMOS TU MEJOR OPCIÓN</h3>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                            <span class="text-primaryservicios fi fi-rr-picture"></span>
-                        </div>
-                        <div>
-                            <h3>Destinos</h3>
-                            <p>Investiga tu destino antes de viajar de esta forma no te vas a perder nada.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                          <i class="text-primaryservicios fi fi-rr-nfc-lock "></i>
-                        </div>
-                        <div>
-                            <h3>Seguro de Viajero</h3>
-                            <p>Viaja seguro, viaja tranquilo.<br>Viajar forma parte de nuestra vida, y los seguros de viaje nos protegen.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                    <div class="unit-4 d-flex">
-                        <div class="unit-4-icon mr-4">
-                            <i class="text-primaryservicios fi fi-rr-luggage-rolling"></i>
-                        </div>
-                        <div>
-                            <h3>Documentos y Equipajes</h3>
-                            <p>Antes de viajar revisa el vencimiento de tu pasaporte.<br> 
-                            ¡No te olvides tus documentos!<br>
-                            No te cargues de más, lleva lo imprescindible.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-      <div class="site-section border-top">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-md-12">
-              <h3 class="mb-2 text-black">¿Queres viajar con nosotros?</h3>
-              <p class="mb-5">
-                <a href="itinerarios.php" target="_blank" class="btn btn-primary py-3 px-5 text-white 
-                  border-0" >Nosotros te llevamos <i class="fi fi-rr-plane-alt"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end -->	
+     
 
             			
      <!-- footer -->			

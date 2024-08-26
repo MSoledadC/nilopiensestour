@@ -149,7 +149,7 @@ session_start()
     </div>
 
     <!-- Botón para ir a listaindex.php -->
-    <div class="text-right mt-3">
+    <div class="text-center mt-3">
       <a href="listaindex.php" class="btn btn-primary">Inicio</a>
     </div>
   </div>

@@ -163,7 +163,6 @@ $datos = mysqli_fetch_array($respuesta);
     </div>
   </div>
 </header>
-
       <div class="site-blocks-cover inner-page-cover" style="background-image: url(images/portadas/2.webp);" data-aos="fade" data-stellar-background-ratio="0.5">
           <div class="container">
               <div class="row align-items-center justify-content-center text-center">
@@ -186,98 +185,101 @@ $datos = mysqli_fetch_array($respuesta);
       </div>
 
 
-<div class="btn-wrapper">
-    <a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:" target="_blank" class="btn-ws">
-        <img src="images/logo_ws.png" alt="Nilopiensestour ws" width="70" height="70" />
-    </a>
-</div>
+    <div class="btn-wrapper">
+        <a href="https://wa.me/34685804332/?text=%20Hola%20Ni%20Lo%20Pienses%20tour,%20quisiera%20saber%20sobre:" target="_blank" class="btn-ws">
+            <img src="images/logo_ws.png" alt="Nilopiensestour ws" width="70" height="70" />
+        </a>
+    </div>
 
 
-<?php
-    $continente = $datos["continente"];
-    $imagen = $datos['imagen'];
-?>
+    <?php
+        $continente = $datos["continente"];
+        $imagen = $datos['imagen'];
+    ?>
 
-<div class="site-section bg-light">
-    <div class="container">
-        <div class="row">
-            <!-- Columna izquierda con el formulario -->
-            <div class="col-md-7">
-                <h3><b>Editar</b> ITINERARIOS<br><small>Seguir las indicaciones y llenar los campos requeridos.</small></h3>
-                <form action="" class="p-5 bg-white form" method="post" enctype="multipart/form-data">
-                    <div class="row form-group">
-                     
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>
-                                    Continente <small>(requerido)</small>
-                                    <input name="continente" type="text" class="form-control" placeholder="Continente" required value="<?php echo $datos['continente']; ?>">
-                                </label>
+    <div class="site-section bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Columna izquierda con el formulario ampliado a col-md-8 -->
+                <div class="col-md-8">
+                    <h3><b>Editar</b> ITINERARIOS<br><small>Seguir las indicaciones y llenar los campos requeridos.</small></h3>
+                    <form action="" class="p-5 bg-white form" method="post" enctype="multipart/form-data">
+                        <div class="row form-group">
+                            <!-- Columna para el campo Continente -->
+                            <div class="col-md-6">
+                                <div class="form-group btn btn-primary">
+                                    <label>Continente<small> (requerido)</small></label>
+                                    <select name="continente" class="form-control" required>
+                                        <option value="" disabled selected>Seleccione un continente</option>
+                                        <option value="america" <?php echo ($datos['continente'] == 'america') ? 'selected' : ''; ?>>América</option>
+                                        <option value="africa" <?php echo ($datos['continente'] == 'africa') ? 'selected' : ''; ?>>África</option>
+                                        <option value="asia" <?php echo ($datos['continente'] == 'asia') ? 'selected' : ''; ?>>Asia</option>
+                                        <option value="paquete" <?php echo ($datos['continente'] == 'paquete') ? 'selected' : ''; ?>>Paquetes</option>
+                                        <option value="europa" <?php echo ($datos['continente'] == 'europa') ? 'selected' : ''; ?>>Europa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Columna para el campo de selección de archivo -->
+                            <div class="col-md-6">
+                                <div class="form-group btn btn-primary">
+                                    <label>Imagen (.jpg 700x799px)<small> (requerido)</small></label>
+                                    <input class="form-control-file mt-2" type="file" name="imagen">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row form-group">
-                        <!-- Input para la primera imagen -->
+                        <div class="row form-group">
                         <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Imagen (.jpg 700x799px)</label>
-                                <input type="file" name="imagen">
+                            <!-- Contenedor para centrar el botón -->
+                                <div class="text-center">
+                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                    <input type="submit" class='btn btn-finish btn-primary' name="guardar_cambios" value="Guardar Cambios">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-12">
-                            <div class="pull-right">
-                                <input type="hidden" name="id" value="<?php echo $id; ?>">
-                                <input type="submit" class='btn btn-finish btn-primary' name="guardar_cambios" value="Guardar Cambios">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <?php
-                        if (isset($_POST['guardar_cambios'])) {
-                            $continente = mysqli_real_escape_string($conexion, $_POST['continente']);
-                            $id = (int)$_POST['id']; // Asegúrate de tener el ID en una variable entera
+                    </form>
+                    <?php
+                    if (isset($_POST['guardar_cambios'])) {
+                        $continente = mysqli_real_escape_string($conexion, $_POST['continente']);
+                        $id = (int)$_POST['id']; // Asegúrate de tener el ID en una variable entera
 
-                            // Inicia la consulta
-                            $consulta = "UPDATE imagenindex SET continente='$continente' ";
+                        // Inicia la consulta
+                        $consulta = "UPDATE imagenindex SET continente='$continente' ";
 
-                            // Agregar imágenes si se han subido
-                            if (!empty($_FILES['imagen']['tmp_name'])) {
-                                $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
-                                $consulta .= ", imagen='$imagen' ";
-                            }
-
-                            // Añadir la condición WHERE al final de la consulta
-                            $consulta .= "WHERE id=$id";
-
-                            // Ejecutar la consulta
-                            if (mysqli_query($conexion, $consulta)) {
-                                // Redireccionar a la lista después de guardar los cambios
-                                header('Location: listaindex.php');
-                                exit();
-                            } else {
-                                echo "Error: " . $consulta . "<br>" . mysqli_error($conexion);
-                            }
+                        // Agregar imágenes si se han subido
+                        if (!empty($_FILES['imagen']['tmp_name'])) {
+                            $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+                            $consulta .= ", imagen='$imagen' ";
                         }
-                        ?>
-            </div>
-            <!-- Columna derecha con el contenido adicional -->
-            <div class="col-md-5">
-                <div class="p-4 mb-3 bg-white">
-                    <img src="images/portadas/3.webp" alt="NilopiensesTour" class="img-fluid mb-4 rounded">
-                    <h3 class="h5 text-contacto mb-3">Si algo bueno te pasa</h3>
-                    <p class="texto-contacto">
-                        <span>Si algo bueno te pasa, Viaja para celebrar... </span><br>
-                        <span>Si algo malo te pasa, Viaja para olvidar... </span><br>
-                        <span>Si nada te pasa, Viaja, para que algo te pase... </span>
-                    </p>
+
+                        // Añadir la condición WHERE al final de la consulta
+                        $consulta .= "WHERE id=$id";
+
+                        // Ejecutar la consulta
+                        if (mysqli_query($conexion, $consulta)) {
+                            // Redireccionar a la lista después de guardar los cambios
+                            header('Location: listaindex.php');
+                            exit();
+                        } else {
+                            echo "Error: " . $consulta . "<br>" . mysqli_error($conexion);
+                        }
+                    }
+                    ?>
+                </div>
+                <!-- Columna derecha con el contenido adicional, ajustada a col-md-4 -->
+                <div class="col-md-4">
+                    <div class="p-4 mb-3 bg-white">
+                        <img src="images/portadas/3.webp" alt="NilopiensesTour" class="img-fluid mb-4 rounded">
+                        <h3 class="h5 text-contacto mb-3">Si algo bueno te pasa</h3>
+                        <p class="texto-contacto">
+                            <span>Si algo bueno te pasa, Viaja para celebrar... </span><br>
+                            <span>Si algo malo te pasa, Viaja para olvidar... </span><br>
+                            <span>Si nada te pasa, Viaja, para que algo te pase... </span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-    
 
     
     

@@ -170,25 +170,46 @@ session_start();
                             <div class="form-group">
                                 <label>Continente <small>(requerido)</small></label>
                                 <select name="continente" class="form-control" required>
-                                    <option value="" disabled selected>Seleccionar Continente</option>
+                                    <option value="" disabled selected>Seleccionar </option>
                                     <option value="america">América</option>
                                     <option value="europa">Europa</option>
-                                    <option value="orientemedio">Asia</option>
+                                    <option value="asia">Asia</option>
                                     <option value="africa">África</option>                           
-                                    <option value="cruceros">Paquetes</option>
+                                    <option value="paquete">Paquetes</option>
                                     
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>País (sin acento)<small>(requerido)</small></label>
-                                <input name="pais" type="text" class="form-control" placeholder="País" required>
+                                <label>País<small> (requerido)</small></label>
+                                <select name="pais" class="form-control" required>
+                                    <option value="" disabled selected>Seleccionar</option>
+                                    <option value="argentina">Argentina</option>
+                                    <option value="brasil">Brasil</option>
+                                    <option value="chile">Chile</option>
+                                    <option value="colombia">Colombia</option>
+                                    <option value="costa_rica">Costa Rica</option>
+                                    <option value="mexico">México</option>
+                                    <option value="panama">Panamá</option>
+                                    <option value="peru">Perú</option>
+                                    <option value="republica_dominicana">República Dominicana</option>
+                                    <option value="marruecos">Marruecos</option>
+                                    <option value="egipto">Egipto</option>
+                                    <option value="sudafrica">Sudáfrica</option>
+                                    <option value="italia">Italia</option>
+                                    <option value="espana">España</option>
+                                    <option value="francia">Francia</option>
+                                    <option value="croacia">Croacia</option>
+                                    <option value="portugal">Portugal</option>
+                                    <option value="paises_bajos">Países Bajos</option>
+                                    <option value="polonia">Polonia</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Contenido 1=Con Contenido / 0=Sin Contenido <small>(requerido)</small></label>
+                                <label>Contenido 1=Con Contenido / 0=Sin  <small>(requerido)</small></label>
                                 <input name="contenido_disponible" type="number" class="form-control" placeholder="0 o 1" min="0" max="1" required>
                             </div>
                         </div>
@@ -213,7 +234,7 @@ session_start();
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>1=Promoción / 0=NoPromoción <small>(requerido)</small></label>
-                                <input name="promocion3" type="text" class="form-control" placeholder="1 true" required>
+                                <input name="promocion3" type="text" class="form-control" placeholder="1 o 0" required>
                             </div>
                         </div>
                     </div>

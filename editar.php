@@ -167,6 +167,7 @@ $datos = mysqli_fetch_array($respuesta);
             $datos_excursion=$datos["datos_excursion"];
             $descripcion=$datos["descripcion"]; 
             $pais=$datos["pais"]; 
+            $continente = $datos["continente"]; 
             $contenido_disponible=$datos["contenido_disponible"]; 
             $noches=$datos["noches"];
             $fecha_salida=$datos["fecha_salida"];  
@@ -195,21 +196,48 @@ $datos = mysqli_fetch_array($respuesta);
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
+                                        <div class="form-group ">
                                             <label>Continente <small>(requerido)</small></label>
-                                            <input name="continente" type="text" class="form-control" placeholder="continente" required value="<?php echo $datos['continente']; ?>">
+                                            <select name="continente" class="form-control" required>
+                                            <option value="" disabled>Seleccione un continente</option>
+                                            <option value="america" <?php echo ($continente == 'america') ? 'selected' : ''; ?>>América</option>
+                                            <option value="africa" <?php echo ($continente == 'africa') ? 'selected' : ''; ?>>África</option>
+                                            <option value="asia" <?php echo ($continente == 'asia') ? 'selected' : ''; ?>>Asia</option>
+                                            <option value="paquete" <?php echo ($continente == 'paquete') ? 'selected' : ''; ?>>Paquetes</option>
+                                            <option value="europa" <?php echo ($continente == 'europa') ? 'selected' : ''; ?>>Europa</option>
+                                        </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Pais <small>(requerido)</small>
-                                                <input name="pais" type="text" class="form-control" placeholder="Pais" required value="<?php echo $datos['pais']; ?>">
-                                            </label>
-                                        </div>
+                                    <div class="form-group">
+                                        <label>País<small> (requerido)</small></label>
+                                        <select name="pais" class="form-control" required>
+                                            <option value="" disabled>Seleccionar</option>
+                                            <option value="argentina" <?php echo ($datos['pais'] == 'argentina') ? 'selected' : ''; ?>>Argentina</option>
+                                            <option value="brasil" <?php echo ($datos['pais'] == 'brasil') ? 'selected' : ''; ?>>Brasil</option>
+                                            <option value="chile" <?php echo ($datos['pais'] == 'chile') ? 'selected' : ''; ?>>Chile</option>
+                                            <option value="colombia" <?php echo ($datos['pais'] == 'colombia') ? 'selected' : ''; ?>>Colombia</option>
+                                            <option value="costa_rica" <?php echo ($datos['pais'] == 'costa_rica') ? 'selected' : ''; ?>>Costa Rica</option>
+                                            <option value="mexico" <?php echo ($datos['pais'] == 'mexico') ? 'selected' : ''; ?>>México</option>
+                                            <option value="panama" <?php echo ($datos['pais'] == 'panama') ? 'selected' : ''; ?>>Panamá</option>
+                                            <option value="peru" <?php echo ($datos['pais'] == 'peru') ? 'selected' : ''; ?>>Perú</option>
+                                            <option value="republica_dominicana" <?php echo ($datos['pais'] == 'republica_dominicana') ? 'selected' : ''; ?>>República Dominicana</option>
+                                            <option value="marruecos" <?php echo ($datos['pais'] == 'marruecos') ? 'selected' : ''; ?>>Marruecos</option>
+                                            <option value="egipto" <?php echo ($datos['pais'] == 'egipto') ? 'selected' : ''; ?>>Egipto</option>
+                                            <option value="sudafrica" <?php echo ($datos['pais'] == 'sudafrica') ? 'selected' : ''; ?>>Sudáfrica</option>
+                                            <option value="italia" <?php echo ($datos['pais'] == 'italia') ? 'selected' : ''; ?>>Italia</option>
+                                            <option value="espana" <?php echo ($datos['pais'] == 'espana') ? 'selected' : ''; ?>>España</option>
+                                            <option value="francia" <?php echo ($datos['pais'] == 'francia') ? 'selected' : ''; ?>>Francia</option>
+                                            <option value="croacia" <?php echo ($datos['pais'] == 'croacia') ? 'selected' : ''; ?>>Croacia</option>
+                                            <option value="portugal" <?php echo ($datos['pais'] == 'portugal') ? 'selected' : ''; ?>>Portugal</option>
+                                            <option value="paises_bajos" <?php echo ($datos['pais'] == 'paises_bajos') ? 'selected' : ''; ?>>Países Bajos</option>
+                                            <option value="polonia" <?php echo ($datos['pais'] == 'polonia') ? 'selected' : ''; ?>>Polonia</option>
+                                        </select>
                                     </div>
+                                </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Contenido Disponible <small>(requerido)</small>
+                                            <label>Contenido 1=Con Contenido / 0=Sin<small> (requerido)</small>
                                                 <input name="contenido_disponible" type="number" class="form-control" placeholder="Contenido Disponible" required value="<?php echo $datos['contenido_disponible']; ?>" min="0" max="1">
                                             </label>
                                         </div>
@@ -235,7 +263,7 @@ $datos = mysqli_fetch_array($respuesta);
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>1=Promoción / 0=NoPromoción <small>(requerido)</small></label>
-                                            <input name="promocion3" type="text" class="form-control" placeholder="1 true" required value="<?php echo $datos['promocion3']; ?>">
+                                            <input name="promocion3" type="text" class="form-control" placeholder="1 o 0" required value="<?php echo $datos['promocion3']; ?>">
                                         </div>
                                     </div>
                                 </div>
