@@ -106,7 +106,7 @@ session_start()
                   <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
                       <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                           <li class="active">
-                              <a class="text-white" href="index.html">Inicio</a>
+                              <a class="text-white" href="index.php">Inicio</a>
                           </li>
                           <li class="has-children">
                               <a class="text-white" href="#">Destinos</a>
@@ -227,7 +227,7 @@ session_start()
         <div class="container overlap-section">
           <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
-              <a href="itinerarios.html" class="unit-1 text-center">
+              <a href="itinerarios.php" class="unit-1 text-center">
                 <img src="images/inicio/1.webp" alt="Nilopiensestour aereos" class="img-fluid"/>
                 <div class="unit-1-text">
                   <h3 class="unit-1-heading"></h3>
@@ -235,7 +235,7 @@ session_start()
               </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
-              <a href="itinerarios.html" class="unit-1 text-center">
+              <a href="itinerarios.php" class="unit-1 text-center">
                 <img src="images/inicio/5.webp" alt="Nilopiensestour cruceros" class="img-fluid"/>
                 <div class="unit-1-text">
                   <h3 class="unit-1-heading"></h3>
@@ -243,7 +243,7 @@ session_start()
               </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
-              <a href="itinerarios.html" class="unit-1 text-center">
+              <a href="itinerarios.php" class="unit-1 text-center">
                 <img src="images/inicio/6.webp" alt="Nilopiensestour salidas grupales" class="img-fluid"/>
                 <div class="unit-1-text">
                   <h3 class="unit-1-heading"></h3>

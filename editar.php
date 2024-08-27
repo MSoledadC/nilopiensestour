@@ -89,16 +89,16 @@ $datos = mysqli_fetch_array($respuesta);
 
                         <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                             <li class="active">
-                                <a class="text-white" href="index.html">Inicio</a>
+                                <a class="text-white" href="index.php">Inicio</a>
                             </li>
                             <li class="has-children">
                                 <a class="text-white" >Destinos</a>
                                 <ul class="dropdown">
-                                <li><a class="text-white" href="america.php">América</a></li>
-                                <li><a class="text-white" href="europa.php">Europa</a></li>
-                                <li><a class="text-white" href="cruceros.php">Cruceros</a></li>               
-                                <li><a class="text-white" href="orientemedio.php">Oriente Medio</a></li>            
-                                <li><a class="text-white" href="africa.php">África</a></li>
+                                    <li><a class="text-white" href="america.php">América</a></li>
+                                    <li><a class="text-white" href="europa.php">Europa</a></li>                               
+                                    <li><a class="text-white" href="asia.php">Asia</a></li>            
+                                    <li><a class="text-white" href="africa.php">África</a></li>
+                                    <li><a class="text-white" href="paquetes.php">Paquetes</a></li> 
                                 </ul>
                             </li>
                             <li><a class="text-white" href="itinerarios.php"> Servicios</a></li>
@@ -203,7 +203,7 @@ $datos = mysqli_fetch_array($respuesta);
                                             <option value="america" <?php echo ($continente == 'america') ? 'selected' : ''; ?>>América</option>
                                             <option value="africa" <?php echo ($continente == 'africa') ? 'selected' : ''; ?>>África</option>
                                             <option value="asia" <?php echo ($continente == 'asia') ? 'selected' : ''; ?>>Asia</option>
-                                            <option value="paquete" <?php echo ($continente == 'paquete') ? 'selected' : ''; ?>>Paquetes</option>
+                                            <option value="paquetes" <?php echo ($continente == 'paquetes') ? 'selected' : ''; ?>>Paquetes</option>
                                             <option value="europa" <?php echo ($continente == 'europa') ? 'selected' : ''; ?>>Europa</option>
                                         </select>
                                         </div>

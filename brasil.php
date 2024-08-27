@@ -207,7 +207,7 @@
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             <h1 class="text-white font-weight-light"></h1>
             <div><a href="index.html">Inicio</a> <span class="mx-2 text-white">&bullet;</span> <span
-                class="text-white">Oriente Medio</span></div>
+                class="text-white">Brasil</span></div>
 
           </div>
         </div>

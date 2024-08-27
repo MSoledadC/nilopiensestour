@@ -88,55 +88,27 @@ $datos = mysqli_fetch_array($respuesta);
             </div>
             <div class="col-8 col-md-8 d-none d-xl-block">
               <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-                <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                  <li class="active">
-                    <a class="text-white" href="index.html">Inicio</a>
-                  </li>
-                  <li class="has-children">
-                    <a class="text-white" href="#">Destinos</a>
-                    <ul class="dropdown">
-                      <li class="has-children">
-                        <a class="text-white" href="america.php">América</a>
-                        <ul class="dropdown">
-                          <li><a class="text-white" href="argentina.php">Argentina</a></li>
-                          <li><a class="text-white" href="brasil.php">Brasil</a></li>
-                          <li><a class="text-white" href="chile.php">Chile</a></li>
-                          <li><a class="text-white" href="colombia.php">Colombia</a></li>
-                          <li><a class="text-white" href="costarica.php">Costa Rica</a></li>
-                          <li><a class="text-white" href="mexico.php">México</a></li>
-                          <li><a class="text-white" href="panama.php">Panamá</a></li>
-                          <li><a class="text-white" href="peru.php">Perú</a></li>
-                          <li><a class="text-white" href="republicadominicana.php">Rep. Dominicana</a></li>
-                        </ul>
-                      </li>
-                      <li class="has-children">
-                        <a class="text-white" href="europa.php">Europa</a>
-                        <ul class="dropdown">
-                          <li><a class="text-white" href="croacia.php">Croacia</a></li>
-                          <li><a class="text-white" href="españa.php">España</a></li>
-                          <li><a class="text-white" href="francia.php">Francia</a></li>
-                          <li><a class="text-white" href="italia.php">Italia</a></li>
-                          <li><a class="text-white" href="paisesbajos.php">Países Bajos</a></li>
-                          <li><a class="text-white" href="polonia.php">Polonia</a></li>
-                          <li><a class="text-white" href="portugal.php">Portugal</a></li>
-                        </ul>
-                      </li>
-                      <li><a class="text-white" href="orientemedio.php">Asia</a></li>
-                      <li class="has-children">
-                        <a class="text-white" href="africa.php">África</a>
-                        <ul class="dropdown">
-                          <li><a class="text-white" href="egipto.php">Egipto</a></li>
-                          <li><a class="text-white" href="marruecos.php">Marruecos</a></li>
-                          <li><a class="text-white" href="sudafrica.php">Sudáfrica</a></li>
-                        </ul>
-                      </li>
-                      <li><a class="text-white" href="cruceros.php">Transfer</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="text-white" href="itinerarios.php">Servicios</a></li>
-                  <li><a class="text-white" href="nosotros.html">Quienes Somos</a></li>
-                  <li><a class="text-white" href="contacto.html">Contacto</a></li>
-                </ul>
+              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                        <li class="active">
+                          <a class="text-white" href="index.php">Inicio</a>
+                        </li>
+                        <li class="has-children">
+                          <a class="text-white" >Destinos</a>
+                          <ul class="dropdown">
+                            <li><a class="text-white" href="america.php">América</a></li>
+                            <li><a class="text-white" href="europa.php">Europa</a></li>                               
+                            <li><a class="text-white" href="asia.php">Asia</a></li>            
+                            <li><a class="text-white" href="africa.php">África</a></li>
+                            <li><a class="text-white" href="paquetes.php">Paquetes</a></li> 
+                          </ul>
+                        </li>
+                        <li><a class="text-white" href="itinerarios.php"> Servicios</a></li>
+                        <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>             
+                        <li><a class="text-white" href="contacto.html">Contacto</a> </li>     
+                        <!--<li><a href="blog.html">Blog</a></li>
+                        <li><a href="discount.html">Discount</a></li>
+                        <li><a href="booking.html">Book Online</a></li> -->
+                      </ul>
               </nav>              
             </div>
 
@@ -214,7 +186,7 @@ $datos = mysqli_fetch_array($respuesta);
                                         <option value="america" <?php echo ($datos['continente'] == 'america') ? 'selected' : ''; ?>>América</option>
                                         <option value="africa" <?php echo ($datos['continente'] == 'africa') ? 'selected' : ''; ?>>África</option>
                                         <option value="asia" <?php echo ($datos['continente'] == 'asia') ? 'selected' : ''; ?>>Asia</option>
-                                        <option value="paquete" <?php echo ($datos['continente'] == 'paquete') ? 'selected' : ''; ?>>Paquetes</option>
+                                        <option value="paquetes" <?php echo ($datos['continente'] == 'paquetes') ? 'selected' : ''; ?>>Paquetes</option>
                                         <option value="europa" <?php echo ($datos['continente'] == 'europa') ? 'selected' : ''; ?>>Europa</option>
                                         <option value="info" <?php echo ($datos['continente'] == 'info') ? 'selected' : ''; ?>>Info</option>
                                     </select>

@@ -41,7 +41,6 @@
   <script src="https://kit.fontawesome.com/df0028962f.js" crossorigin="anonymous"></script>
 
 </head>
-  </head>
 
   <body>
     <div class="site-wrap">
@@ -65,20 +64,25 @@
             <?php
               // Conexión a la base de datos
               $conexion = mysqli_connect("127.0.0.1", "root", "", "nilopiensestour");
+              mysqli_set_charset($conexion, "utf8");
 
               // Función para obtener destinos por continente
               function obtener_destinos($conexion, $continente) {
-                  $query = "SELECT pais FROM itinerarios WHERE continente = '$continente' AND contenido_disponible = 1";
-                  $result = mysqli_query($conexion, $query);
+              $query = "SELECT DISTINCT pais FROM itinerarios WHERE continente = '$continente' AND 
+             contenido_disponible = 1";
+             $result = mysqli_query($conexion, $query);
 
-                  $destinos = [];
-                  if ($result) {
-                      while ($row = mysqli_fetch_assoc($result)) {
-                          $destinos[] = $row['pais'];
-                      }
-                  }
-                  return $destinos;
-              }
+             if (!$result) {
+             die('Error en la consulta: ' . mysqli_error($conexion));
+             }
+
+            $destinos = [];
+            while ($row = mysqli_fetch_assoc($result)) {
+            $destinos[] = $row['pais'];
+            }
+
+            return $destinos;
+             }
 
               // Función para convertir nombres de países a formato visual
               function nombre_pais_visual($pais) {
@@ -97,7 +101,6 @@
               $destinos_africa = obtener_destinos($conexion, 'África');
               $destinos_asia = obtener_destinos($conexion, 'Asia');
               $destinos_paquetes = obtener_destinos($conexion, 'Paquetes');
-              $destinos_info = obtener_destinos($conexion, 'Info');
               ?>
 
               <div class="col-8 col-md-8 d-none d-xl-block">

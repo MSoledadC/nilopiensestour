@@ -68,7 +68,7 @@
 
               // Función para obtener destinos por continente
               function obtener_destinos($conexion, $continente) {
-                  $query = "SELECT pais FROM itinerarios WHERE continente = '$continente' AND contenido_disponible = 1";
+                  $query = "SELECT DISTINCT pais FROM itinerarios WHERE continente = '$continente' AND contenido_disponible = 1";
                   $result = mysqli_query($conexion, $query);
 
                   $destinos = [];
@@ -206,9 +206,8 @@
 
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             <h1 class="text-white font-weight-light"></h1>
-            <div><a href="index.html">Inicio</a> <span class="mx-2 text-white">&bullet;</span> <span
-                class="text-white">Europa</span></div>
-
+            <div><a href="index.php">Inicio</a> <span class="mx-2 text-white">&bullet;</span> <span
+                class="text-white">Paises Bajos</span></div>
           </div>
         </div>
       </div>
@@ -227,7 +226,7 @@
     mysqli_select_db($conexion, "nilopiensestour");
 
     // 2) Preparar la orden SQL
-    $consulta = "SELECT * FROM itinerarios WHERE pais = 'paises bajos'";
+    $consulta = "SELECT * FROM itinerarios WHERE pais = 'paisesbajos'";
 
     // 3) Ejecutar la orden y obtener los registros
     $datos = mysqli_query($conexion, $consulta);

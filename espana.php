@@ -68,7 +68,7 @@
 
               // Función para obtener destinos por continente
               function obtener_destinos($conexion, $continente) {
-                  $query = "SELECT pais FROM itinerarios WHERE continente = '$continente' AND contenido_disponible = 1";
+                 $query = "SELECT DISTINCT pais FROM itinerarios WHERE continente = '$continente' AND contenido_disponible = 1";
                   $result = mysqli_query($conexion, $query);
 
                   $destinos = [];
@@ -207,7 +207,7 @@
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             <h1 class="text-white font-weight-light"></h1>
             <div><a href="index.html">Inicio</a> <span class="mx-2 text-white">&bullet;</span> <span
-                class="text-white">Europa</span></div>
+                class="text-white">España</span></div>
 
           </div>
         </div>

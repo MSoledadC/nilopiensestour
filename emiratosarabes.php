@@ -103,7 +103,7 @@
                   <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
                       <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                           <li class="active">
-                              <a class="text-white" href="index.html">Inicio</a>
+                              <a class="text-white" href="index.php">Inicio</a>
                           </li>
                           <li class="has-children">
                               <a class="text-white" href="#">Destinos</a>
@@ -207,7 +207,7 @@
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             <h1 class="text-white font-weight-light"></h1>
             <div><a href="index.php">Inicio</a> <span class="mx-2 text-white">&bullet;</span> <span
-                class="text-white">México</span></div>
+                class="text-white">Emiratos Árabes</span></div>
 
           </div>
         </div>
@@ -227,7 +227,7 @@
     mysqli_select_db($conexion, "nilopiensestour");
 
     // 2) Preparar la orden SQL
-    $consulta = "SELECT * FROM itinerarios WHERE pais = 'mexico'";
+    $consulta = "SELECT * FROM itinerarios WHERE pais = 'emiratosarabes'";
 
     // 3) Ejecutar la orden y obtener los registros
     $datos = mysqli_query($conexion, $consulta);
@@ -368,9 +368,9 @@
                   <div class="footer__social">
                       <h3 class="footer-heading mb-2">Redes Sociales</h3>
                       <div class="d-flex justify-content-between">
-                          <a class="social-icon mr-2 redes_footer" href="https://www.facebook.com/people/NI-Lo-Pienses-Tour/61562454133917/?mibextid=qi2Omg&rdid=HgxgTyFEMMvE3Rao&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FKn3GWjBhuihHipro%2F%3Fmibextid%3Dqi2Omg" target="_blank"><i class="fa fa-facebook"></i></a>
-                          <a class="social-icon mr-2 redes_footer" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa fa-instagram"></i></a>
-                          <a class="social-icon mr-2 redes_footer" href="https://www.tripadvisor.es/Attraction_Review-g150812-d27967357-Reviews-Ni_Lo_Pienses_Tour-Playa_del_Carmen_Yucatan_Peninsula.html" target="_blank"><span class="icon-tripadvisor"></span></a>
+                        <a class="social-icon mr-2 redes_footer" href="https://www.facebook.com/people/NI-Lo-Pienses-Tour/61562454133917/?mibextid=qi2Omg&rdid=HgxgTyFEMMvE3Rao&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FKn3GWjBhuihHipro%2F%3Fmibextid%3Dqi2Omg" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a class="social-icon mr-2 redes_footer" href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a class="social-icon mr-2 redes_footer" href="https://www.tripadvisor.es/Attraction_Review-g150812-d27967357-Reviews-Ni_Lo_Pienses_Tour-Playa_del_Carmen_Yucatan_Peninsula.html" target="_blank"><span class="icon-tripadvisor"></span></a>
                        </div>
                   </div>
               </div>
