@@ -189,6 +189,9 @@ $datos = mysqli_fetch_array($respuesta);
                                         <option value="paquetes" <?php echo ($datos['continente'] == 'paquetes') ? 'selected' : ''; ?>>Paquetes</option>
                                         <option value="europa" <?php echo ($datos['continente'] == 'europa') ? 'selected' : ''; ?>>Europa</option>
                                         <option value="info" <?php echo ($datos['continente'] == 'info') ? 'selected' : ''; ?>>Info</option>
+                                        <option value="imagen1" <?php echo ($datos['continente'] == 'imagen1') ? 'selected' : ''; ?>>Imagen1</option>
+                                        <option value="imagen2" <?php echo ($datos['continente'] == 'imagen2') ? 'selected' : ''; ?>>Imagen2</option>
+                                        <option value="imagen3" <?php echo ($datos['continente'] == 'imagen3') ? 'selected' : ''; ?>>Imagen3</option>
                                     </select>
                                 </div>
                             </div>

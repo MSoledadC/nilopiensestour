@@ -1,73 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">  
-  <url>
-    <loc>https://www.nilopiensestour.com/</loc>
-    <lastmod>2024-05-26T20:51:57+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/index.html</loc>
-    <lastmod>2024-05-26T20:51:57+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/america.php</loc>
-    <lastmod>2024-05-27T01:15:01+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/europa.php</loc>
-    <lastmod>2024-05-27T01:15:01+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/orientemedio.php</loc>
-    <lastmod>2024-05-27T01:15:01+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/africa.php</loc>
-    <lastmod>2024-05-27T01:15:01+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/cruceros.php</loc>
-    <lastmod>2024-05-27T01:15:01+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/itinerarios.php</loc>
-    <lastmod>2024-05-27T01:15:01+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/nosotros.html</loc>
-    <lastmod>2024-05-26T21:00:47+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/contacto.html</loc>
-    <lastmod>2024-05-26T20:56:26+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/login.html</loc>
-    <lastmod>2024-05-26T21:00:26+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/politicasprivacidad.html</loc>
-    <lastmod>2024-05-26T21:01:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/avisolegal.html</loc>
-    <lastmod>2024-05-26T20:56:09+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.nilopiensestour.com/cookies.html</loc>
-    <lastmod>2024-05-26T20:56:41+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.nilopiensestour.com/</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/index.php</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/america.php</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/peru.php</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/mexico.php</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/argentina.php</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/europa.php</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/italia.php</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/asia.php</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/egipto.php</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/paquetes.php</loc>
+  <lastmod>2024-08-27T04:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/nosotros.html</loc>
+  <lastmod>2024-08-27T02:20:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/contacto.html</loc>
+  <lastmod>2024-08-27T02:08:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/login.html</loc>
+  <lastmod>2024-08-27T02:26:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/politicasprivacidad.html</loc>
+  <lastmod>2024-08-27T02:21:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/avisolegal.html</loc>
+  <lastmod>2024-08-27T02:06:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nilopiensestour.com/cookies.html</loc>
+  <lastmod>2024-08-27T02:09:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>

@@ -20,6 +20,8 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200;1,300&family=Poppins:ital,wght@0,200;0,400;1,100&display=swap" rel="stylesheet"/>
 
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+
 
   <!-- <link rel="manifest" href="site.webmanifest"> -->
   <link rel="shortcut icon" type="image/x-icon" href="/images/logotr.ico">
@@ -227,36 +229,32 @@
         </div>
       </div>
 
-      <div class="site-sectiontablet">
-        <div class="container overlap-section">
-          <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
-              <a href="itinerarios.html" class="unit-1 text-center">
-                <img src="images/inicio/1.webp" alt="Nilopiensestour aereos" class="img-fluid"/>
-                <div class="unit-1-text">
-                  <h3 class="unit-1-heading"></h3>
+      <?php
+            // 1) Conexion
+            $conexion = mysqli_connect("127.0.0.1", "root", "");
+            mysqli_select_db($conexion, "nilopiensestour");
+            
+            // 2) Preparar la orden SQL para obtener las imágenes específicas
+            $consulta = "SELECT * FROM imagenindex WHERE continente IN ('imagen1', 'imagen2', 'imagen3')";
+
+            // 3) Ejecutar la orden y obtenemos los registros
+            $datos = mysqli_query($conexion, $consulta);
+          ?>
+
+
+<div class="site-sectiontablet">
+            <div class="container overlap-section">
+                <div class="row">
+                    <?php while ($reg = mysqli_fetch_array($datos)) { ?>
+                        <div class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
+                            <a href="itinerarios.php" class="unit-1 text-center">
+                                <img src="data:image/jpeg;base64,<?php echo base64_encode($reg['imagen']); ?>" alt="Nilopiensestour <?php echo $reg['continente']; ?>" class="img-fluid"/>
+                            </a>
+                        </div>
+                    <?php } ?>
                 </div>
-              </a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
-              <a href="itinerarios.html" class="unit-1 text-center">
-                <img src="images/inicio/5.webp" alt="Nilopiensestour cruceros" class="img-fluid"/>
-                <div class="unit-1-text">
-                  <h3 class="unit-1-heading"></h3>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-lg-0">
-              <a href="itinerarios.html" class="unit-1 text-center">
-                <img src="images/inicio/6.webp" alt="Nilopiensestour salidas grupales" class="img-fluid"/>
-                <div class="unit-1-text">
-                  <h3 class="unit-1-heading"></h3>
-                </div>
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
 
       
       <div class="btn-wrapper">
@@ -279,7 +277,7 @@
                $conexion = mysqli_connect("127.0.0.1", "root", "");
                mysqli_select_db($conexion, "nilopiensestour");
               // 2) Preparar la orden SQL
-              $consulta = "SELECT * FROM imagenindex ";
+              $consulta = "SELECT * FROM imagenindex WHERE continente IN ('america', 'africa', 'asia', 'europa', 'paquetes', 'info')";
 
               // 3) Ejecutar la orden y obtenemos los registros
               $datos = mysqli_query($conexion, $consulta);
