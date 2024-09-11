@@ -20,6 +20,8 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200;1,300&family=Poppins:ital,wght@0,200;0,400;1,100&display=swap" rel="stylesheet"/>
 
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
 
   <!-- <link rel="manifest" href="site.webmanifest"> -->
   <link rel="shortcut icon" type="image/x-icon" href="/images/logotr.ico">
@@ -59,7 +61,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-4 col-xl-2 logocontainer">
-              <img class="mb-0 logonav"src="images/logo-tr.png" alt="Nilopiensestour logo" width="150" height="150"/>
+            <img class="mb-0 logonav"src="images/logo_.png" alt="Nilopiensestour logo" width="150" height="150"/>
                <!-- <h1 class="text-white mb-0 nava"><strong>NI LO PIENSES TOUR</strong></h1>-->
             </div>
             <?php

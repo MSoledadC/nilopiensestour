@@ -77,7 +77,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-4 col-xl-2 logocontainer">
-              <img class="mb-0 logonav"src="images/logo-tr.png" alt="Nilopiensestour logo" width="150" height="150"/>
+              <img class="mb-0 logonav"src="images/logo_.png" alt="Nilopiensestour logo" width="150" height="150"/>
                <!-- <h1 class="text-white mb-0 nava"><strong>NI LO PIENSES TOUR</strong></h1>-->
             </div>
             <?php

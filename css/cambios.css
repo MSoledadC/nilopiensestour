@@ -13,11 +13,12 @@ h6 {
     /* O la fuente que desees utilizar para los títulos */
 }
 
-.mochiy-pop-one-regular {
-    font-family: "Mochiy Pop One", sans-serif;
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
     font-weight: 400;
     font-style: normal;
     letter-spacing: 3px !important; 
+    font-size: 4rem !important; 
   }
 
 a {
@@ -103,6 +104,7 @@ a:hover {
 
 .logonav {
     margin-left: -40px;
+    border-radius: 50%;
 }
 
 .large-icon{
@@ -1152,7 +1154,7 @@ a:hover {
          }
     }
 
-    @media (max-width: 426px) {
+    @media (max-width: 428px) {
         .paginas_destinos.inner-page-cover {
           background-position: 50% 0px !important;
         }
@@ -1180,21 +1182,17 @@ a:hover {
             height: calc(40vh) !important;
         }
 
-        .site-mobile-menu .site-nav-wrap > li > ul > li > a {
-            font-size: 10px !important;
-        }
+        .site-mobile-menu .site-nav-wrap > li > ul > li > ul > li > a{
+            font-size: 12px !important;}
 
         .site-mobile-menu {
             padding-top: 0px;
         }
 
-        .site-mobile-menu .site-nav-wrap > li > a{
-            font-size: 10px !important;
-        }
-
         .site-sectiontablet {
             margin-top: 70px;
         }
+
     }
     
     
@@ -1210,6 +1208,9 @@ a:hover {
             height: 100px;
             margin-left: 0px;
         }
+
+        .site-mobile-menu .site-nav-wrap > li > ul > li > ul > li > a{
+            font-size: 12px !important;}
     }
 
 

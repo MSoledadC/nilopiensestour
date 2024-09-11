@@ -20,7 +20,8 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200;1,300&family=Poppins:ital,wght@0,200;0,400;1,100&display=swap" rel="stylesheet"/>
 
-  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+ 
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
 
   <!-- <link rel="manifest" href="site.webmanifest"> -->
@@ -60,12 +61,12 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-4 col-xl-2 logocontainer">
-              <img class="mb-0 logonav"src="images/logo-tr.png" alt="Nilopiensestour logo" width="150" height="150"/>
+              <img class="mb-0 logonav"src="images/logo_.png" alt="Nilopiensestour logo" width="150" height="150"/>
                <!-- <h1 class="text-white mb-0 nava"><strong>NI LO PIENSES TOUR</strong></h1>-->
             </div>
             <?php
-              // Conexión a la base de datos
-              $conexion = mysqli_connect("127.0.0.1", "root", "", "nilopiensestour");
+              // 1) Conexión
+                $conexion = mysqli_connect("127.0.0.1", "root", "", "nilopiensestour");
               mysqli_set_charset($conexion, "utf8");
 
               // Función para obtener destinos por continente
@@ -208,7 +209,7 @@
           <div class="container">
             <div class="row align-items-center justify-content-center text-center">
               <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-                <h1 class="mochiy-pop-one-regular ">NI LO PIENSES TOUR</h1>
+                <h1 class="special-elite-regular ">NI LO PIENSES TOUR</h1>
                 <p class="mb-5"></p>
                 <!--<p><a href="#" class="btn btn-primary py-3 px-5 text-white">Book Now!</a></p>-->
               </div>
@@ -228,18 +229,16 @@
           </div>
         </div>
       </div>
-
       <?php
-            // 1) Conexion
-            $conexion = mysqli_connect("127.0.0.1", "root", "");
-            mysqli_select_db($conexion, "nilopiensestour");
-            
-            // 2) Preparar la orden SQL para obtener las imágenes específicas
-            $consulta = "SELECT * FROM imagenindex WHERE continente IN ('imagen1', 'imagen2', 'imagen3')";
+        // 1) Conexión
+        $conexion = mysqli_connect("127.0.0.1", "root", "", "nilopiensestour");
 
-            // 3) Ejecutar la orden y obtenemos los registros
-            $datos = mysqli_query($conexion, $consulta);
-          ?>
+        // 2) Preparar la orden SQL para obtener las imágenes específicas
+        $consulta = "SELECT * FROM imagenindex WHERE continente IN ('imagen1', 'imagen2', 'imagen3')";
+
+        // 3) Ejecutar la orden y obtenemos los registros
+        $datos = mysqli_query($conexion, $consulta);
+    ?>
 
 
 <div class="site-sectiontablet">
