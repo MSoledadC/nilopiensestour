@@ -59,7 +59,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-4 col-xl-2 logocontainer">
-              <img class="mb-0 logonav"src="images/logo_.png" alt="Nilopiensestour logo" width="150" height="150"/>
+              <img class="mb-0 logonav"src="images/logo_.png" alt="Nilopiensestour logo" width="100" height="100"/>
                <!-- <h1 class="text-white mb-0 nava"><strong>NI LO PIENSES TOUR</strong></h1>-->
             </div>
             <?php
@@ -349,7 +349,7 @@
           <div class="row d-flex align-items-center footer-vista-cel">
               <div class="col-lg-2 col-md-4 mb-2">
                   <div class="footer_widget">
-                      <img src="images/logo-tr.png" width="150" height="150" alt="NilopiensesTour logo" class="logo_footer">
+                    <img src="images/logo_.png" width="120" height="120" alt="NilopiensesTour logo" class="logo_footer">
                   </div>
               </div>
               <div class="col-lg-6 col-md-8 mb-8 mb-lg-0">

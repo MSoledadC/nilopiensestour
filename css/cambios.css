@@ -261,11 +261,9 @@ a:hover {
 }
 
 .logo_footer {
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    margin-left: -50px;
+    margin-left: -80px;
 }
 
 .input-group {
@@ -1164,9 +1162,13 @@ a:hover {
         }
 
         .logonav {
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
             margin-left: 0px;
+        }
+
+        .special-elite-regular{
+            font-size: 2rem !important;
         }
 
         .titulocontacto {
@@ -1193,6 +1195,14 @@ a:hover {
             margin-top: 70px;
         }
 
+        .site-footer .footer-heading {
+            font-size: 15px;
+        }
+
+        .list-unstyled {
+            font-size: 13px;
+        }
+
     }
     
     
@@ -1204,9 +1214,13 @@ a:hover {
         }
 
         .logonav {
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
             margin-left: 0px;
+        }
+
+        .special-elite-regular{
+            font-size: 1.5rem !important;
         }
 
         .site-mobile-menu .site-nav-wrap > li > ul > li > ul > li > a{
