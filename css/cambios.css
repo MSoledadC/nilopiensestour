@@ -684,7 +684,8 @@ a:hover {
 
 .imagen-nosotros {
     height: 500px;
-    width: 540px;
+    display: block;
+    margin: 0 auto;
 }
 
 .titulo-nosotros2 {

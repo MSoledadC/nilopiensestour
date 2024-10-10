@@ -43,77 +43,162 @@
 </head>
 
 <body>
+    <div class="site-wrap">
 
-  <div class="site-wrap">
-
-    <div class="site-mobile-menu">
-        <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close mt-3">
-                <span class="icon-close2 js-menu-toggle"></span>
-            </div>
-        </div>
-        <div class="site-mobile-menu-body"></div>
-    </div>
-
-    <header class="site-navbar py-1" role="banner">
+      <div class="site-mobile-menu">
+          <div class="site-mobile-menu-header">
+              <div class="site-mobile-menu-close mt-3">
+                  <span class="icon-close2 js-menu-toggle"></span>
+              </div>
+          </div>
+          <div class="site-mobile-menu-body"></div>
+      </div>
+      
+      <header class="site-navbar py-1" role="banner">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-6 col-xl-2">
-                  <img class="mb-0 logonav"src="images/logo_.png" alt="Nilopiensestour logo" width="100" height="100"/>
-                    <!-- <h1 class="text-white mb-0 nava"><strong>NI LO PIENSES TOUR</strong></h1>-->
-                </div>
-                <div class="col-8 col-md-8 d-none d-xl-block">
-                    <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-
-                      <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                        <li class="active">
-                          <a class="text-white" href="index.php">Inicio</a>
-                        </li>
-                        <li class="has-children">
-                          <a class="text-white" >Destinos</a>
-                          <ul class="dropdown">
-                            <li><a class="text-white" href="america.php">América</a></li>
-                            <li><a class="text-white" href="europa.php">Europa</a></li>                               
-                            <li><a class="text-white" href="asia.php">Asia</a></li>            
-                            <li><a class="text-white" href="africa.php">África</a></li>
-                            <li><a class="text-white" href="paquetes.php">Paquetes</a></li> 
-                          </ul>
-                        </li>
-                        <li><a class="text-white" href="itinerarios.php"> Servicios</a></li>
-                        <li><a class="text-white" href="nosotros.html"> Quienes Somos</a></li>             
-                        <li><a class="text-white" href="contacto.html">Contacto</a> </li>     
-                        <!--<li><a href="blog.html">Blog</a></li>
-                        <li><a href="discount.html">Discount</a></li>
-                        <li><a href="booking.html">Book Online</a></li> -->
-                      </ul>
-                    </nav>
-                </div>
-
-                <div class="col-6 col-xl-2 text-right">
-                  <div class="d-none d-xl-inline-block">
-                      <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0"
-                          data-class="social">
-                          <li><a href="https://www.facebook.com/people/NI-Lo-Pienses-Tour/61562454133917/?mibextid=qi2Omg&rdid=HgxgTyFEMMvE3Rao&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FKn3GWjBhuihHipro%2F%3Fmibextid%3Dqi2Omg" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-facebook"></span></a>
-                          </li>
-                          <li><a href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-instagram"></span></a>
-                          </li>
-                          <li><a href="https://www.tripadvisor.es/Attraction_Review-g150812-d27967357-Reviews-Ni_Lo_Pienses_Tour-Playa_del_Carmen_Yucatan_Peninsula.html" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-tripadvisor"></span></a>
-                          </li>
-                          <li><a href="login.html" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-user"></span></a>
-                          </li>                          
-                      </ul>
-                  </div>
-
-                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
-                      <a href="#" class="site-menu-toggle js-menu-toggle text-white "><span class="icon-menu h3 menuvistacel"></span></a>
-                    </div>
-
-                </div>
-
+          <div class="row align-items-center">
+            <div class="col-4 col-xl-2 logocontainer">
+              <img class="mb-0 logonav"src="images/logo_.png" alt="Nilopiensestour logo" width="100" height="100"/>
+               <!-- <h1 class="text-white mb-0 nava"><strong>NI LO PIENSES TOUR</strong></h1>-->
             </div>
-        </div>
+            <?php
+              // 1) Conexión
+                $conexion = mysqli_connect("127.0.0.1", "root", "", "nilopiensestour");
+              mysqli_set_charset($conexion, "utf8");
 
-    </header>
+              // Función para obtener destinos por continente
+              function obtener_destinos($conexion, $continente) {
+              $query = "SELECT DISTINCT pais FROM itinerarios WHERE continente = '$continente' AND 
+             contenido_disponible = 1";
+             $result = mysqli_query($conexion, $query);
+
+             if (!$result) {
+             die('Error en la consulta: ' . mysqli_error($conexion));
+             }
+
+            $destinos = [];
+            while ($row = mysqli_fetch_assoc($result)) {
+            $destinos[] = $row['pais'];
+            }
+
+            return $destinos;
+             }
+
+              // Función para convertir nombres de países a formato visual
+              function nombre_pais_visual($pais) {
+                  $mapa_paises = [
+                      'mexico' => 'México',
+                      'peru' => 'Perú',
+                      // Agrega más países según sea necesario
+                  ];
+
+                  return $mapa_paises[$pais] ?? ucfirst($pais);
+              }
+
+              // Obtener destinos para cada continente
+              $destinos_america = obtener_destinos($conexion, 'América');
+              $destinos_europa = obtener_destinos($conexion, 'Europa');
+              $destinos_africa = obtener_destinos($conexion, 'África');
+              $destinos_asia = obtener_destinos($conexion, 'Asia');
+              $destinos_paquetes = obtener_destinos($conexion, 'Paquetes');
+              ?>
+
+              <div class="col-8 col-md-8 d-none d-xl-block">
+                  <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
+                      <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                          <li class="active">
+                              <a class="text-white" href="index.html">Inicio</a>
+                          </li>
+                          <li class="has-children">
+                              <a class="text-white" href="#">Destinos</a>
+                              <ul class="dropdown">
+                                  <?php if (!empty($destinos_america)): ?>
+                                      <li class="has-children">
+                                          <a class="text-white" href="america.php">América</a>
+                                          <ul class="dropdown">
+                                              <?php foreach ($destinos_america as $pais): ?>
+                                                  <li><a class="text-white" href="<?= strtolower($pais) ?>.php"><?= nombre_pais_visual($pais) ?></a></li>
+                                              <?php endforeach; ?>
+                                          </ul>
+                                      </li>
+                                  <?php endif; ?>
+
+                                  <?php if (!empty($destinos_europa)): ?>
+                                      <li class="has-children">
+                                          <a class="text-white" href="europa.php">Europa</a>
+                                          <ul class="dropdown">
+                                              <?php foreach ($destinos_europa as $pais): ?>
+                                                  <li><a class="text-white" href="<?= strtolower($pais) ?>.php"><?= nombre_pais_visual($pais) ?></a></li>
+                                              <?php endforeach; ?>
+                                          </ul>
+                                      </li>
+                                  <?php endif; ?>
+
+                                  <?php if (!empty($destinos_asia)): ?>
+                                      <li class="has-children">
+                                          <a class="text-white" href="asia.php">Asia</a>
+                                          <ul class="dropdown">
+                                              <?php foreach ($destinos_asia as $pais): ?>
+                                                  <li><a class="text-white" href="<?= strtolower($pais) ?>.php"><?= nombre_pais_visual($pais) ?></a></li>
+                                              <?php endforeach; ?>
+                                          </ul>
+                                      </li>
+                                  <?php endif; ?>
+
+                                  <?php if (!empty($destinos_africa)): ?>
+                                      <li class="has-children">
+                                          <a class="text-white" href="africa.php">África</a>
+                                          <ul class="dropdown">
+                                              <?php foreach ($destinos_africa as $pais): ?>
+                                                  <li><a class="text-white" href="<?= strtolower($pais) ?>.php"><?= nombre_pais_visual($pais) ?></a></li>
+                                              <?php endforeach; ?>
+                                          </ul>
+                                      </li>
+                                  <?php endif; ?>
+
+                                  <?php if (!empty($destinos_paquete)): ?>
+                                      <li class="has-children">
+                                          <a class="text-white" href="paquetes.php">Paquetes</a>
+                                          <ul class="dropdown">
+                                              <?php foreach ($destinos_paquete as $pais): ?>
+                                                  <li><a class="text-white" href="<?= strtolower($pais) ?>.php"><?= nombre_pais_visual($pais) ?></a></li>
+                                              <?php endforeach; ?>
+                                          </ul>
+                                      </li>
+                                  <?php else: ?>
+                                      <li><a class="text-white" href="paquetes.php">Paquetes</a></li>
+                                  <?php endif; ?>
+                              </ul>
+                          </li>
+                          <li><a class="text-white" href="itinerarios.php">Servicios</a></li>
+                          <li><a class="text-white" href="nosotros.php">Quienes Somos</a></li>
+                          <li><a class="text-white" href="contacto.php">Contacto</a></li>
+                      </ul>
+                  </nav>
+              </div>
+            <div class="col-6 col-xl-2 text-right">
+              <div class="d-none d-xl-inline-block">
+                  <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0"
+                      data-class="social">
+                      <li><a href="https://www.facebook.com/people/NI-Lo-Pienses-Tour/61562454133917/?mibextid=qi2Omg&rdid=HgxgTyFEMMvE3Rao&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FKn3GWjBhuihHipro%2F%3Fmibextid%3Dqi2Omg" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-facebook large-icon"></span></a>
+                      </li>
+                      <li><a href="https://www.instagram.com/nilopiensestour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-instagram large-icon"></span></a>
+                      </li>
+                      <li><a href="https://www.tripadvisor.es/Attraction_Review-g150812-d27967357-Reviews-Ni_Lo_Pienses_Tour-Playa_del_Carmen_Yucatan_Peninsula.html" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-tripadvisor large-icon"></span></a>
+                      </li>
+                      <li><a href="login.html" target="_blank" class="pl-3 pr-3 text-white"><span class="icon-user large-icon"></span></a>
+                      </li>                          
+                  </ul>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3 menu-vista-cel" style="position: relative; top: 3px; ">
+                  <a href="#" class="site-menu-toggle js-menu-toggle text-white "><span class="icon-menu h3 menuvistacel"></span></a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</header>
 
     <div class="site-blocks-cover inner-page-cover" style="background-image: url(images/portadas/20.webp); background-position: center bottom;"  data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
@@ -197,7 +282,7 @@
                     <div class="about_info">
                         <div class="nosotrossub mb-20px entrada-desde-abajo">
                             <span class="titulo-nosotros2" >Calidad en NiLoPiensesTour </span>
-                            <p class="subtitulo2" >Gracias por confíar en nosotros, para ser parte de tus aventuras.</p>
+                            <p class="subtitulo2" >Gracias por confiar en nosotros para ser parte de tus aventuras.</p>
                             <p class="texto2">
                               ¡Bienvenido/a a Ni Lo Pienses Tour, donde cada viaje es una experiencia única e inolvidable!</P>
                         </div>
